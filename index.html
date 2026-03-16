@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Template</title>
+    <meta
+      name="description"
+      content="A simple dark portfolio template with one section visible at a time."
+    />
+
+    <!-- Google fonts for a clean modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Site header -->
+      <header class="site-header">
+        <div>
+          <p class="site-label">Portfolio Template</p>
+          <h1 class="site-title">Your Name Here</h1>
+        </div>
+
+        <!-- Navigation buttons -->
+        <nav class="site-nav" aria-label="Main navigation">
+          <button class="nav-button is-active" data-section="home" aria-selected="true" type="button">
+            Home
+          </button>
+          <button class="nav-button" data-section="about" aria-selected="false" type="button">
+            About
+          </button>
+          <button class="nav-button" data-section="projects" aria-selected="false" type="button">
+            Projects
+          </button>
+          <button class="nav-button" data-section="contact" aria-selected="false" type="button">
+            Contact
+          </button>
+        </nav>
+      </header>
+
+      <!-- Main content area -->
+      <main class="content-area">
+        <!-- Home section -->
+        <section id="home" class="content-section is-active" aria-labelledby="home-heading">
+          <p class="section-tag">Welcome</p>
+          <h2 id="home-heading" class="section-heading">A clean space for your future portfolio.</h2>
+          <p class="section-text">
+            This is placeholder text for a short introduction. You can replace it later with a quick summary
+            about who you are, what you do, and the kind of work you want people to notice first.
+          </p>
+
+          <div class="info-grid">
+            <article class="info-card">
+              <h3>Focus</h3>
+              <p>Placeholder for your main area of work or creative direction.</p>
+            </article>
+            <article class="info-card">
+              <h3>Current Goal</h3>
+              <p>Placeholder for what you are building, learning, or offering right now.</p>
+            </article>
+            <article class="info-card">
+              <h3>Location</h3>
+              <p>Placeholder for your city, remote status, or availability.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about" class="content-section" aria-labelledby="about-heading">
+          <p class="section-tag">About</p>
+          <h2 id="about-heading" class="section-heading">A simple place to tell your story.</h2>
+          <p class="section-text">
+            This section is for background information. You can later add a short story about your experience,
+            interests, values, or the kind of work you enjoy most.
+          </p>
+
+          <div class="split-layout">
+            <div class="panel-block">
+              <h3>Background</h3>
+              <p>
+                Placeholder text for education, work history, creative journey, or any personal context you
+                want visitors to understand.
+              </p>
+            </div>
+
+            <div class="panel-block">
+              <h3>Skills</h3>
+              <ul class="simple-list">
+                <li>Placeholder skill or tool</li>
+                <li>Placeholder skill or tool</li>
+                <li>Placeholder skill or tool</li>
+                <li>Placeholder skill or tool</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="content-section" aria-labelledby="projects-heading">
+          <p class="section-tag">Projects</p>
+          <h2 id="projects-heading" class="section-heading">Show your work one project at a time later on.</h2>
+          <p class="section-text">
+            These cards are placeholders for future projects. Replace each title, description, and label when
+            you are ready to add real work.
+          </p>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-label">Project 01</span>
+              <h3>Placeholder project title</h3>
+              <p>Short placeholder description for a future project, case study, or featured piece of work.</p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-label">Project 02</span>
+              <h3>Placeholder project title</h3>
+              <p>Short placeholder description for a future project, case study, or featured piece of work.</p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-label">Project 03</span>
+              <h3>Placeholder project title</h3>
+              <p>Short placeholder description for a future project, case study, or featured piece of work.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact" class="content-section" aria-labelledby="contact-heading">
+          <p class="section-tag">Contact</p>
+          <h2 id="contact-heading" class="section-heading">Make it easy for people to reach you.</h2>
+          <p class="section-text">
+            Use this section later for an email address, social links, collaboration details, or a simple
+            contact form if you decide to add one.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Email</h3>
+              <p>placeholder@email.com</p>
+            </div>
+            <div class="contact-card">
+              <h3>Social</h3>
+              <p>@yourhandle</p>
+            </div>
+            <div class="contact-card">
+              <h3>Availability</h3>
+              <p>Placeholder for freelance, full-time, or open to opportunities.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
