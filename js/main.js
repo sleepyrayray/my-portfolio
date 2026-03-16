@@ -1,6 +1,12 @@
 // Get all navigation buttons and all content sections.
 const navButtons = document.querySelectorAll(".nav-button");
 const contentSections = document.querySelectorAll(".content-section");
+const galleryButtons = document.querySelectorAll(".gallery-button");
+const galleryModal = document.getElementById("gallery-modal");
+const galleryModalImage = document.getElementById("gallery-modal-image");
+const galleryModalTitle = document.getElementById("gallery-modal-title");
+const galleryModalCaption = document.getElementById("gallery-modal-caption");
+const galleryCloseButton = document.getElementById("gallery-close-button");
 
 // This is the section we want to show first.
 const defaultSectionId = "home";
@@ -19,12 +25,60 @@ function showSection(sectionId) {
   });
 }
 
+// Open the gallery modal with the selected preview information.
+function openGalleryModal(button) {
+  const previewImage = button.dataset.image;
+  const previewAlt = button.dataset.alt;
+  const previewTitle = button.dataset.title;
+  const previewCaption = button.dataset.caption;
+
+  galleryModalImage.src = previewImage;
+  galleryModalImage.alt = previewAlt;
+  galleryModalTitle.textContent = previewTitle;
+  galleryModalCaption.textContent = previewCaption;
+
+  galleryModal.classList.add("is-visible");
+  galleryModal.setAttribute("aria-hidden", "false");
+}
+
+// Close the gallery modal.
+function closeGalleryModal() {
+  galleryModal.classList.remove("is-visible");
+  galleryModal.setAttribute("aria-hidden", "true");
+}
+
 // Add a click event to each button.
 navButtons.forEach(function (button) {
   button.addEventListener("click", function () {
     const selectedSectionId = button.dataset.section;
     showSection(selectedSectionId);
   });
+});
+
+// Add a click event to each gallery thumbnail.
+galleryButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    openGalleryModal(button);
+  });
+});
+
+// Close the modal when the close button is clicked.
+galleryCloseButton.addEventListener("click", function () {
+  closeGalleryModal();
+});
+
+// Close the modal when the dark backdrop is clicked.
+galleryModal.addEventListener("click", function (event) {
+  if (event.target.dataset.closeModal === "true") {
+    closeGalleryModal();
+  }
+});
+
+// Close the modal when the Escape key is pressed.
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && galleryModal.classList.contains("is-visible")) {
+    closeGalleryModal();
+  }
 });
 
 // Show the default section when the page first loads.
