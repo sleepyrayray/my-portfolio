@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Hernaez | Portfolio Showcase</title>
+    <meta
+      name="description"
+      content="A responsive portfolio scaffold for selected work in game design, interactive systems, and mixed media."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="site-shell header-shell">
+        <a class="brand" href="#top" data-brand>Portfolio</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section hero" aria-labelledby="hero-title">
+        <div class="site-shell hero-shell">
+          <div class="hero-copy-block" data-reveal>
+            <p class="eyebrow" data-hero-eyebrow></p>
+            <h1 id="hero-title" data-hero-title></h1>
+            <p class="hero-copy" data-hero-copy></p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">See Selected Work</a>
+              <a class="button button-secondary" href="#contact">Start a Conversation</a>
+            </div>
+
+            <div class="hero-stats" data-hero-stats></div>
+          </div>
+
+          <aside class="hero-panel" data-reveal>
+            <p class="panel-label">Current Focus</p>
+            <div class="hero-focus" data-hero-focus></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="site-shell">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-about-eyebrow></p>
+            <h2 id="about-title" data-about-title></h2>
+          </div>
+
+          <div class="about-layout">
+            <div class="about-copy" data-about-copy data-reveal></div>
+            <div class="about-points" data-about-points></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="site-shell">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow" data-projects-eyebrow></p>
+            <h2 id="projects-title" data-projects-title></h2>
+            <p class="section-intro" data-projects-intro></p>
+          </div>
+
+          <div class="project-grid" data-project-grid></div>
+        </div>
+      </section>
+
+      <section class="section spotlights" aria-labelledby="spotlights-title">
+        <div class="site-shell">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Project Spotlights</p>
+            <h2 id="spotlights-title">Selected work, rebuilt into a clearer format.</h2>
+            <p class="section-intro">
+              Each spotlight keeps the original process-heavy content, but organizes it into
+              a structure that is easier to scan and expand later.
+            </p>
+          </div>
+
+          <div class="spotlight-list" data-project-spotlights></div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="site-shell contact-shell">
+          <div class="section-heading contact-heading" data-reveal>
+            <p class="eyebrow" data-contact-eyebrow></p>
+            <h2 id="contact-title" data-contact-title></h2>
+            <p class="section-intro" data-contact-body></p>
+          </div>
+
+          <div class="contact-card" data-reveal>
+            <p class="panel-label">Reach Out</p>
+            <a class="contact-email" data-contact-email href="#"></a>
+            <p class="contact-location" data-contact-location></p>
+            <div class="contact-links" data-contact-links></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-shell">
+        <p class="footer-copy">Built as a responsive static scaffold for future portfolio edits.</p>
+        <p class="footer-copy"><span data-year></span> <span data-brand-footer></span></p>
+      </div>
+    </footer>
+
+    <script src="content/site-content.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

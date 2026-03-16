@@ -1,0 +1,17 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" fill="#111315"/>
+  <rect x="48" y="48" width="1504" height="1104" rx="40" fill="url(#paint0_linear)" stroke="#D59A4B" stroke-width="4"/>
+  <circle cx="1210" cy="292" r="180" fill="#D59A4B" fill-opacity="0.16"/>
+  <circle cx="350" cy="900" r="280" fill="#BFD06E" fill-opacity="0.14"/>
+  <path d="M160 900C320 720 500 620 690 610C890 600 1030 680 1190 600C1310 540 1400 480 1490 390V1050H160V900Z" fill="#18211C"/>
+  <path d="M200 900C370 750 510 705 690 696C885 686 1028 768 1210 665C1300 614 1388 558 1480 463" stroke="#7B9651" stroke-width="24" stroke-linecap="round"/>
+  <text x="140" y="228" fill="#F6F2E8" font-family="Georgia, serif" font-size="128" letter-spacing="3">SPIRIT CAMPER</text>
+  <text x="144" y="318" fill="#D8C9AF" font-family="Arial, sans-serif" font-size="42">Placeholder for title screen, gameplay still, or walkthrough thumbnail</text>
+  <text x="144" y="1010" fill="#D59A4B" font-family="Arial, sans-serif" font-size="36" letter-spacing="5">UE5 / NARRATIVE / FOREST EXPLORATION</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="138" y1="112" x2="1438" y2="1060" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E2429"/>
+      <stop offset="1" stop-color="#0C0F12"/>
+    </linearGradient>
+  </defs>
+</svg>
