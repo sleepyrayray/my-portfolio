@@ -22,6 +22,6 @@ Each selected project now has its own folder and the site points to a `cover` im
 
 The easiest workflow is:
 
-1. Keep one `cover` image in each project folder for the project card and main case-study header.
-2. Add additional numbered gallery files like `1.jpg`, `2.png`, `3.jpg` as needed.
+1. Keep one `cover` image in each project folder for project previews and cards.
+2. Add additional numbered gallery files like `1.jpg`, `2.png`, `3.jpg` as needed, and include the `cover` file in `gallery` too if you want it to appear with the rest of the case-study images.
 3. Update paths, captions, and optional video links in `content/site-content.js`.

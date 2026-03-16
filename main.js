@@ -113,11 +113,12 @@ const renderProjectCards = () => {
     media.append(createImage(project.cover.src, project.cover.alt));
 
     const mediaFlags = createElement("div", "project-media-flags");
+    const imageCount = getProjectImageCount(project);
     mediaFlags.append(
       createElement(
         "span",
         "media-flag",
-        `${project.gallery.length + 1} image${project.gallery.length ? "s" : ""}`
+        `${imageCount} image${imageCount === 1 ? "" : "s"}`
       )
     );
     if (project.videoUrl) {
@@ -173,6 +174,12 @@ const renderFacts = (project) => {
   });
   return facts;
 };
+
+const galleryIncludesCover = (project) =>
+  Boolean(project.cover?.src && project.gallery.some((item) => item.src === project.cover.src));
+
+const getProjectImageCount = (project) =>
+  project.gallery.length + (project.cover?.src && !galleryIncludesCover(project) ? 1 : 0);
 
 const renderGallery = (project) => {
   const block = createElement("section", "spotlight-block");
@@ -241,8 +248,6 @@ const renderSpotlights = () => {
     const shell = createElement("div", "spotlight-shell");
 
     const sidebar = createElement("div", "spotlight-sidebar");
-    const cover = createElement("figure", "spotlight-cover");
-    cover.append(createImage(project.cover.src, project.cover.alt));
 
     const intro = createElement("div", "spotlight-intro");
     intro.append(createElement("p", "project-kicker", project.kicker));
@@ -267,7 +272,13 @@ const renderSpotlights = () => {
       actions.append(videoLink);
     }
 
-    sidebar.append(cover, intro, renderFacts(project), tags, actions);
+    if (project.cover?.src && !galleryIncludesCover(project)) {
+      const cover = createElement("figure", "spotlight-cover");
+      cover.append(createImage(project.cover.src, project.cover.alt));
+      sidebar.append(cover);
+    }
+
+    sidebar.append(intro, renderFacts(project), tags, actions);
 
     const main = createElement("div", "spotlight-main");
 

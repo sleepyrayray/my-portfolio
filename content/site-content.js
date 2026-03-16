@@ -75,7 +75,7 @@ window.siteContent = {
       color: "#d59a4b",
       cover: {
         src: "assets/projects/spirit-camper/cover.png",
-        alt: "Spirit Camper title screen and opening menu.",
+        alt: "Spirit Camper gameplay screenshot showing the forest landscape and environment building.",
       },
       summary:
         "A quiet narrative-driven adventure built in Unreal Engine 5 where players explore a forest, gather materials, and help Seraphina resolve her unfinished business.",
@@ -87,20 +87,26 @@ window.siteContent = {
       gallery: [
         {
           src: "assets/projects/spirit-camper/1.png",
-          alt: "Spirit Camper gameplay screenshot showing an interior environment.",
-          caption: "Interior exploration and early environmental layout.",
+          alt: "Spirit Camper main menu screen.",
+          caption: "Main menu screen introducing the game's tone and visual identity.",
+          ratio: "wide",
+        },
+        {
+          src: "assets/projects/spirit-camper/cover.png",
+          alt: "Spirit Camper gameplay screenshot showing the forest landscape and environment building.",
+          caption: "Landscape building across the forest environment and traversal spaces.",
           ratio: "wide",
         },
         {
           src: "assets/projects/spirit-camper/2.png",
-          alt: "Spirit Camper gameplay screenshot showing character interaction.",
-          caption: "Player interaction moments that support the narrative flow.",
+          alt: "Spirit Camper gameplay screenshot showing interior exploration.",
+          caption: "Interior exploration through the cabin and enclosed spaces.",
           ratio: "wide",
         },
         {
           src: "assets/projects/spirit-camper/3.png",
-          alt: "Spirit Camper gameplay screenshot showing outdoor traversal.",
-          caption: "Landscape building and traversal across the forest environment.",
+          alt: "Spirit Camper gameplay screenshot showing player interaction.",
+          caption: "Player interaction moments that support the narrative flow.",
           ratio: "wide",
         },
       ],
