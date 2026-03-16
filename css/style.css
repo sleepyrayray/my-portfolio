@@ -219,6 +219,50 @@ textarea {
   gap: 1rem;
 }
 
+.project-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tab-button {
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  color: var(--muted-text);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.project-tab-button:hover,
+.project-tab-button:focus-visible {
+  color: var(--text-color);
+  border-color: rgba(139, 211, 255, 0.45);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.project-tab-button.is-active {
+  color: #061018;
+  border-color: transparent;
+  background-color: var(--accent-color);
+}
+
+.project-panel {
+  display: none;
+}
+
+.project-panel.is-active {
+  display: block;
+  animation: sectionFade 0.35s ease;
+}
+
 .project-main-card,
 .project-gallery-panel,
 .project-video-card {
@@ -241,6 +285,13 @@ textarea {
   font-family: var(--heading-font);
   font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.1;
+}
+
+.project-summary {
+  margin-bottom: 1.5rem;
+  color: var(--muted-text);
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
 .project-meta-list {
@@ -309,8 +360,15 @@ textarea {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.9rem;
+}
+
+.gallery-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gallery-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .gallery-button {
@@ -487,6 +545,10 @@ textarea {
   .project-gallery-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .project-switcher {
+    flex-direction: column;
   }
 
   .project-meta-list {

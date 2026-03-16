@@ -106,163 +106,333 @@
         <!-- Projects section -->
         <section id="projects" class="content-section" aria-labelledby="projects-heading">
           <p class="section-tag">Projects</p>
-          <h2 id="projects-heading" class="section-heading">Spirit Camper</h2>
+          <h2 id="projects-heading" class="section-heading">Selected Projects</h2>
           <p class="section-text">
-            A narrative-driven adventure game built in Unreal Engine 5. The player explores a forest, interacts
-            with characters and objects, gathers materials, and helps Seraphina create a cure for a deadly poison.
+            Choose a project to view one case study at a time. Each project keeps the same clean layout with its
+            own summary, gallery, and walkthrough video.
           </p>
 
-          <div class="project-feature">
-            <!-- Project summary and metadata -->
-            <article class="project-main-card">
-              <div class="project-header-row">
-                <div>
-                  <span class="project-label">Project 01</span>
-                  <h3 class="project-title">Spirit Camper</h3>
+          <!-- Simple project switcher -->
+          <div class="project-switcher" aria-label="Project switcher">
+            <button class="project-tab-button is-active" data-project="spirit-camper" aria-selected="true" type="button">
+              Spirit Camper
+            </button>
+            <button class="project-tab-button" data-project="sheldon" aria-selected="false" type="button">
+              Sheldon
+            </button>
+          </div>
+
+          <!-- Spirit Camper project -->
+          <div class="project-panel is-active" id="spirit-camper-project">
+            <div class="project-feature">
+              <!-- Project summary and metadata -->
+              <article class="project-main-card">
+                <div class="project-header-row">
+                  <div>
+                    <span class="project-label">Project 01</span>
+                    <h3 class="project-title">Spirit Camper</h3>
+                  </div>
+
+                  <ul class="project-meta-list">
+                    <li>
+                      <span>Medium</span>
+                      <strong>Game Design, Unreal Engine 5</strong>
+                    </li>
+                    <li>
+                      <span>Date</span>
+                      <strong>November 2024</strong>
+                    </li>
+                    <li>
+                      <span>Video</span>
+                      <strong>Embedded walkthrough below</strong>
+                    </li>
+                  </ul>
                 </div>
 
-                <ul class="project-meta-list">
-                  <li>
-                    <span>Medium</span>
-                    <strong>Game Design, Unreal Engine 5</strong>
-                  </li>
-                  <li>
-                    <span>Date</span>
-                    <strong>November 2024</strong>
-                  </li>
-                  <li>
-                    <span>Video</span>
-                    <strong>Embedded walkthrough below</strong>
-                  </li>
-                </ul>
-              </div>
+                <p class="project-summary">
+                  A narrative-driven adventure game built in Unreal Engine 5. The player explores a forest,
+                  interacts with characters and objects, gathers materials, and helps Seraphina create a cure
+                  for a deadly poison.
+                </p>
 
-              <div class="project-notes-grid">
-                <article class="project-note">
-                  <h4>Development Summary</h4>
-                  <p>
-                    This was my introduction to Unreal Engine 5 and digital game development. After exploring
-                    several ideas, I chose Spirit Camper for its narrative focus and built the project around
-                    exploration, dialogue, collectibles, and light environmental puzzles.
-                  </p>
-                </article>
+                <div class="project-notes-grid">
+                  <article class="project-note">
+                    <h4>Development Summary</h4>
+                    <p>
+                      This was my introduction to Unreal Engine 5 and digital game development. After exploring
+                      several ideas, I chose Spirit Camper for its narrative focus and built the project around
+                      exploration, dialogue, collectibles, and light environmental puzzles.
+                    </p>
+                  </article>
 
-                <article class="project-note">
-                  <h4>Design and Gameplay</h4>
-                  <p>
-                    I focused on player guidance and usability. Blocked paths, invisible walls, simple interface
-                    elements, and notes placed around the map helped guide players through the story clearly.
-                  </p>
-                </article>
+                  <article class="project-note">
+                    <h4>Design and Gameplay</h4>
+                    <p>
+                      I focused on player guidance and usability. Blocked paths, invisible walls, simple interface
+                      elements, and notes placed around the map helped guide players through the story clearly.
+                    </p>
+                  </article>
 
-                <article class="project-note">
-                  <h4>Technical and Creative Work</h4>
-                  <p>
-                    I sourced and arranged environmental assets such as trees, flowers, and a tombstone to shape
-                    the world and atmosphere. I also implemented teleportation, NPC interaction, and a key and
-                    door system, and used AI-generated voice lines for both characters.
-                  </p>
-                </article>
+                  <article class="project-note">
+                    <h4>Technical and Creative Work</h4>
+                    <p>
+                      I sourced and arranged environmental assets such as trees, flowers, and a tombstone to shape
+                      the world and atmosphere. I also implemented teleportation, NPC interaction, and a key and
+                      door system, and used AI-generated voice lines for both characters.
+                    </p>
+                  </article>
 
-                <article class="project-note">
-                  <h4>Reflection</h4>
-                  <p>
-                    This project was challenging and rewarding because it was my first digital game in Unreal
-                    Engine 5. It taught me a lot about iteration, flexibility, and balancing scope with time. If
-                    I continued it, I would expand the story and add more mechanics.
-                  </p>
-                </article>
-              </div>
-            </article>
-
-            <!-- Project gallery -->
-            <article class="project-gallery-panel">
-              <div class="project-gallery-header">
-                <div>
-                  <span class="project-label">Gallery</span>
-                  <h3 class="gallery-title">Preview images</h3>
+                  <article class="project-note">
+                    <h4>Reflection</h4>
+                    <p>
+                      This project was challenging and rewarding because it was my first digital game in Unreal
+                      Engine 5. It taught me a lot about iteration, flexibility, and balancing scope with time. If
+                      I continued it, I would expand the story and add more mechanics.
+                    </p>
+                  </article>
                 </div>
-                <p class="gallery-help-text">Click a thumbnail to open a larger preview with a caption.</p>
-              </div>
+              </article>
 
-              <div class="gallery-grid">
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-image="assets/images/spirit-camper/1.png"
-                  data-alt="Main menu screen of Spirit Camper"
-                  data-title="Spirit Camper main menu"
-                  data-caption="Main menu screen of Spirit Camper"
-                >
-                  <span class="gallery-thumb">
-                    <img src="assets/images/spirit-camper/1.png" alt="Main menu screen of Spirit Camper" />
-                    <span class="gallery-thumb-label">Main Menu</span>
-                  </span>
-                </button>
+              <!-- Project gallery -->
+              <article class="project-gallery-panel">
+                <div class="project-gallery-header">
+                  <div>
+                    <span class="project-label">Gallery</span>
+                    <h3 class="gallery-title">Preview images</h3>
+                  </div>
+                  <p class="gallery-help-text">Click a thumbnail to open a larger preview with a caption.</p>
+                </div>
 
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-image="assets/images/spirit-camper/2.png"
-                  data-alt="Early gameplay test inside an interior space"
-                  data-title="Spirit Camper interior test"
-                  data-caption="Early gameplay test inside an interior space"
-                >
-                  <span class="gallery-thumb">
-                    <img src="assets/images/spirit-camper/2.png" alt="Early gameplay test inside an interior space" />
-                    <span class="gallery-thumb-label">Interior Test</span>
-                  </span>
-                </button>
+                <div class="gallery-grid gallery-grid-four">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/spirit-camper/1.png"
+                    data-alt="Main menu screen of Spirit Camper"
+                    data-title="Spirit Camper main menu"
+                    data-caption="Main menu screen of Spirit Camper"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/spirit-camper/1.png" alt="Main menu screen of Spirit Camper" />
+                      <span class="gallery-thumb-label">Main Menu</span>
+                    </span>
+                  </button>
 
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-image="assets/images/spirit-camper/3.png"
-                  data-alt="Forest exploration and environment design"
-                  data-title="Spirit Camper forest exploration"
-                  data-caption="Forest exploration and environment design"
-                >
-                  <span class="gallery-thumb">
-                    <img src="assets/images/spirit-camper/3.png" alt="Forest exploration and environment design" />
-                    <span class="gallery-thumb-label">Forest View</span>
-                  </span>
-                </button>
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/spirit-camper/2.png"
+                    data-alt="Early gameplay test inside an interior space"
+                    data-title="Spirit Camper interior test"
+                    data-caption="Early gameplay test inside an interior space"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/spirit-camper/2.png" alt="Early gameplay test inside an interior space" />
+                      <span class="gallery-thumb-label">Interior Test</span>
+                    </span>
+                  </button>
 
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-image="assets/images/spirit-camper/4.png"
-                  data-alt="Dialogue scene with the player and Seraphina"
-                  data-title="Spirit Camper dialogue scene"
-                  data-caption="Dialogue scene with the player and Seraphina"
-                >
-                  <span class="gallery-thumb">
-                    <img src="assets/images/spirit-camper/4.png" alt="Dialogue scene with the player and Seraphina" />
-                    <span class="gallery-thumb-label">Dialogue Scene</span>
-                  </span>
-                </button>
-              </div>
-            </article>
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/spirit-camper/3.png"
+                    data-alt="Forest exploration and environment design"
+                    data-title="Spirit Camper forest exploration"
+                    data-caption="Forest exploration and environment design"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/spirit-camper/3.png" alt="Forest exploration and environment design" />
+                      <span class="gallery-thumb-label">Forest View</span>
+                    </span>
+                  </button>
 
-            <!-- Walkthrough video -->
-            <article class="project-video-card">
-              <span class="project-label">Walkthrough Video</span>
-              <h3>Watch the Spirit Camper gameplay walkthrough here.</h3>
-              <p>
-                This embed keeps the video directly inside the project page instead of sending visitors to a link.
-              </p>
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/spirit-camper/4.png"
+                    data-alt="Dialogue scene with the player and Seraphina"
+                    data-title="Spirit Camper dialogue scene"
+                    data-caption="Dialogue scene with the player and Seraphina"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/spirit-camper/4.png" alt="Dialogue scene with the player and Seraphina" />
+                      <span class="gallery-thumb-label">Dialogue Scene</span>
+                    </span>
+                  </button>
+                </div>
+              </article>
 
-              <div class="video-frame">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/FUAOf7wHHUY"
-                  title="Spirit Camper gameplay walkthrough"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </article>
+              <!-- Walkthrough video -->
+              <article class="project-video-card">
+                <span class="project-label">Walkthrough Video</span>
+                <h3>Watch the Spirit Camper gameplay walkthrough here.</h3>
+                <p>
+                  This embed keeps the video directly inside the project page instead of sending visitors to a link.
+                </p>
+
+                <div class="video-frame">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/FUAOf7wHHUY"
+                    title="Spirit Camper gameplay walkthrough"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Sheldon project -->
+          <div class="project-panel" id="sheldon-project">
+            <div class="project-feature">
+              <!-- Project summary and metadata -->
+              <article class="project-main-card">
+                <div class="project-header-row">
+                  <div>
+                    <span class="project-label">Project 02</span>
+                    <h3 class="project-title">Sheldon</h3>
+                  </div>
+
+                  <ul class="project-meta-list">
+                    <li>
+                      <span>Medium</span>
+                      <strong>Scratch, Photoshop, Micro:bit, Programming, Clay Sculpture</strong>
+                    </li>
+                    <li>
+                      <span>Date</span>
+                      <strong>December 2024</strong>
+                    </li>
+                    <li>
+                      <span>Video</span>
+                      <strong>Embedded walkthrough below</strong>
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="project-summary">
+                  Sheldon is a hybrid pet simulator that combines a clay turtle sculpture, micro:bit interaction,
+                  and a Scratch game. Players pet the turtle to raise its friendship meter, creating a simple and
+                  relaxing interactive experience.
+                </p>
+
+                <div class="project-notes-grid">
+                  <article class="project-note">
+                    <h4>Development Summary</h4>
+                    <p>
+                      My teammate and I created Sheldon as a hybrid project that joined physical and digital
+                      interaction. Inspired by a classmate's turtle-themed design, we explored how a sculpted
+                      object and a digital game could work together through touch input and Scratch gameplay.
+                    </p>
+                  </article>
+
+                  <article class="project-note">
+                    <h4>My Role</h4>
+                    <p>
+                      I focused on the digital side by designing and coding the gameplay and menu in Scratch,
+                      building the friendship meter, writing Sheldon's dialogue, and shaping his reactions. I also
+                      sourced and edited AI-generated turtle images and used AI-generated voice lines for sound.
+                    </p>
+                  </article>
+
+                  <article class="project-note">
+                    <h4>Physical and Digital Link</h4>
+                    <p>
+                      My partner sculpted the turtle in clay and used copper tape on the shell and belly to
+                      connect it to the micro:bit. That setup made the turtle responsive to touch and let the
+                      player's physical interaction directly affect the game.
+                    </p>
+                  </article>
+
+                  <article class="project-note">
+                    <h4>Reflection</h4>
+                    <p>
+                      I am proud of how this project turned out. It brought together sculpture, programming, and
+                      interaction in a playful way, and the mix of physical object and digital interface helped
+                      Sheldon feel engaging and complete. With more time, I would expand the story and add more
+                      characters.
+                    </p>
+                  </article>
+                </div>
+              </article>
+
+              <!-- Project gallery -->
+              <article class="project-gallery-panel">
+                <div class="project-gallery-header">
+                  <div>
+                    <span class="project-label">Gallery</span>
+                    <h3 class="gallery-title">Preview images</h3>
+                  </div>
+                  <p class="gallery-help-text">Click a thumbnail to open a larger preview with a caption.</p>
+                </div>
+
+                <div class="gallery-grid gallery-grid-three">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/sheldon/1.JPG"
+                    data-alt="Physical setup linking the turtle to the digital game"
+                    data-title="Sheldon physical setup"
+                    data-caption="Physical setup linking the turtle to the digital game"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/sheldon/1.JPG" alt="Physical setup linking the turtle to the digital game" />
+                      <span class="gallery-thumb-label">Physical Setup</span>
+                    </span>
+                  </button>
+
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/sheldon/2.jpg"
+                    data-alt="Clay turtle sculpture connected for touch input"
+                    data-title="Sheldon turtle sculpture"
+                    data-caption="Clay turtle sculpture connected for touch input"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/sheldon/2.jpg" alt="Clay turtle sculpture connected for touch input" />
+                      <span class="gallery-thumb-label">Clay Sculpture</span>
+                    </span>
+                  </button>
+
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-image="assets/images/sheldon/3.png"
+                    data-alt="Friendship meter and dialogue system in action"
+                    data-title="Sheldon friendship meter"
+                    data-caption="Friendship meter and dialogue system in action"
+                  >
+                    <span class="gallery-thumb">
+                      <img src="assets/images/sheldon/3.png" alt="Friendship meter and dialogue system in action" />
+                      <span class="gallery-thumb-label">Friendship Meter</span>
+                    </span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Walkthrough video -->
+              <article class="project-video-card">
+                <span class="project-label">Walkthrough Video</span>
+                <h3>Watch the Sheldon gameplay walkthrough here.</h3>
+                <p>
+                  This embed shows the hybrid interaction directly on the page, including the touch input and the
+                  Scratch-based interface.
+                </p>
+
+                <div class="video-frame">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/ht8jK31BSgM"
+                    title="Sheldon gameplay walkthrough"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </article>
+            </div>
           </div>
         </section>
 

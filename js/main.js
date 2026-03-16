@@ -1,6 +1,8 @@
 // Get all navigation buttons and all content sections.
 const navButtons = document.querySelectorAll(".nav-button");
 const contentSections = document.querySelectorAll(".content-section");
+const projectTabButtons = document.querySelectorAll(".project-tab-button");
+const projectPanels = document.querySelectorAll(".project-panel");
 const galleryButtons = document.querySelectorAll(".gallery-button");
 const galleryModal = document.getElementById("gallery-modal");
 const galleryModalImage = document.getElementById("gallery-modal-image");
@@ -10,6 +12,7 @@ const galleryCloseButton = document.getElementById("gallery-close-button");
 
 // This is the section we want to show first.
 const defaultSectionId = "home";
+const defaultProjectId = "spirit-camper";
 
 // Show one section and hide the others.
 function showSection(sectionId) {
@@ -20,6 +23,20 @@ function showSection(sectionId) {
 
   navButtons.forEach(function (button) {
     const isCurrentButton = button.dataset.section === sectionId;
+    button.classList.toggle("is-active", isCurrentButton);
+    button.setAttribute("aria-selected", isCurrentButton);
+  });
+}
+
+// Show one project inside the projects section and hide the others.
+function showProject(projectId) {
+  projectPanels.forEach(function (panel) {
+    const isCurrentProject = panel.id === projectId + "-project";
+    panel.classList.toggle("is-active", isCurrentProject);
+  });
+
+  projectTabButtons.forEach(function (button) {
+    const isCurrentButton = button.dataset.project === projectId;
     button.classList.toggle("is-active", isCurrentButton);
     button.setAttribute("aria-selected", isCurrentButton);
   });
@@ -55,6 +72,14 @@ navButtons.forEach(function (button) {
   });
 });
 
+// Add a click event to each project switcher button.
+projectTabButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const selectedProjectId = button.dataset.project;
+    showProject(selectedProjectId);
+  });
+});
+
 // Add a click event to each gallery thumbnail.
 galleryButtons.forEach(function (button) {
   button.addEventListener("click", function () {
@@ -83,3 +108,4 @@ document.addEventListener("keydown", function (event) {
 
 // Show the default section when the page first loads.
 showSection(defaultSectionId);
+showProject(defaultProjectId);
