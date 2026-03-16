@@ -16,7 +16,7 @@ This repo now includes a responsive static portfolio scaffold with:
 ## Edit Later
 
 - Update text in `content/site-content.js`
-- Replace placeholder art in `assets/placeholders/`
+- Replace cover and gallery images inside `assets/projects/`
 - Adjust styling in `styles.css`
 
 ## Run

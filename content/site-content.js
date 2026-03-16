@@ -1,60 +1,61 @@
 window.siteContent = {
   name: "Ray Hernaez",
-  role: "Game Designer, Interactive Media Maker, and Visual Storyteller",
+  role: "Game Designer / Interactive Media / Visual Storytelling",
   hero: {
-    eyebrow: "Selected Portfolio Rebuild",
-    title: "Interactive worlds, tactile experiments, and visual storytelling with a point of view.",
+    eyebrow: "Selected Portfolio",
+    title: "Game design, physical interaction, and mixed-media storytelling built to be explored.",
     copy:
-      "This scaffold turns the old long-form portfolio into a cleaner, modern showcase for projects spanning game design, physical computing, board game systems, and mixed media art. The structure is simple to edit now and flexible enough to grow later.",
+      "This rebuild turns the old long-form portfolio into a clearer, image-led showcase. It highlights projects where mechanics, atmosphere, and visual choices work together, from Unreal Engine environments and Scratch plus micro:bit experiments to board game systems and tactile art studies.",
     stats: [
-      { value: "5", label: "selected projects" },
-      { value: "2024-2025", label: "featured work span" },
-      { value: "Game design + mixed media", label: "core focus" },
+      { value: "5", label: "featured projects" },
+      { value: "3", label: "embedded walkthroughs" },
+      { value: "2024-2025", label: "current work span" },
     ],
     focus: [
       "Narrative systems",
-      "Physical interaction",
+      "Physical play",
       "Worldbuilding",
-      "Visual storytelling",
+      "Collaborative design",
+      "Mixed-media process",
     ],
   },
   about: {
     eyebrow: "About",
-    title: "I make work that invites people to explore, touch, and participate.",
+    title: "I make projects that ask people to explore, touch, notice, and participate.",
     paragraphs: [
-      "My projects sit between game design, physical interaction, and visual art. I am especially drawn to work where mechanics support story, interfaces shape emotion, and the final result feels handmade rather than generic.",
-      "Across Unreal Engine prototypes, Scratch and micro:bit experiments, tabletop systems, and mixed-media art, I keep returning to the same questions: how does a project guide people, what makes an interaction memorable, and how can visual choices carry meaning beyond decoration?",
+      "My work moves between digital games, physical computing, board game design, and mixed media. I am most interested in projects where interaction supports emotion, where visuals carry narrative weight, and where the final result feels crafted rather than templated.",
+      "Across Unreal Engine prototypes, Scratch and micro:bit builds, tabletop systems, and material-based art, I keep returning to the same questions: how does a project guide someone clearly, what makes an interaction memorable, and how can the form of the work deepen the idea behind it?",
     ],
     points: [
       {
         title: "Design Lens",
-        text: "I focus on systems that are clear to learn, expressive to use, and grounded in a strong concept.",
+        text: "I focus on readable systems, strong concepts, and experiences that feel intentional from the first interaction to the final reflection.",
       },
       {
         title: "Process",
-        text: "Research, prototyping, iteration, and reflection are central to how I build and evaluate work.",
+        text: "Research, prototyping, iteration, and visual polish all matter to me, especially when they make a project easier to understand and stronger to experience.",
       },
       {
         title: "Medium Range",
-        text: "My portfolio moves across digital games, physical computing, board game design, and mixed media.",
+        text: "My portfolio spans narrative games, tactile interactive builds, collaborative board game systems, and artwork shaped by observation and experimentation.",
       },
       {
-        title: "What Matters",
-        text: "I care about atmosphere, accessibility, emotional clarity, and building experiences people want to stay with.",
+        title: "What I Care About",
+        text: "Atmosphere, accessibility, pacing, and emotional clarity are what I keep trying to sharpen in every project.",
       },
     ],
   },
   projectsIntro: {
     eyebrow: "Selected Projects",
-    title: "A tighter view of the work worth leading with.",
+    title: "A tighter set of projects worth spending time with.",
     intro:
-      "These five projects capture the strongest themes from the old site: interactive storytelling, physical play, tactile prototyping, and art that transforms concept into experience.",
+      "These projects show the strongest patterns in my work: story-driven interaction, physical experimentation, prototyping through iteration, and visual ideas that push beyond surface aesthetics.",
   },
   contact: {
     eyebrow: "Contact",
     title: "Let’s talk about games, interactive systems, and visual storytelling.",
     body:
-      "Update the email and links below with your real contact details when you are ready. This section is intentionally lightweight so it can later become a dedicated contact page or stay part of the landing page.",
+      "The contact details below are still placeholders, but the structure is ready for your real email and links whenever you want to swap them in.",
     email: "hello@your-email.com",
     location: "Toronto, ON / Remote",
     links: [
@@ -70,29 +71,54 @@ window.siteContent = {
       kicker: "Narrative Game Design",
       date: "November 2024",
       medium: "Game Design, Unreal Engine 5",
+      status: "Solo project",
       color: "#d59a4b",
-      image: "assets/placeholders/spirit-camper.svg",
-      alt: "Placeholder cover for Spirit Camper project imagery.",
+      cover: {
+        src: "assets/projects/spirit-camper/cover.png",
+        alt: "Spirit Camper title screen and opening menu.",
+      },
       summary:
         "A quiet narrative-driven adventure built in Unreal Engine 5 where players explore a forest, gather materials, and help Seraphina resolve her unfinished business.",
       role:
-        "Concept development, gameplay design, environment building, interaction flow, and UI/UX decisions.",
+        "Concept development, gameplay design, environment building, interaction flow, and UI decisions.",
       focus: ["Exploration", "NPC interaction", "Environmental puzzles"],
+      videoUrl: "https://youtu.be/FUAOf7wHHUY",
+      videoLabel: "Watch walkthrough",
+      gallery: [
+        {
+          src: "assets/projects/spirit-camper/1.png",
+          alt: "Spirit Camper gameplay screenshot showing an interior environment.",
+          caption: "Interior exploration and early environmental layout.",
+          ratio: "wide",
+        },
+        {
+          src: "assets/projects/spirit-camper/2.png",
+          alt: "Spirit Camper gameplay screenshot showing character interaction.",
+          caption: "Player interaction moments that support the narrative flow.",
+          ratio: "wide",
+        },
+        {
+          src: "assets/projects/spirit-camper/3.png",
+          alt: "Spirit Camper gameplay screenshot showing outdoor traversal.",
+          caption: "Landscape building and traversal across the forest environment.",
+          ratio: "wide",
+        },
+      ],
       contributions: [
-        "Brainstormed multiple game concepts and selected a narrative direction that could be scoped realistically.",
-        "Created a high-concept document to simplify the game structure and focus on essential mechanics.",
+        "Brainstormed multiple game concepts and selected a direction that could be scoped realistically within the project timeline.",
+        "Created a high-concept document to simplify the game structure and focus on the core interaction loop.",
         "Shaped the player journey through notes, blocked paths, and other subtle guidance systems.",
       ],
       process: [
         {
           title: "Scope with intention",
           text:
-            "Because the project was also a first deep dive into UE5, the design deliberately favored a smaller set of interaction loops over more complex cutscene-heavy storytelling.",
+            "Because the project was also a first deep dive into UE5, the design favored a smaller set of interaction loops over more technically heavy cinematic features.",
         },
         {
           title: "Guide the player clearly",
           text:
-            "Invisible walls, gated progression, and collectible clues were used to support the narrative flow without overwhelming the player.",
+            "Invisible walls, gated progression, and collectible clues were used to support the intended narrative flow without making the experience feel overly restrictive.",
         },
         {
           title: "Build atmosphere",
@@ -105,7 +131,6 @@ window.siteContent = {
         "Strengthened confidence with Unreal Engine 5 systems and environmental worldbuilding.",
         "Saw how simple mechanics can still create a meaningful narrative experience.",
       ],
-      mediaNote: "Replace this placeholder with a title screen, gameplay still, or walkthrough thumbnail.",
     },
     {
       slug: "sheldon",
@@ -113,14 +138,33 @@ window.siteContent = {
       kicker: "Interactive Pet Simulator",
       date: "December 2024",
       medium: "Scratch, Photoshop, micro:bit, Programming, Clay Sculpture",
+      status: "Collaborative project",
       color: "#7ec6ae",
-      image: "assets/placeholders/sheldon.svg",
-      alt: "Placeholder cover for Sheldon project imagery.",
+      cover: {
+        src: "assets/projects/sheldon/cover.png",
+        alt: "Sheldon game interface with the turtle character and friendship meter.",
+      },
       summary:
         "A hybrid pet simulator where players hold and pet a clay turtle connected to a micro:bit while a Scratch-based interface tracks Sheldon’s friendship level.",
       role:
         "Digital design lead for gameplay, interface, friendship meter logic, dialogue writing, and AI-assisted visual and voice integration.",
       focus: ["Physical interaction", "Scratch interface", "Friendly casual play"],
+      videoUrl: "https://youtu.be/ht8jK31BSgM",
+      videoLabel: "Watch demo",
+      gallery: [
+        {
+          src: "assets/projects/sheldon/1.JPG",
+          alt: "Clay turtle sculpture wired for touch interaction.",
+          caption: "The physical turtle build and touch-based circuitry.",
+          ratio: "portrait",
+        },
+        {
+          src: "assets/projects/sheldon/2.jpg",
+          alt: "Development setup showing the Scratch project and micro:bit connection.",
+          caption: "Scratch development and micro:bit integration during production.",
+          ratio: "landscape",
+        },
+      ],
       contributions: [
         "Worked with a teammate to combine physical sculpture and digital game design into one experience.",
         "Built the gameplay flow and menu structure in Scratch, including Sheldon’s friendship meter.",
@@ -130,7 +174,7 @@ window.siteContent = {
         {
           title: "Merge tactile and digital play",
           text:
-            "The core concept centered on creating a pet simulator where touch in the physical world would affect emotional progress in the digital one.",
+            "The project centered on making physical touch matter, so petting the clay turtle would directly affect emotional progress in the digital interface.",
         },
         {
           title: "Make feedback feel gentle",
@@ -140,7 +184,7 @@ window.siteContent = {
         {
           title: "Build personality into the system",
           text:
-            "AI-generated images and voice lines were edited and integrated to help give Sheldon a more distinct presence.",
+            "AI-generated images and voice lines were edited and integrated to help Sheldon feel like a character rather than a simple meter mechanic.",
         },
       ],
       takeaways: [
@@ -148,7 +192,6 @@ window.siteContent = {
         "Learned more about collaborative work split across physical and digital responsibilities.",
         "Confirmed how strong character framing can elevate a simple interaction loop.",
       ],
-      mediaNote: "Replace with clay sculpture photos, the Scratch UI, or a short demo still.",
     },
     {
       slug: "vampire-slayer",
@@ -156,14 +199,27 @@ window.siteContent = {
       kicker: "Physical Game Prototype",
       date: "November 2024",
       medium: "Electronics, Programming, micro:bits, Cardboard",
+      status: "Collaborative project",
       color: "#c86f67",
-      image: "assets/placeholders/vampire-slayer.svg",
-      alt: "Placeholder cover for Vampire Slayer project imagery.",
+      cover: {
+        src: "assets/projects/vampire-slayer/cover.jpg",
+        alt: "Finished Vampire Slayer arcade box prototype.",
+      },
       summary:
         "A light-based arcade project inspired by Whack-a-Mole, where players use phone flashlights to force vampire heads back into hiding.",
       role:
         "Concepting, prototyping, aesthetics, material sourcing, and collaborative system assembly.",
       focus: ["Physical computing", "Arcade interaction", "Prototype iteration"],
+      videoUrl: "https://youtu.be/KpaRr-BpMeA",
+      videoLabel: "Watch gameplay",
+      gallery: [
+        {
+          src: "assets/projects/vampire-slayer/1.jpg",
+          alt: "Cardboard mechanism layout for the Vampire Slayer prototype.",
+          caption: "Internal prototype mechanics and layout before the final shell was assembled.",
+          ratio: "square",
+        },
+      ],
       contributions: [
         "Helped shape the concept from a Whack-a-Mole starting point into a vampire-themed light mechanic.",
         "Supported the build with materials, structural decisions, and the final red-and-black visual direction.",
@@ -191,7 +247,6 @@ window.siteContent = {
         "Saw how iteration on mechanisms is just as important as visual presentation.",
         "Learned how a playful concept becomes more memorable when theme and interaction align.",
       ],
-      mediaNote: "Replace with the full game box, mechanism photos, or a short gameplay clip preview.",
     },
     {
       slug: "evil",
@@ -199,14 +254,43 @@ window.siteContent = {
       kicker: "Board Game Design",
       date: "March 2025",
       medium: "Board Game Design",
+      status: "Collaborative project",
       color: "#9cb864",
-      image: "assets/placeholders/evil.svg",
-      alt: "Placeholder cover for E.V.I.L. project imagery.",
+      cover: {
+        src: "assets/projects/evil/cover.jpg",
+        alt: "Final E.V.I.L. board game setup with board and cards.",
+      },
       summary:
         "A three-player cooperative strategy board game where legendary villains battle across branching paths of heroes using ability cards, companion cards, and coordinated team play.",
       role:
-        "Led the MDA thinking and core concept, supported character ideation, board art, balance changes, and rulebook development.",
+        "Led the MDA thinking and core concept, supported character ideation, board art, balancing, and rulebook development.",
       focus: ["Systems design", "Playtesting", "Team coordination"],
+      gallery: [
+        {
+          src: "assets/projects/evil/1.jpg",
+          alt: "Close view of the E.V.I.L. board map and route system.",
+          caption: "Board map composition and the path structure players navigate together.",
+          ratio: "landscape",
+        },
+        {
+          src: "assets/projects/evil/2.jpg",
+          alt: "Prototype board layout and early development materials for E.V.I.L.",
+          caption: "Prototype board planning and early development materials.",
+          ratio: "landscape",
+        },
+        {
+          src: "assets/projects/evil/3.jpg",
+          alt: "Rulebook spread and card components for E.V.I.L.",
+          caption: "Rulebook design and the visual system for abilities and outcomes.",
+          ratio: "wide",
+        },
+        {
+          src: "assets/projects/evil/4.jpg",
+          alt: "Playtest session for E.V.I.L. with players holding cards around the board.",
+          caption: "Playtesting helped tune pacing, teamwork, and card balance.",
+          ratio: "wide",
+        },
+      ],
       contributions: [
         "Pitched the central concept and flow, then helped guide the project around a clear cooperative identity.",
         "Designed and drew the final board map while also contributing to character ideation and presentation.",
@@ -234,7 +318,6 @@ window.siteContent = {
         "Learned how theme becomes more powerful when every mechanic supports it.",
         "Came away with a stronger sense of collaborative leadership in a multi-role team project.",
       ],
-      mediaNote: "Replace with the final board, rulebook spreads, card layouts, or a playtest photo.",
     },
     {
       slug: "frottage",
@@ -242,18 +325,41 @@ window.siteContent = {
       kicker: "Mixed Media / Texture Study",
       date: "September 2024",
       medium: "Frottage Textures, Mixed Media",
+      status: "Solo project",
       color: "#7fa4d6",
-      image: "assets/placeholders/frottage.svg",
-      alt: "Placeholder cover for Frottage project imagery.",
+      cover: {
+        src: "assets/projects/frottage/cover.jpg",
+        alt: "Frottage artwork featuring a butterfly-like form.",
+      },
       summary:
         "A mixed-media exploration of frottage where everyday texture rubbings became three distinct artworks about freedom, ascent, and unease.",
       role:
         "Collected source textures, interpreted hidden figures through pareidolia, and transformed the rubbings into finished image-based narratives.",
       focus: ["Material observation", "Pareidolia", "Narrative image-making"],
+      gallery: [
+        {
+          src: "assets/projects/frottage/1.jpg",
+          alt: "Frottage artwork inspired by layered terrain and ascent.",
+          caption: "A terrain-like composition that reimagines texture as movement upward.",
+          ratio: "portrait",
+        },
+        {
+          src: "assets/projects/frottage/2.jpg",
+          alt: "Frottage texture study transformed into an atmospheric composition.",
+          caption: "Texture becomes image through color, framing, and reinterpretation.",
+          ratio: "portrait",
+        },
+        {
+          src: "assets/projects/frottage/3.jpg",
+          alt: "Frottage artwork with shadowy forms and red accents.",
+          caption: "A darker piece that uses minimal color to create unease.",
+          ratio: "portrait",
+        },
+      ],
       contributions: [
         "Gathered rubbings from sidewalks, tree trunks, and shoe soles as the raw material for the work.",
-        "Reinterpreted textures into three separate pieces including Flight of the Free, Heavenly Ascent, and The Staring Shadows.",
-        "Used Photoshop selectively to enhance mood, color, contrast, and conceptual clarity without losing the tactile origin.",
+        "Reinterpreted textures into three separate pieces, each with its own emotional register and narrative direction.",
+        "Used Photoshop selectively to enhance mood, color, and contrast without losing the tactile origin of the source material.",
       ],
       process: [
         {
@@ -277,7 +383,6 @@ window.siteContent = {
         "Learned how minimal digital intervention can amplify a tactile process.",
         "Confirmed an interest in work that bridges observation, experimentation, and storytelling.",
       ],
-      mediaNote: "Replace with the butterfly piece, the stairway piece, and the red-eyed shadow composition.",
     },
   ],
 };
