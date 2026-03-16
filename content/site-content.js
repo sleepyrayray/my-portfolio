@@ -148,7 +148,7 @@ window.siteContent = {
       color: "#7ec6ae",
       cover: {
         src: "assets/projects/sheldon/cover.png",
-        alt: "Sheldon game interface with the turtle character and friendship meter.",
+        alt: "Sheldon gameplay screen with the turtle character and friendship meter.",
       },
       summary:
         "A hybrid pet simulator where players hold and pet a clay turtle connected to a micro:bit while a Scratch-based interface tracks Sheldon’s friendship level.",
@@ -159,16 +159,22 @@ window.siteContent = {
       videoLabel: "Watch demo",
       gallery: [
         {
-          src: "assets/projects/sheldon/1.JPG",
-          alt: "Clay turtle sculpture wired for touch interaction.",
-          caption: "The physical turtle build and touch-based circuitry.",
-          ratio: "portrait",
+          src: "assets/projects/sheldon/cover.png",
+          alt: "Sheldon gameplay screen with the turtle character and friendship meter.",
+          caption: "Screen gameplay showing Sheldon's interface, dialogue, and friendship meter.",
+          ratio: "landscape",
         },
         {
           src: "assets/projects/sheldon/2.jpg",
-          alt: "Development setup showing the Scratch project and micro:bit connection.",
+          alt: "Scratch development view for Sheldon with gameplay screens and micro:bit logic.",
           caption: "Scratch development and micro:bit integration during production.",
           ratio: "landscape",
+        },
+        {
+          src: "assets/projects/sheldon/1.JPG",
+          alt: "Clay turtle sculpture used as the physical controller for Sheldon.",
+          caption: "The physical turtle build that players hold and pet during play.",
+          ratio: "portrait",
         },
       ],
       contributions: [
@@ -209,7 +215,7 @@ window.siteContent = {
       color: "#c86f67",
       cover: {
         src: "assets/projects/vampire-slayer/cover.jpg",
-        alt: "Finished Vampire Slayer arcade box prototype.",
+        alt: "Finished Vampire Slayer build with the completed arcade shell.",
       },
       summary:
         "A light-based arcade project inspired by Whack-a-Mole, where players use phone flashlights to force vampire heads back into hiding.",
@@ -220,9 +226,15 @@ window.siteContent = {
       videoLabel: "Watch gameplay",
       gallery: [
         {
+          src: "assets/projects/vampire-slayer/cover.jpg",
+          alt: "Finished Vampire Slayer build with the completed arcade shell.",
+          caption: "The finished version of the build with the full arcade shell and vampire theme.",
+          ratio: "square",
+        },
+        {
           src: "assets/projects/vampire-slayer/1.jpg",
-          alt: "Cardboard mechanism layout for the Vampire Slayer prototype.",
-          caption: "Internal prototype mechanics and layout before the final shell was assembled.",
+          alt: "Internal Vampire Slayer prototype showing the mechanism and layout before finishing.",
+          caption: "An internal prototype showing the mechanism and layout before the final shell was assembled.",
           ratio: "square",
         },
       ],
@@ -264,7 +276,7 @@ window.siteContent = {
       color: "#9cb864",
       cover: {
         src: "assets/projects/evil/cover.jpg",
-        alt: "Final E.V.I.L. board game setup with board and cards.",
+        alt: "E.V.I.L. board map showing the main play area and branching routes.",
       },
       summary:
         "A three-player cooperative strategy board game where legendary villains battle across branching paths of heroes using ability cards, companion cards, and coordinated team play.",
@@ -273,27 +285,33 @@ window.siteContent = {
       focus: ["Systems design", "Playtesting", "Team coordination"],
       gallery: [
         {
+          src: "assets/projects/evil/cover.jpg",
+          alt: "E.V.I.L. board map showing the main play area and branching routes.",
+          caption: "The board map and route system that organize the main cooperative play space.",
+          ratio: "landscape",
+        },
+        {
           src: "assets/projects/evil/1.jpg",
-          alt: "Close view of the E.V.I.L. board map and route system.",
-          caption: "Board map composition and the path structure players navigate together.",
+          alt: "Early E.V.I.L. prototype board plan used to map the game structure.",
+          caption: "Prototype board planning used to shape the route system and overall flow.",
           ratio: "landscape",
         },
         {
           src: "assets/projects/evil/2.jpg",
-          alt: "Prototype board layout and early development materials for E.V.I.L.",
-          caption: "Prototype board planning and early development materials.",
+          alt: "E.V.I.L. playtesting session with players gathered around the board.",
+          caption: "Playtesting helped tune pacing, teamwork, and moment-to-moment balance.",
           ratio: "landscape",
         },
         {
           src: "assets/projects/evil/3.jpg",
-          alt: "Rulebook spread and card components for E.V.I.L.",
-          caption: "Rulebook design and the visual system for abilities and outcomes.",
+          alt: "E.V.I.L. card designs showing the visual treatment for abilities and companions.",
+          caption: "Card designs that define abilities, companions, and supporting visual cues.",
           ratio: "wide",
         },
         {
           src: "assets/projects/evil/4.jpg",
-          alt: "Playtest session for E.V.I.L. with players holding cards around the board.",
-          caption: "Playtesting helped tune pacing, teamwork, and card balance.",
+          alt: "E.V.I.L. rulebook spread explaining the game's systems and turn flow.",
+          caption: "The rulebook that explains turn structure, systems, and how the team coordinates.",
           ratio: "wide",
         },
       ],
@@ -335,7 +353,7 @@ window.siteContent = {
       color: "#7fa4d6",
       cover: {
         src: "assets/projects/frottage/cover.jpg",
-        alt: "Frottage artwork featuring a butterfly-like form.",
+        alt: "Frottage artwork featuring a butterfly-like form exploring flight versus groundedness.",
       },
       summary:
         "A mixed-media exploration of frottage where everyday texture rubbings became three distinct artworks about freedom, ascent, and unease.",
@@ -344,21 +362,27 @@ window.siteContent = {
       focus: ["Material observation", "Pareidolia", "Narrative image-making"],
       gallery: [
         {
+          src: "assets/projects/frottage/cover.jpg",
+          alt: "Frottage artwork featuring a butterfly-like form exploring flight versus groundedness.",
+          caption: "A butterfly image exploring the contrast between flight and groundedness.",
+          ratio: "square",
+        },
+        {
           src: "assets/projects/frottage/1.jpg",
-          alt: "Frottage artwork inspired by layered terrain and ascent.",
-          caption: "A terrain-like composition that reimagines texture as movement upward.",
+          alt: "Frottage artwork showing a rib-like skeletal form with a heart inside.",
+          caption: "A rib-like skeletal form with a heart nested inside the composition.",
           ratio: "portrait",
         },
         {
           src: "assets/projects/frottage/2.jpg",
-          alt: "Frottage texture study transformed into an atmospheric composition.",
-          caption: "Texture becomes image through color, framing, and reinterpretation.",
+          alt: "Frottage artwork shaped into a terrain-like composition.",
+          caption: "A terrain-focused composition shaped from layered surface textures.",
           ratio: "portrait",
         },
         {
           src: "assets/projects/frottage/3.jpg",
-          alt: "Frottage artwork with shadowy forms and red accents.",
-          caption: "A darker piece that uses minimal color to create unease.",
+          alt: "Frottage artwork with darker forms and red accents.",
+          caption: "A darker piece that leans into shadow, weight, and unease.",
           ratio: "portrait",
         },
       ],
