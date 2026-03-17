@@ -9,10 +9,21 @@ const galleryModalImage = document.getElementById("gallery-modal-image");
 const galleryModalTitle = document.getElementById("gallery-modal-title");
 const galleryModalCaption = document.getElementById("gallery-modal-caption");
 const galleryCloseButton = document.getElementById("gallery-close-button");
+const currentYear = document.getElementById("current-year");
 
 // This is the section we want to show first.
 const defaultSectionId = "home";
-const defaultProjectId = "spirit-camper";
+
+function clearProjectSelection() {
+  projectPanels.forEach(function (panel) {
+    panel.classList.remove("is-active");
+  });
+
+  projectTabButtons.forEach(function (button) {
+    button.classList.remove("is-active");
+    button.setAttribute("aria-selected", "false");
+  });
+}
 
 // Show one section and hide the others.
 function showSection(sectionId) {
@@ -26,6 +37,10 @@ function showSection(sectionId) {
     button.classList.toggle("is-active", isCurrentButton);
     button.setAttribute("aria-selected", isCurrentButton);
   });
+
+  if (sectionId === "projects") {
+    clearProjectSelection();
+  }
 }
 
 // Show one project inside the projects section and hide the others.
@@ -108,4 +123,7 @@ document.addEventListener("keydown", function (event) {
 
 // Show the default section when the page first loads.
 showSection(defaultSectionId);
-showProject(defaultProjectId);
+
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}

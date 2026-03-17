@@ -1,22 +1,22 @@
-# Portfolio Site
+# Ray Hernaez Portfolio
 
 ## Short Description
-A dark, minimalist portfolio site built with plain HTML, CSS, and JavaScript.
+A personal portfolio website for Ray Hernaez, built with plain HTML, CSS, and JavaScript.
 
 ## Purpose of the Site
-This project is a personal portfolio website for presenting creative and interactive work in a clean, easy-to-navigate format. The site focuses on simple section switching, project case studies, and image galleries that open larger previews.
+This site presents Ray Hernaez's work in game design, digital art, and interactive media in a clean, easy-to-navigate format. It highlights project case studies, gallery images, and walkthrough videos while keeping the interface simple and focused.
 
 ## Current Status
-The site is now past the starter stage and includes real project content in the `Projects` section.
+The site includes personalized `Home`, `About`, `Projects`, and `Contact` sections with real portfolio content.
 
 Current state:
 - Dark theme layout is in place
 - Main navigation switches between `Home`, `About`, `Projects`, and `Contact`
-- Only one main section shows at a time
-- The `Projects` section shows one project at a time
+- Only one main section is visible at a time
+- The `Projects` section opens with project buttons first, with no project selected by default
 - Project images open in a modal with captions
 - Some projects include embedded YouTube walkthroughs
-- `Home`, `About`, and `Contact` still use placeholder copy
+- The footer includes an automatically updating year
 
 ## Current Projects
 - Spirit Camper
@@ -26,17 +26,18 @@ Current state:
 - Frottage
 
 ## Folder Structure
-- `index.html` - the full site layout and project content
-- `css/style.css` - all visual styling, layout, and responsive rules
-- `js/main.js` - section switching, project switching, and gallery modal logic
-- `assets/images/` - project image folders used by the galleries
+- `index.html` - the full site layout and portfolio content
+- `css/style.css` - all styling, layout, responsive rules, and gallery presentation
+- `js/main.js` - section switching, project switching, gallery modal logic, and footer year handling
+- `assets/images/` - project image folders used in the galleries
 - `sections/` - reserved for future file splitting if needed
 
 ## Site Behavior
 - The top navigation shows one main section at a time
-- The `Projects` area uses its own simple project switcher
-- Gallery thumbnails stay in a clean grid
-- Clicking a thumbnail opens a larger image with a caption
+- The `Projects` area uses its own project switcher
+- Opening `Projects` shows the project chooser before any case study is selected
+- Clicking a project button reveals that project's case study
+- Clicking a gallery thumbnail opens a larger image with a caption
 
 ## Local Development
 1. Open `index.html` in a browser.
@@ -48,4 +49,4 @@ Current state:
 This is a static website, so it can be deployed on platforms like GitHub Pages, Netlify, or Vercel.
 
 ## Credits
-- Created by [Your Name]
+- Designed and built by Ray Hernaez
