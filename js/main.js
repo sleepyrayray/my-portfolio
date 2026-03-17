@@ -10,6 +10,14 @@ const galleryModalTitle = document.getElementById("gallery-modal-title");
 const galleryModalCaption = document.getElementById("gallery-modal-caption");
 const galleryCloseButton = document.getElementById("gallery-close-button");
 const currentYear = document.getElementById("current-year");
+const projectsSection = document.getElementById("projects");
+const projectBackButton = document.getElementById("project-back-button");
+
+function setProjectViewState(hasActiveProject) {
+  if (projectsSection) {
+    projectsSection.classList.toggle("has-active-project", hasActiveProject);
+  }
+}
 
 // This is the section we want to show first.
 const defaultSectionId = "home";
@@ -23,6 +31,8 @@ function clearProjectSelection() {
     button.classList.remove("is-active");
     button.setAttribute("aria-selected", "false");
   });
+
+  setProjectViewState(false);
 }
 
 // Show one section and hide the others.
@@ -55,6 +65,8 @@ function showProject(projectId) {
     button.classList.toggle("is-active", isCurrentButton);
     button.setAttribute("aria-selected", isCurrentButton);
   });
+
+  setProjectViewState(true);
 }
 
 // Open the gallery modal with the selected preview information.
@@ -94,6 +106,16 @@ projectTabButtons.forEach(function (button) {
     showProject(selectedProjectId);
   });
 });
+
+if (projectBackButton) {
+  projectBackButton.addEventListener("click", function () {
+    clearProjectSelection();
+
+    if (projectTabButtons.length > 0) {
+      projectTabButtons[0].focus();
+    }
+  });
+}
 
 // Add a click event to each gallery thumbnail.
 galleryButtons.forEach(function (button) {
