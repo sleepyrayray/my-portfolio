@@ -19,6 +19,7 @@ Current state:
 - The footer includes an automatically updating year
 
 ## Current Projects
+- The Heavy 20s
 - Spirit Camper
 - Sheldon
 - Vampire Slayer
