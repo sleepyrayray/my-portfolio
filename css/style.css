@@ -296,7 +296,10 @@ button:focus-visible {
   line-height: 1.45;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  white-space: nowrap;
+}
+
+.hero-stage__lead-line {
+  display: block;
 }
 
 .hero-stage__body {
@@ -377,6 +380,76 @@ button:focus-visible {
 .hero-stage__action--solid,
 .hero-stage__action--ghost {
   color: var(--text-color);
+}
+
+.contact-page .page-shell {
+  min-height: 100svh;
+  padding-block: 0;
+  display: flex;
+}
+
+.contact-page__main {
+  flex: 1;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-stage {
+  width: min(100%, 640px);
+  gap: 1.35rem;
+}
+
+.contact-stage .hero-stage__name {
+  margin-block: 0.18rem 0.28rem;
+}
+
+.contact-stage__bio {
+  max-width: 34ch;
+  color: var(--muted-text);
+  font-size: clamp(1.02rem, 1.95vw, 1.14rem);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.contact-stage__focus {
+  max-width: 34ch;
+  color: var(--text-color);
+  font-family: var(--label-font);
+  font-size: clamp(0.72rem, 1.5vw, 1rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-wrap: pretty;
+}
+
+.contact-stage__reach {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 0.42rem;
+}
+
+.contact-stage__note {
+  color: var(--muted-text);
+  font-family: var(--label-font);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.contact-stage__email {
+  color: var(--text-color);
+  font-family: var(--label-font);
+  font-size: clamp(0.96rem, 2vw, 1.12rem);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+.contact-stage__actions {
+  margin-top: 0.15rem;
 }
 
 .archive-section {
@@ -1006,6 +1079,10 @@ button:focus-visible {
     min-height: auto;
   }
 
+  .contact-page .page-shell {
+    min-height: 100svh;
+  }
+
   .site-header {
     flex-direction: column;
   }
@@ -1064,6 +1141,10 @@ button:focus-visible {
   .hero-stage {
     width: min(100%, 560px);
   }
+
+  .contact-stage {
+    width: min(100%, 600px);
+  }
 }
 
 @media (max-width: 560px) {
@@ -1100,6 +1181,41 @@ button:focus-visible {
 
   .hero-stage__action {
     padding: 0.42rem 0.62rem;
+  }
+
+  .contact-page .page-shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .contact-stage {
+    gap: 1rem;
+  }
+
+  .contact-stage__bio {
+    max-width: 28ch;
+    font-size: 0.98rem;
+  }
+
+  .contact-stage__focus {
+    max-width: 28ch;
+    font-size: 0.75rem;
+  }
+
+  .contact-stage__reach {
+    margin-top: 0.34rem;
+  }
+
+  .contact-stage__note {
+    font-size: 0.68rem;
+  }
+
+  .contact-stage__email {
+    max-width: 100%;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    overflow-wrap: anywhere;
   }
 
   .archive-grid {
