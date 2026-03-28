@@ -1,6 +1,7 @@
 const projectOverlay = document.querySelector(".project-detail-overlay");
 const overlayOpenButton = document.querySelector("[data-project-overlay-open]");
 const overlayCloseButtons = document.querySelectorAll("[data-project-overlay-close]");
+const projectFigures = document.querySelectorAll(".project-detail__figure");
 
 function setProjectOverlayState(isOpen) {
   if (!projectOverlay || !overlayOpenButton) {
@@ -30,3 +31,13 @@ if (projectOverlay && overlayOpenButton) {
     }
   });
 }
+
+projectFigures.forEach(function (figure) {
+  figure.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
+  figure.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+});

@@ -465,7 +465,7 @@ button:focus-visible {
 
 .project-detail-page__main {
   flex: 1;
-  padding-bottom: clamp(4rem, 10vw, 7rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
 .contact-stage {
@@ -548,15 +548,41 @@ button:focus-visible {
   gap: 1rem;
 }
 
+.project-detail__pair {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 861px) {
+  .project-detail__pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .project-detail__pair--balanced {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.7725fr);
+  }
+
+  .project-detail__pair--balanced-sheldon {
+    grid-template-columns: minmax(0, 0.5625fr) minmax(0, 1fr);
+  }
+}
+
 .project-detail__figure {
   overflow: hidden;
   background-color: rgba(255, 245, 233, 0.02);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .project-detail__figure img {
   display: block;
   width: 100%;
   height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .has-project-overlay {
@@ -775,9 +801,9 @@ button:focus-visible {
 .archive-card {
   min-height: clamp(340px, 46vw, 540px);
   padding: clamp(2.8rem, 7vw, 4.4rem) clamp(1rem, 3vw, 2rem) 1.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-items: center;
   align-items: center;
   gap: 1.35rem;
 }
@@ -796,25 +822,51 @@ button:focus-visible {
 
 .archive-card__figure {
   width: 100%;
-  flex: 1;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   user-select: none;
   -webkit-user-select: none;
+}
+
+.archive-card__media-link {
+  display: inline-flex;
+  flex: 0 1 auto;
+  max-width: min(74%, 420px);
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.archive-card__media-link:focus-visible {
+  outline: 1px solid rgba(211, 160, 122, 0.28);
+  outline-offset: 8px;
 }
 
 .archive-card__image {
   display: block;
   width: auto;
-  max-width: min(74%, 420px);
+  max-width: 100%;
   max-height: clamp(180px, 24vw, 280px);
   height: auto;
   object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.9;
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
+  transition:
+    filter 0.85s ease,
+    opacity 0.85s ease;
+}
+
+.archive-card__media-link:hover .archive-card__image,
+.archive-card__media-link:focus-visible .archive-card__image {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .archive-card__name-link {
@@ -1591,8 +1643,11 @@ button:focus-visible {
     border-top: 1px solid rgba(241, 228, 211, 0.18);
   }
 
-  .archive-card__image {
+  .archive-card__media-link {
     max-width: min(82%, 360px);
+  }
+
+  .archive-card__image {
     max-height: 240px;
   }
 
