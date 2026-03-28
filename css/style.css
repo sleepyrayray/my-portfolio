@@ -433,7 +433,7 @@ button:focus-visible {
 }
 
 .hero-stage__action[aria-current="page"] {
-  color: var(--text-color);
+  color: var(--accent-strong);
 }
 
 .home-page .page-shell {

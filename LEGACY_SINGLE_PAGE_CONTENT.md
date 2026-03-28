@@ -4,7 +4,7 @@ Saved on 2026-03-28 before cleaning the homepage shell.
 
 Purpose:
 - preserve the older hidden homepage/about/contact/project copy
-- keep project details handy while individual project pages are still being designed
+- keep the older source material handy after the project pages were built
 - remove the heavy legacy markup from `index.html` without losing the content
 
 ## About Snapshot
@@ -133,4 +133,4 @@ Key notes:
 
 ## Note
 
-This file is a working archive, not final presentation copy. Project detail pages can simplify, rewrite, or reorder this material later.
+This file is a working archive, not final presentation copy. The live project pages can still simplify, rewrite, or reorder this material later.

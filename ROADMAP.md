@@ -3,22 +3,25 @@
 ## Goal
 Build a dark, retro, minimal portfolio that borrows Oakline Studio's composition discipline and archive logic while keeping the experience personal, image-led, and easy to grow.
 
-This roadmap is intentionally sequential. We work one focused area at a time, lock it in, then move forward.
+This roadmap stays sequential on purpose. Lock one area, then move forward.
 
 ## Current Status
 ### Completed
 - Homepage hero has been redesigned into a centered intro with a dark retro visual system
-- `Projects` and `Contact` now live on their own pages instead of being part of the homepage
-- A shared sticky top-right nav now appears on all main pages
-- A shared bottom-left footer now appears on all main pages
-- Shared footer rendering has been simplified with `js/shared-layout.js`
-- The project archive grid has been moved to its own `projects.html` page
+- The public site now uses a separate homepage, archive page, and individual project detail pages
+- The contact experience now lives in a shared overlay instead of a standalone content page
+- A shared sticky top-right nav appears across the live site
+- A shared bottom-left footer appears across the live site
+- Shared footer rendering, contact overlay behavior, and project-page header injection are handled in `js/shared-layout.js`
+- The project archive grid lives on `projects.html`
+- All six projects now have their own detail pages under `projects/`
 - Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
 
-### Current Main Pages
+### Current Public Surface
 - `index.html` - hero-first homepage
 - `projects.html` - project archive overview
-- `contact.html` - about/contact page
+- `projects/*.html` - project detail pages
+- `contact.html` - redirect shim that opens the contact overlay through `index.html?contact=1`
 
 ## Working Agreement
 - Keep the dark retro-vintage mood
@@ -37,7 +40,8 @@ This roadmap is intentionally sequential. We work one focused area at a time, lo
 ## What We Intentionally Changed
 - Dark tobacco palette instead of a white editorial canvas
 - Ray's name as typography instead of logo artwork
-- Separate `Projects` and `Contact` pages instead of a single agency-style landing page
+- Separate project archive and detail pages instead of a single agency-style landing page
+- Contact as an overlay instead of a dedicated content page
 - Persistent sticky top-right nav instead of a bottom sticky filter bar
 
 ## Phase Review
@@ -57,53 +61,57 @@ Status: done for now
 - Homepage now acts as an entry point rather than an about page
 
 ### Phase 3: Project Archive
-Status: done for overview page
+Status: done for first pass
 
 - Archive grid exists on `projects.html`
 - Two-column desktop / one-column mobile behavior is in place
-- Cover images and project names are shown
+- Cover images and project names both open project detail pages
 - Grid edges and divider logic are in place
 
-### Phase 4: Contact / About Page
+### Phase 4: Contact / About
 Status: done for first pass
 
-- Contact page has its own layout
-- About copy and contact info live there
-- Email is currently the only contact method
+- Contact content now lives in a shared overlay
+- `contact.html` now acts as a redirect entry point instead of a standalone content page
+- Email is click-to-copy
 
 ### Phase 5: Shared Layout Cleanup
 Status: done for first pass
 
-- Sticky nav appears on all pages
-- Footer appears on all pages
+- Sticky nav appears across the live site
+- Footer appears across the live site
 - Shared footer rendering is centralized
-- Static nav markup is kept per page for first-paint stability
+- Shared contact overlay behavior is centralized
+- Project-page brand header is injected centrally
 
-## Next Phase: Project Detail Pages
+### Phase 6: Project Detail Pages
+Status: done for first pass
+
+- Separate detail page layout exists for each project
+- Long-form `Learn more` overlays are in place
+- Media stacks and embedded walkthroughs are in place where needed
+- Detail pages are linked from the archive
+
+## Next Phase: Polish And Cleanup
 ### Priority
 This is the next major task.
 
-### What still needs to be built
-- Separate detail page layout for each project
-- Final content structure for each project page
-- Actual links from archive project names into those detail pages
-- Consistent project-page navigation back into the main site
+### What still needs work
+- Final copy pass across homepage, overlay text, archive labels, and project detail pages
+- Dedicated responsive and browser QA pass
+- Final polish pass on spacing, typography, hover behavior, and overlay feel
+- Decide whether any project pages need lighter video treatment later
 
-### Questions to resolve during that phase
-- What content blocks each project page should include
-- Whether walkthrough videos should remain external, embedded, or replaced with lighter previews
-- How minimal or information-dense each project page should feel
-
-## Still To Do After Project Pages
-- Decide whether to split project data/content further for easier maintenance
+## Still To Do Later
+- Decide whether project content/data should be split further for easier maintenance
 - Add filtering later if the project list grows
-- Do a dedicated responsiveness and browser QA pass
-- Do a final cleanup pass on spacing, typography, and hover polish
+- Review whether the custom cursor should stay as-is after broader device testing
 
 ## Current Risks / Cleanup Notes
-- Legacy one-page content is now archived in `LEGACY_SINGLE_PAGE_CONTENT.md`
-- `js/main.js` still contains older section-switching and project-panel logic that is no longer part of the current main experience
-- Shared layout is now cleaner, but the rest of the content architecture could still be simplified later
+- Legacy one-page content is archived in `LEGACY_SINGLE_PAGE_CONTENT.md`
+- `js/main.js` has now been reduced to archive-only behavior, but the broader codebase could still be split further if the site grows
+- `contact.html` is now a redirect shim, so the real contact experience lives in shared JS/CSS rather than a standalone HTML page
+- The current build has had many iterative visual adjustments, so a final consistency pass will still help
 
 ## Reference Notes
 - Oakline homepage analysis lives in `OAKLINE_HOMEPAGE_REFERENCE.md`

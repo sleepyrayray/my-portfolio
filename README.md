@@ -4,11 +4,12 @@
 A personal portfolio website for Ray Hernaez, built with plain HTML, CSS, and JavaScript.
 
 ## Current Site Structure
-The site currently has three main public pages:
+The live site currently works as:
 
 - `index.html` - homepage hero
 - `projects.html` - project archive overview
-- `contact.html` - about/contact page
+- `projects/*.html` - individual project detail pages
+- `contact.html` - redirect entry that opens the shared contact overlay
 
 The visual direction is dark, minimal, and retro-toned, with Oakline Studio used mainly as a structural reference.
 
@@ -16,17 +17,20 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 ### Live design direction
 - Dark tobacco palette
 - Centered typography-led homepage
-- Sticky top-right navigation
+- Plain-text sticky top-right navigation
 - Tiny bottom-left footer
-- Separate overview pages for projects and contact
+- Separate archive and project-detail pages
+- Shared centered contact overlay
 
 ### Current page behavior
 - `Home`, `Projects`, and `Contact` are always visible in the sticky nav
-- The current page is highlighted in the nav
+- `Contact` opens the shared overlay rather than a standalone content page
 - The footer year is generated automatically
 - The projects archive uses a two-column desktop grid and one-column mobile grid
-- Project cover images are non-draggable and not directly interactive
-- Project names are the intended entry points for future project detail pages
+- Project cover images and project names both open their detail pages
+- Project detail pages include a `Learn more` text overlay
+- The contact email is click-to-copy
+- Most site text is intentionally non-selectable
 
 ## Current Projects
 - Spirit Camper
@@ -39,32 +43,31 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 ## Folder Structure
 - `index.html` - homepage
 - `projects.html` - projects archive page
-- `contact.html` - about/contact page
-- `css/style.css` - main styling, layout rules, and responsive behavior
-- `js/main.js` - older interaction logic plus current archive protections
-- `js/shared-layout.js` - shared sticky nav and shared footer rendering
+- `contact.html` - redirect shim for the contact overlay
+- `projects/` - all project detail pages
+- `css/style.css` - main styling, layout rules, overlays, and responsive behavior
+- `js/main.js` - archive placeholder handling and archive media protections
+- `js/project-detail.js` - project detail overlay behavior and project media protections
+- `js/shared-layout.js` - shared footer rendering, project-page header injection, contact overlay behavior, custom cursor, and shared interaction rules
 - `assets/images/` - project image folders used in the archive and galleries
 - `sections/` - reserved for future file splitting if needed
 
 ## Important Architecture Note
-The repo is currently in a transition state:
+The public experience is now built around separate pages plus a shared contact overlay.
 
-- the new public experience is built around separate pages
-- some older single-page portfolio sections still remain inside `index.html`
-- some older section-switching and project-panel logic still remains in `js/main.js`
-
-Those leftovers do not define the current main experience, but they should likely be cleaned up after the project detail pages are designed.
+The older hidden homepage/about/contact/project content is no longer in the live homepage shell and has been archived in `LEGACY_SINGLE_PAGE_CONTENT.md`.
 
 ## Local Development
-1. Open `index.html`, `projects.html`, or `contact.html` in a browser.
+1. Open `index.html` or `projects.html` in a browser.
 2. Update shared visual styling in `css/style.css`.
-3. Update shared nav/footer rendering in `js/shared-layout.js`.
-4. Update any older interaction logic in `js/main.js` only when needed.
+3. Update shared overlay/footer/header behavior in `js/shared-layout.js`.
+4. Update project detail overlay behavior in `js/project-detail.js`.
+5. Touch `js/main.js` only when archive-grid behavior is involved.
 
 ## Next Planned Work
-- build the individual project detail pages
-- link each project name in the archive to its real page
-- clean up legacy hidden sections after the new structure is fully locked
+- do a final copy and consistency pass across all pages
+- run a dedicated responsiveness and browser QA pass
+- add archive filtering later if the project list grows
 
 ## Deployment
 This is a static website, so it can be deployed on platforms like GitHub Pages, Netlify, or Vercel.
