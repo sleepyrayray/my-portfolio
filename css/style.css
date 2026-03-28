@@ -453,15 +453,27 @@ button:focus-visible {
     0 4px 12px rgba(44, 20, 13, 0.14);
 }
 
-.home-page .page-shell,
-.contact-page .page-shell {
+.home-page .page-shell {
   min-height: 100svh;
   padding-block: 0;
   display: flex;
   flex-direction: column;
 }
 
+.contact-page .page-shell {
+  min-height: 100svh;
+  padding-top: clamp(2rem, 6vw, 3.2rem);
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .projects-page {
+  overflow-x: clip;
+}
+
+.contact-page,
+.project-detail-page {
   overflow-x: clip;
 }
 
@@ -473,13 +485,30 @@ button:focus-visible {
   flex-direction: column;
 }
 
-.home-page__main,
-.contact-page__main {
+.home-page__main {
   flex: 1;
   min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contact-page__main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: start;
+  align-content: start;
+  gap: 0;
+}
+
+.contact-page__header {
+  display: grid;
+  justify-items: center;
+  gap: 1.35rem;
+  text-align: center;
+  margin-bottom: clamp(1.25rem, 3vw, 1.9rem);
 }
 
 .projects-page__main {
@@ -488,7 +517,7 @@ button:focus-visible {
 
 .project-detail-page .page-shell {
   min-height: 100svh;
-  padding-top: clamp(4.75rem, 8vw, 6rem);
+  padding-top: clamp(2rem, 6vw, 3.2rem);
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
@@ -496,17 +525,40 @@ button:focus-visible {
 
 .project-detail-page__main {
   flex: 1;
-  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(0.5rem, 1.8vw, 1rem);
+}
+
+.project-detail-page__header {
+  display: grid;
+  justify-items: center;
+  gap: 1.35rem;
+  text-align: center;
+  margin-bottom: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+.project-detail-page__brand {
+  display: flex;
+  justify-content: center;
+}
+
+.project-detail-page__header .hero-stage__name {
+  margin-block: clamp(1rem, 2.4vw, 1.6rem) 0.28rem;
 }
 
 .contact-stage {
   width: min(100%, 640px);
   gap: 1.35rem;
+  justify-self: center;
+  align-self: start;
+  position: relative;
+  padding-block: clamp(1.25rem, 3vw, 1.9rem);
 }
 
 .project-detail {
   display: grid;
   gap: clamp(2rem, 5vw, 3.25rem);
+  position: relative;
+  padding-top: clamp(1.25rem, 3vw, 1.9rem);
 }
 
 .project-detail__hero {
@@ -577,6 +629,33 @@ button:focus-visible {
 .project-detail__stack {
   display: grid;
   gap: 1rem;
+  position: relative;
+  padding-block: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+.contact-stage::before,
+.contact-stage::after,
+.project-detail::before,
+.project-detail__stack::before,
+.project-detail__stack::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 100vw;
+  border-top: 1px solid rgba(241, 228, 211, 0.18);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.contact-stage::before,
+.project-detail::before,
+.project-detail__stack::before {
+  top: 0;
+}
+
+.contact-stage::after,
+.project-detail__stack::after {
+  bottom: 0;
 }
 
 .project-detail__pair {
@@ -726,15 +805,15 @@ button:focus-visible {
 }
 
 .projects-stage__header .hero-stage__name {
-  margin-block: 0.18rem 0.28rem;
+  margin-block: clamp(1rem, 2.4vw, 1.6rem) 0.28rem;
 }
 
 .projects-stage__label {
   margin-top: 0.08rem;
 }
 
-.contact-stage .hero-stage__name {
-  margin-block: 0.18rem 0.28rem;
+.contact-page__header .hero-stage__name {
+  margin-block: clamp(1rem, 2.4vw, 1.6rem) 0.28rem;
 }
 
 .contact-stage__bio {
@@ -754,7 +833,7 @@ button:focus-visible {
   width: fit-content;
   color: var(--text-color);
   font-family: var(--label-font);
-  font-size: clamp(0.72rem, 1.5vw, 1rem);
+  font-size: clamp(0.88rem, 1.8vw, 1.16rem);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.06em;
@@ -776,19 +855,20 @@ button:focus-visible {
 .contact-stage__note {
   color: var(--muted-text);
   font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-size: clamp(0.72rem, 1.45vw, 0.96rem);
   font-weight: 500;
-  letter-spacing: 0.09em;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .contact-stage__email {
   color: var(--text-color);
   font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-size: clamp(0.72rem, 1.45vw, 0.96rem);
   font-weight: 500;
-  letter-spacing: 0.09em;
-  line-height: 1.4;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -1583,10 +1663,15 @@ button:focus-visible {
     padding: 0.42rem 0.62rem;
   }
 
-  .home-page .page-shell,
-  .contact-page .page-shell {
+  .home-page .page-shell {
     width: min(100% - 1rem, 1120px);
     padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .contact-page .page-shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 1rem;
     padding-bottom: 0;
   }
 
@@ -1603,6 +1688,10 @@ button:focus-visible {
   }
 
   .projects-stage__header {
+    padding-top: 3.25rem;
+  }
+
+  .contact-page__header {
     padding-top: 3.25rem;
   }
 
@@ -1635,7 +1724,7 @@ button:focus-visible {
   .contact-stage__focus {
     max-width: none;
     width: auto;
-    font-size: 0.75rem;
+    font-size: 0.88rem;
   }
 
   .contact-stage__focus-line {
@@ -1647,13 +1736,13 @@ button:focus-visible {
   }
 
   .contact-stage__note {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
 
   .contact-stage__email {
     max-width: 100%;
-    font-size: 0.68rem;
-    letter-spacing: 0.09em;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
     overflow-wrap: anywhere;
   }
 

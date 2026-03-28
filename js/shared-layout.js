@@ -11,6 +11,25 @@ function renderSiteFooter(slot) {
     "</p>";
 }
 
+function renderProjectPageHeader() {
+  const projectMain = document.querySelector(".project-detail-page__main");
+  const projectNav = projectMain ? projectMain.querySelector(".hero-stage__actions--nav") : null;
+
+  if (!projectMain || !projectNav || projectMain.querySelector(".project-detail-page__header")) {
+    return;
+  }
+
+  projectNav.insertAdjacentHTML(
+    "afterend",
+    '<div class="project-detail-page__header" aria-hidden="true">' +
+      '<div class="project-detail-page__brand hero-stage__name">' +
+        '<span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>' +
+      "</div>" +
+      '<p class="hero-stage__kicker projects-stage__label project-detail-page__label">Projects</p>' +
+    "</div>"
+  );
+}
+
 function setupCustomCursor() {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     return;
@@ -47,4 +66,5 @@ function setupCustomCursor() {
 }
 
 document.querySelectorAll("[data-site-footer]").forEach(renderSiteFooter);
+renderProjectPageHeader();
 setupCustomCursor();
