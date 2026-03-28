@@ -40,7 +40,7 @@ function renderContactOverlay() {
     '<div class="contact-overlay" id="contact-overlay" hidden>' +
       '<div class="contact-overlay__backdrop" data-contact-overlay-close></div>' +
       '<div class="contact-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="contact-overlay-title">' +
-        '<button class="contact-overlay__close" type="button" data-contact-overlay-close>Close</button>' +
+        '<button class="contact-overlay__close" type="button" aria-label="Close" data-contact-overlay-close>X</button>' +
         '<div class="contact-overlay__content">' +
           '<p class="hero-stage__kicker contact-overlay__label">About + Contact</p>' +
           '<h2 id="contact-overlay-title" class="sr-only">About + Contact</h2>' +

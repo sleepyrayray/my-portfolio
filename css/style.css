@@ -373,14 +373,13 @@ button:focus-visible {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 0.85rem;
   margin-top: 0.6rem;
   margin-inline: auto;
-  padding: 0.16rem;
-  border: 1px solid rgba(241, 228, 211, 0.18);
-  border-radius: 0;
+  padding: 0;
+  border: 0;
   background: transparent;
-  box-shadow: inset 0 1px 0 rgba(255, 245, 233, 0.03);
+  box-shadow: none;
 }
 
 .hero-stage__actions--nav {
@@ -389,12 +388,10 @@ button:focus-visible {
   right: clamp(0.75rem, 2.8vw, 1.6rem);
   margin: 0;
   z-index: 30;
-  background: rgba(18, 11, 9, 0.72);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 245, 233, 0.04),
-    0 12px 28px rgba(0, 0, 0, 0.16);
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
 }
 
 .hero-stage__action {
@@ -403,11 +400,10 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  padding: 0.44rem 0.68rem;
-  border: 1px solid transparent;
-  border-radius: 0;
+  padding: 0;
+  border: 0;
   background: transparent;
-  color: var(--text-color);
+  color: var(--muted-text);
   font-family: var(--label-font);
   font-size: 0.72rem;
   font-weight: 500;
@@ -415,49 +411,29 @@ button:focus-visible {
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: none;
-  transition:
-    color 0.25s ease,
-    border-color 0.25s ease,
-    background-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: color 0.25s ease;
 }
 
 .hero-stage__divider {
-  display: block;
-  flex: 0 0 auto;
-  align-self: stretch;
-  width: 1px;
-  margin-block: -0.16rem;
-  margin-inline: 0.28rem;
-  background: rgba(241, 228, 211, 0.18);
+  display: none;
 }
 
 .hero-stage__action:hover,
 .hero-stage__action:focus-visible {
-  color: #f8efe3;
-  border-color: rgba(211, 160, 122, 0.28);
-  background:
-    linear-gradient(180deg, rgba(211, 160, 122, 0.12), rgba(165, 83, 61, 0.07));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 243, 228, 0.06),
-    0 4px 12px rgba(44, 20, 13, 0.14);
-  transform: translateY(-1px);
+  color: var(--accent-strong);
+  background: none;
+  box-shadow: none;
+  transform: none;
+  outline: none;
 }
 
 .hero-stage__action--solid,
 .hero-stage__action--ghost {
-  color: var(--text-color);
+  color: inherit;
 }
 
 .hero-stage__action[aria-current="page"] {
-  color: #f8efe3;
-  border-color: rgba(211, 160, 122, 0.28);
-  background:
-    linear-gradient(180deg, rgba(211, 160, 122, 0.12), rgba(165, 83, 61, 0.07));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 243, 228, 0.06),
-    0 4px 12px rgba(44, 20, 13, 0.14);
+  color: var(--text-color);
 }
 
 .home-page .page-shell {
@@ -747,23 +723,27 @@ button:focus-visible {
   top: clamp(1rem, 2vw, 1.4rem);
   right: clamp(1rem, 2vw, 1.4rem);
   display: inline-flex;
-  margin-bottom: 0;
-  border: 1px solid rgba(241, 228, 211, 0.18);
-  padding: 0.42rem 0.72rem;
+  margin: 0;
+  border: 0;
+  padding: 0;
   background: transparent;
   box-shadow: none;
-  color: var(--text-color);
+  color: var(--muted-text);
   font-family: var(--label-font);
   font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .project-detail-overlay__close:hover,
 .project-detail-overlay__close:focus-visible {
-  border-color: rgba(211, 160, 122, 0.28);
-  background: linear-gradient(180deg, rgba(211, 160, 122, 0.12), rgba(165, 83, 61, 0.07));
+  color: var(--accent-strong);
+  background: none;
+  box-shadow: none;
   transform: none;
+  outline: none;
 }
 
 .project-detail-overlay__content {
@@ -836,23 +816,27 @@ button:focus-visible {
   top: clamp(1rem, 2vw, 1.4rem);
   right: clamp(1rem, 2vw, 1.4rem);
   display: inline-flex;
-  margin-bottom: 0;
-  border: 1px solid rgba(241, 228, 211, 0.18);
-  padding: 0.42rem 0.72rem;
+  margin: 0;
+  border: 0;
+  padding: 0;
   background: transparent;
   box-shadow: none;
-  color: var(--text-color);
+  color: var(--muted-text);
   font-family: var(--label-font);
   font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .contact-overlay__close:hover,
 .contact-overlay__close:focus-visible {
-  border-color: rgba(211, 160, 122, 0.28);
-  background: linear-gradient(180deg, rgba(211, 160, 122, 0.12), rgba(165, 83, 61, 0.07));
+  color: var(--accent-strong);
+  background: none;
+  box-shadow: none;
   transform: none;
+  outline: none;
 }
 
 .contact-overlay__content {
@@ -1768,7 +1752,7 @@ button:focus-visible {
   }
 
   .hero-stage__actions {
-    gap: 0;
+    gap: 0.7rem;
     margin-top: 0.48rem;
   }
 
@@ -1778,7 +1762,7 @@ button:focus-visible {
   }
 
   .hero-stage__action {
-    padding: 0.42rem 0.62rem;
+    padding: 0;
   }
 
   .home-page .page-shell {
