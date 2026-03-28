@@ -12,6 +12,8 @@ const galleryCloseButton = document.getElementById("gallery-close-button");
 const currentYear = document.getElementById("current-year");
 const projectsSection = document.getElementById("projects");
 const projectBackButton = document.getElementById("project-back-button");
+const archiveGrid = document.querySelector(".archive-grid");
+const archiveFigures = document.querySelectorAll(".archive-card__figure");
 
 function setProjectViewState(hasActiveProject) {
   if (projectsSection) {
@@ -116,6 +118,27 @@ if (projectBackButton) {
     }
   });
 }
+
+if (archiveGrid) {
+  const archiveCards = archiveGrid.querySelectorAll(".archive-card");
+
+  if (archiveCards.length % 2 !== 0) {
+    const placeholderCard = document.createElement("article");
+    placeholderCard.className = "archive-card archive-card--placeholder";
+    placeholderCard.setAttribute("aria-hidden", "true");
+    archiveGrid.appendChild(placeholderCard);
+  }
+}
+
+archiveFigures.forEach(function (figure) {
+  figure.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
+  figure.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+});
 
 // Add a click event to each gallery thumbnail.
 galleryButtons.forEach(function (button) {

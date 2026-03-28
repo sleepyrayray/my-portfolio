@@ -61,8 +61,9 @@
             </p>
 
             <div class="hero-stage__actions" aria-label="Primary actions">
-              <button class="hero-stage__action hero-stage__action--solid" type="button">Projects</button>
-              <button class="hero-stage__action hero-stage__action--ghost" type="button">Contact</button>
+              <a class="hero-stage__action hero-stage__action--solid" href="#selected-work">Projects</a>
+              <span class="hero-stage__divider" aria-hidden="true"></span>
+              <a class="hero-stage__action hero-stage__action--ghost" href="mailto:r.hernz@outlook.com">Contact</a>
             </div>
           </div>
         </section>
@@ -1080,6 +1081,85 @@
           </div>
         </section>
       </main>
+
+      <section class="archive-section" id="selected-work" aria-labelledby="selected-work-heading">
+        <p class="archive-section__label">Projects</p>
+        <h2 class="sr-only" id="selected-work-heading">Projects</h2>
+
+        <div class="archive-grid">
+          <article class="archive-card">
+            <figure class="archive-card__figure">
+              <img
+                class="archive-card__image"
+                src="assets/images/spirit-camper/3.png"
+                alt="Spirit Camper cover image"
+                draggable="false"
+              />
+            </figure>
+            <button class="archive-card__name-link" type="button">Spirit Camper</button>
+          </article>
+
+          <article class="archive-card">
+            <figure class="archive-card__figure">
+              <img
+                class="archive-card__image"
+                src="assets/images/sheldon/3.png"
+                alt="Sheldon cover image"
+                draggable="false"
+              />
+            </figure>
+            <button class="archive-card__name-link" type="button">Sheldon</button>
+          </article>
+
+          <article class="archive-card">
+            <figure class="archive-card__figure">
+              <img
+                class="archive-card__image"
+                src="assets/images/vampire-slayer/2.jpg"
+                alt="Vampire Slayer cover image"
+                draggable="false"
+              />
+            </figure>
+            <button class="archive-card__name-link" type="button">Vampire Slayer</button>
+          </article>
+
+          <article class="archive-card">
+            <figure class="archive-card__figure">
+              <img
+                class="archive-card__image"
+                src="assets/images/evil/2.jpg"
+                alt="E.V.I.L. cover image"
+                draggable="false"
+              />
+            </figure>
+            <button class="archive-card__name-link" type="button">E.V.I.L.</button>
+          </article>
+
+          <article class="archive-card">
+            <figure class="archive-card__figure">
+              <img
+                class="archive-card__image"
+                src="assets/images/the-heavy-20s/5.png"
+                alt="The Heavy 20s cover image"
+                draggable="false"
+              />
+            </figure>
+            <button class="archive-card__name-link" type="button">The Heavy 20s</button>
+          </article>
+
+          <article class="archive-card">
+            <figure class="archive-card__figure">
+              <img
+                class="archive-card__image"
+                src="assets/images/frottage/1.jpg"
+                alt="Frottage cover image"
+                draggable="false"
+              />
+            </figure>
+            <button class="archive-card__name-link" type="button">Frottage</button>
+          </article>
+        </div>
+      </section>
 
       <footer class="site-footer" aria-label="Site footer">
         <p class="site-footer-text">
