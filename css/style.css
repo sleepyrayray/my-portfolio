@@ -197,6 +197,15 @@ button:focus-visible {
   opacity: 0.42;
 }
 
+/* Keep the sticky nav fixed from first paint so it doesn't briefly inherit centered hero layout. */
+.hero-stage__actions--nav {
+  position: fixed;
+  top: max(0.85rem, env(safe-area-inset-top));
+  right: clamp(0.75rem, 2.8vw, 1.6rem);
+  margin: 0;
+  z-index: 30;
+}
+
 .hero-focus-pass .page-shell {
   min-height: 100svh;
   padding-block: 0;
@@ -410,6 +419,7 @@ button:focus-visible {
     0 4px 12px rgba(44, 20, 13, 0.14);
 }
 
+.home-page .page-shell,
 .contact-page .page-shell {
   min-height: 100svh;
   padding-block: 0;
@@ -429,6 +439,7 @@ button:focus-visible {
   flex-direction: column;
 }
 
+.home-page__main,
 .contact-page__main {
   flex: 1;
   min-height: 0;
@@ -1270,6 +1281,7 @@ button:focus-visible {
     padding: 0.42rem 0.62rem;
   }
 
+  .home-page .page-shell,
   .contact-page .page-shell {
     width: min(100% - 1rem, 1120px);
     padding-top: 0;

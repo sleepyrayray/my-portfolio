@@ -18,11 +18,17 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="contact-page" data-page="contact">
+  <body class="contact-page">
     <div class="page-shell page-shell--contact">
       <main class="contact-page__main">
         <section class="hero-stage contact-stage" aria-labelledby="contact-page-heading">
-          <div data-site-nav data-current="contact" data-nav-label="Contact page navigation"></div>
+          <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Contact page navigation">
+            <a class="hero-stage__action hero-stage__action--ghost" href="index.html">Home</a>
+            <span class="hero-stage__divider" aria-hidden="true"></span>
+            <a class="hero-stage__action hero-stage__action--ghost" href="projects.html">Projects</a>
+            <span class="hero-stage__divider" aria-hidden="true"></span>
+            <a class="hero-stage__action hero-stage__action--solid" href="contact.html" aria-current="page">Contact</a>
+          </nav>
           <p class="hero-stage__kicker">About + Contact</p>
           <h1 id="contact-page-heading" class="hero-stage__name">
             <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
@@ -42,7 +48,7 @@
         </section>
       </main>
 
-      <div data-site-footer></div>
+      <footer class="site-footer" data-site-footer></footer>
     </div>
 
     <script src="js/shared-layout.js"></script>

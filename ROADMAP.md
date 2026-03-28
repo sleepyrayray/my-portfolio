@@ -11,8 +11,9 @@ This roadmap is intentionally sequential. We work one focused area at a time, lo
 - `Projects` and `Contact` now live on their own pages instead of being part of the homepage
 - A shared sticky top-right nav now appears on all main pages
 - A shared bottom-left footer now appears on all main pages
-- Shared page chrome has been simplified with `js/shared-layout.js` so nav and footer are not duplicated by hand
+- Shared footer rendering has been simplified with `js/shared-layout.js`
 - The project archive grid has been moved to its own `projects.html` page
+- Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
 
 ### Current Main Pages
 - `index.html` - hero-first homepage
@@ -75,7 +76,8 @@ Status: done for first pass
 
 - Sticky nav appears on all pages
 - Footer appears on all pages
-- Shared nav/footer rendering is centralized
+- Shared footer rendering is centralized
+- Static nav markup is kept per page for first-paint stability
 
 ## Next Phase: Project Detail Pages
 ### Priority
@@ -93,14 +95,13 @@ This is the next major task.
 - How minimal or information-dense each project page should feel
 
 ## Still To Do After Project Pages
-- Decide whether to fully remove or archive the old hidden single-page portfolio sections still living inside `index.html`
 - Decide whether to split project data/content further for easier maintenance
 - Add filtering later if the project list grows
 - Do a dedicated responsiveness and browser QA pass
 - Do a final cleanup pass on spacing, typography, and hover polish
 
 ## Current Risks / Cleanup Notes
-- `index.html` still contains legacy hidden sections from the older single-page version
+- Legacy one-page content is now archived in `LEGACY_SINGLE_PAGE_CONTENT.md`
 - `js/main.js` still contains older section-switching and project-panel logic that is no longer part of the current main experience
 - Shared layout is now cleaner, but the rest of the content architecture could still be simplified later
 
