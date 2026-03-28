@@ -55,6 +55,37 @@ body::before {
   opacity: 0.12;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    --cursor-x: -100px;
+    --cursor-y: -100px;
+    --cursor-scale: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 244, 232, 0.96);
+    mix-blend-mode: difference;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate3d(var(--cursor-x), var(--cursor-y), 0) translate(-50%, -50%) scale(var(--cursor-scale));
+    transition: opacity 0.18s ease;
+    will-change: transform, opacity;
+  }
+
+  .custom-cursor.is-visible {
+    opacity: 0.92;
+  }
+}
+
 button,
 input,
 textarea {
@@ -853,7 +884,7 @@ button:focus-visible {
   height: auto;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.9;
+  opacity: 0.5;
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
