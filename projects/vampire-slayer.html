@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Hernaez | Vampire Slayer</title>
+    <meta
+      name="description"
+      content="Vampire Slayer by Ray Hernaez, a light-based interactive game that combines micro:bits, motors, sensors, and a hand-built cardboard structure."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:ital,wght@0,500;0,600;0,700;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="project-detail-page">
+    <div class="page-shell page-shell--project-detail">
+      <main class="project-detail-page__main">
+        <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Vampire Slayer page navigation">
+          <a class="hero-stage__action hero-stage__action--ghost" href="../index.html">Home</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--solid" href="../projects.html" aria-current="page">Projects</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--ghost" href="../contact.html">Contact</a>
+        </nav>
+
+        <article class="project-detail" aria-labelledby="vampire-slayer-heading">
+          <header class="project-detail__hero">
+            <section class="project-detail__block">
+              <p class="project-detail__label">project</p>
+              <h1 id="vampire-slayer-heading" class="project-detail__title">Vampire Slayer</h1>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">bio</p>
+              <p class="project-detail__summary">
+                Vampire Slayer is a light-based interactive game where players use their phone flashlights to hit
+                popping vampire heads. Inspired by Whack-a-Mole, the project combines micro:bits, motors,
+                sensors, and a hand-built cardboard structure.
+                <button
+                  class="project-detail__more-trigger"
+                  type="button"
+                  data-project-overlay-open
+                  aria-controls="vampire-slayer-overlay"
+                  aria-expanded="false"
+                >
+                  Learn more!
+                </button>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">deliverables</p>
+              <p class="project-detail__meta-copy">
+                <span>Electronics</span>
+                <span>Programming</span>
+                <span>Micro:bits</span>
+                <span>Cardboard Build</span>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">year</p>
+              <p class="project-detail__year">2024</p>
+            </section>
+          </header>
+
+          <section class="project-detail__stack" aria-label="Vampire Slayer media">
+            <figure class="project-detail__figure">
+              <img src="../assets/images/vampire-slayer/2.jpg" alt="Final Vampire Slayer cardboard game build" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/vampire-slayer/1.jpg" alt="Internal prototype showing the moving mechanism of Vampire Slayer" />
+            </figure>
+
+            <section class="project-detail__video">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/KpaRr-BpMeA?autoplay=1&mute=1&rel=0&playsinline=1"
+                  title="Vampire Slayer walkthrough"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </section>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer" data-site-footer></footer>
+    </div>
+
+    <div class="project-detail-overlay" id="vampire-slayer-overlay" hidden>
+      <div class="project-detail-overlay__backdrop" data-project-overlay-close></div>
+
+      <div
+        class="project-detail-overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="vampire-slayer-overlay-title"
+      >
+        <button class="project-detail-overlay__close" type="button" data-project-overlay-close>Close</button>
+
+        <div class="project-detail-overlay__content">
+          <p class="project-detail__label">learn more</p>
+          <h2 id="vampire-slayer-overlay-title" class="project-detail-overlay__title">Vampire Slayer</h2>
+
+          <section class="project-detail-overlay__section">
+            <h3>Development Summary</h3>
+            <p>
+              Vampire Slayer started with a playful mechanical idea: building something in the spirit of
+              Whack-a-Mole, but translating that energy into a handmade interactive object. The early stage of the
+              project involved experimenting with motors, structure, and physical movement until the setup became
+              stable enough to support repeated play.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>How It Works</h3>
+            <p>
+              Players use their phone flashlights as the main form of input. When light hits one of the vampire
+              heads, sensors detect it and trigger the mechanism that lowers the head back into the structure. That
+              interaction gave the piece its rhythm and made the technology feel direct and easy to understand.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Build and Visual Direction</h3>
+            <p>
+              The project moved from rough styrofoam tests into a more resolved cardboard build supported by
+              micro:bits, motors, and hand-made components. I contributed materials for the structure and focused
+              on the visual side of the project, especially the red-and-black vampire theme that tied the
+              mechanics, atmosphere, and presentation together.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Reflection</h3>
+            <p>
+              This was a strong learning experience because the physical system needed a lot of adjustment before
+              it behaved the way we wanted. Working through those challenges made the final result feel even more
+              rewarding. If I returned to it, I would refine the mechanism further and push the theatrical feel of
+              the game even more.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/shared-layout.js"></script>
+    <script src="../js/project-detail.js"></script>
+  </body>
+</html>

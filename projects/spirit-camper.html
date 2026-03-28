@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Hernaez | Spirit Camper</title>
+    <meta
+      name="description"
+      content="Spirit Camper by Ray Hernaez, a narrative-driven Unreal Engine 5 adventure project focused on exploration, dialogue, and atmosphere."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:ital,wght@0,500;0,600;0,700;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="project-detail-page">
+    <div class="page-shell page-shell--project-detail">
+      <main class="project-detail-page__main">
+        <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Spirit Camper page navigation">
+          <a class="hero-stage__action hero-stage__action--ghost" href="../index.html">Home</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--solid" href="../projects.html" aria-current="page">Projects</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--ghost" href="../contact.html">Contact</a>
+        </nav>
+
+        <article class="project-detail" aria-labelledby="spirit-camper-heading">
+          <header class="project-detail__hero">
+            <section class="project-detail__block">
+              <p class="project-detail__label">project</p>
+              <h1 id="spirit-camper-heading" class="project-detail__title">Spirit Camper</h1>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">bio</p>
+              <p class="project-detail__summary">
+                A narrative-driven adventure game built in Unreal Engine 5. The player explores a forest,
+                interacts with characters and objects, gathers materials, and helps Seraphina create a cure for a
+                deadly poison.
+                <button
+                  class="project-detail__more-trigger"
+                  type="button"
+                  data-project-overlay-open
+                  aria-controls="spirit-camper-overlay"
+                  aria-expanded="false"
+                >
+                  Learn more!
+                </button>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">deliverables</p>
+              <p class="project-detail__meta-copy">
+                <span>Game Design</span>
+                <span>Unreal Engine 5</span>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">year</p>
+              <p class="project-detail__year">2024</p>
+            </section>
+          </header>
+
+          <section class="project-detail__stack" aria-label="Spirit Camper media">
+            <figure class="project-detail__figure">
+              <img src="../assets/images/spirit-camper/3.png" alt="Forest exploration scene from Spirit Camper" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/spirit-camper/1.png" alt="Main menu screen from Spirit Camper" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/spirit-camper/4.png" alt="Potion-making area in Spirit Camper" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/spirit-camper/2.png" alt="Interior gameplay test from Spirit Camper" />
+            </figure>
+
+            <section class="project-detail__video">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/FUAOf7wHHUY?autoplay=1&mute=1&rel=0&playsinline=1"
+                  title="Spirit Camper gameplay walkthrough"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </section>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer" data-site-footer></footer>
+    </div>
+
+    <div class="project-detail-overlay" id="spirit-camper-overlay" hidden>
+      <div class="project-detail-overlay__backdrop" data-project-overlay-close></div>
+
+      <div
+        class="project-detail-overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="spirit-camper-overlay-title"
+      >
+        <button class="project-detail-overlay__close" type="button" data-project-overlay-close>Close</button>
+
+        <div class="project-detail-overlay__content">
+          <p class="project-detail__label">learn more</p>
+          <h2 id="spirit-camper-overlay-title" class="project-detail-overlay__title">Spirit Camper</h2>
+
+          <section class="project-detail-overlay__section">
+            <h3>Development Summary</h3>
+            <p>
+              Spirit Camper was my first full game project in Unreal Engine 5, so a lot of the process involved
+              learning the engine while also figuring out what kind of experience I wanted to build. I decided to
+              lean into narrative and atmosphere instead of trying to make something overly complex, which led me
+              toward a forest-based adventure centered on exploration, dialogue, and a cure-making objective.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Design and Gameplay</h3>
+            <p>
+              The main design goal was to keep the player moving through the story in a clear and readable way. I
+              used blocked paths, invisible walls, simple prompts, and notes placed around the world to guide
+              progression without making the game feel too restricted. The result was a light adventure structure
+              where players could explore, collect what they needed, and understand the next step without too much
+              confusion.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Technical and Creative Work</h3>
+            <p>
+              I sourced and arranged environmental assets such as trees, flowers, and other props to shape the
+              mood of the world, and I used those choices to make the forest feel more immersive. On the gameplay
+              side, I implemented NPC interaction, teleportation, a key-and-door system, and the main collectible
+              flow. I also experimented with AI-generated voice lines for the characters, which helped the project
+              feel more complete and gave the dialogue scenes a stronger presence.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Reflection</h3>
+            <p>
+              This project taught me a lot about scope, iteration, and how to stay flexible when building a game
+              inside a tool I was still learning. It was challenging, but it also gave me a much clearer sense of
+              how I like to work across environment building, interaction, and story structure. If I revisited
+              Spirit Camper, I would expand the narrative, refine the pacing, and introduce more mechanics while
+              keeping the same atmospheric tone.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/shared-layout.js"></script>
+    <script src="../js/project-detail.js"></script>
+  </body>
+</html>

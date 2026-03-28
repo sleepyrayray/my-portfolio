@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Hernaez | Frottage</title>
+    <meta
+      name="description"
+      content="Frottage by Ray Hernaez, a mixed media texture series built from everyday surfaces, pareidolia, and digital editing."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:ital,wght@0,500;0,600;0,700;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="project-detail-page">
+    <div class="page-shell page-shell--project-detail">
+      <main class="project-detail-page__main">
+        <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Frottage page navigation">
+          <a class="hero-stage__action hero-stage__action--ghost" href="../index.html">Home</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--solid" href="../projects.html" aria-current="page">Projects</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--ghost" href="../contact.html">Contact</a>
+        </nav>
+
+        <article class="project-detail" aria-labelledby="frottage-heading">
+          <header class="project-detail__hero">
+            <section class="project-detail__block">
+              <p class="project-detail__label">project</p>
+              <h1 id="frottage-heading" class="project-detail__title">Frottage</h1>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">bio</p>
+              <p class="project-detail__summary">
+                Frottage is a mixed media project that transforms texture rubbings from everyday surfaces into
+                imaginative artworks. Using observation, pareidolia, and digital editing, it explores freedom,
+                ascent, and unease.
+                <button
+                  class="project-detail__more-trigger"
+                  type="button"
+                  data-project-overlay-open
+                  aria-controls="frottage-overlay"
+                  aria-expanded="false"
+                >
+                  Learn more!
+                </button>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">deliverables</p>
+              <p class="project-detail__meta-copy">
+                <span>Frottage Textures</span>
+                <span>Mixed Media</span>
+                <span>Texture Series</span>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">year</p>
+              <p class="project-detail__year">2024</p>
+            </section>
+          </header>
+
+          <section class="project-detail__stack" aria-label="Frottage media">
+            <figure class="project-detail__figure">
+              <img src="../assets/images/frottage/1.jpg" alt="Flight of the Free artwork from the Frottage series" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/frottage/3.jpg" alt="Heavenly Ascent artwork from the Frottage series" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/frottage/4.jpg" alt="The Staring Shadows artwork from the Frottage series" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/frottage/2.jpg" alt="Rib bones study artwork from the Frottage series" />
+            </figure>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer" data-site-footer></footer>
+    </div>
+
+    <div class="project-detail-overlay" id="frottage-overlay" hidden>
+      <div class="project-detail-overlay__backdrop" data-project-overlay-close></div>
+
+      <div class="project-detail-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="frottage-overlay-title">
+        <button class="project-detail-overlay__close" type="button" data-project-overlay-close>Close</button>
+
+        <div class="project-detail-overlay__content">
+          <p class="project-detail__label">learn more</p>
+          <h2 id="frottage-overlay-title" class="project-detail-overlay__title">Frottage</h2>
+
+          <section class="project-detail-overlay__section">
+            <h3>Project Concept</h3>
+            <p>
+              Frottage began with an interest in what everyday textures can become when they are treated as the
+              start of an image rather than just a surface pattern. I was especially drawn to how rubbings could
+              trigger recognition, imagination, and visual storytelling once they were looked at closely enough.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Process</h3>
+            <p>
+              I collected rubbings from things like sidewalks, bark, and shoe soles, then used pareidolia to pull
+              possible forms out of them. After identifying those shapes, I refined the compositions digitally in
+              Photoshop so the final pieces could hold together more clearly as finished images instead of raw
+              texture experiments.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Artworks</h3>
+            <p>
+              The pieces in the series each pushed the textures in a different emotional direction. Flight of the
+              Free suggests freedom through a butterfly form, Heavenly Ascent turns repeated textures into a
+              dreamlike staircase, and The Staring Shadows uses darkened surfaces and hidden eyes to create a more
+              uneasy atmosphere.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Reflection</h3>
+            <p>
+              This project showed me how much visual storytelling can come from observation and reinterpretation. I
+              liked that the source material stayed grounded in everyday surfaces while the final pieces moved
+              somewhere more imaginative. It also reinforced how digital editing can support mood without erasing
+              the original texture history of the work.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/shared-layout.js"></script>
+    <script src="../js/project-detail.js"></script>
+  </body>
+</html>

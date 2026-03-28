@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Hernaez | Sheldon</title>
+    <meta
+      name="description"
+      content="Sheldon by Ray Hernaez, a hybrid pet simulator that connects clay sculpture, micro:bit interaction, and Scratch gameplay."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:ital,wght@0,500;0,600;0,700;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="project-detail-page">
+    <div class="page-shell page-shell--project-detail">
+      <main class="project-detail-page__main">
+        <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Sheldon page navigation">
+          <a class="hero-stage__action hero-stage__action--ghost" href="../index.html">Home</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--solid" href="../projects.html" aria-current="page">Projects</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--ghost" href="../contact.html">Contact</a>
+        </nav>
+
+        <article class="project-detail" aria-labelledby="sheldon-heading">
+          <header class="project-detail__hero">
+            <section class="project-detail__block">
+              <p class="project-detail__label">project</p>
+              <h1 id="sheldon-heading" class="project-detail__title">Sheldon</h1>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">bio</p>
+              <p class="project-detail__summary">
+                Sheldon is a hybrid pet simulator that combines a clay turtle sculpture, micro:bit interaction,
+                and a Scratch game. Players pet the turtle to raise its friendship meter, creating a simple and
+                relaxing interactive experience.
+                <button
+                  class="project-detail__more-trigger"
+                  type="button"
+                  data-project-overlay-open
+                  aria-controls="sheldon-overlay"
+                  aria-expanded="false"
+                >
+                  Learn more!
+                </button>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">deliverables</p>
+              <p class="project-detail__meta-copy">
+                <span>Scratch</span>
+                <span>Photoshop</span>
+                <span>Micro:bit</span>
+                <span>Clay Sculpture</span>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">year</p>
+              <p class="project-detail__year">2024</p>
+            </section>
+          </header>
+
+          <section class="project-detail__stack" aria-label="Sheldon media">
+            <figure class="project-detail__figure">
+              <img src="../assets/images/sheldon/3.png" alt="Friendship meter and dialogue screen from Sheldon" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/sheldon/1.JPG" alt="Physical setup linking the clay turtle to the digital game" />
+            </figure>
+
+            <figure class="project-detail__figure">
+              <img src="../assets/images/sheldon/2.jpg" alt="Clay turtle sculpture used for the Sheldon project" />
+            </figure>
+
+            <section class="project-detail__video">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/ht8jK31BSgM?autoplay=1&mute=1&rel=0&playsinline=1"
+                  title="Sheldon gameplay walkthrough"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </section>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer" data-site-footer></footer>
+    </div>
+
+    <div class="project-detail-overlay" id="sheldon-overlay" hidden>
+      <div class="project-detail-overlay__backdrop" data-project-overlay-close></div>
+
+      <div class="project-detail-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="sheldon-overlay-title">
+        <button class="project-detail-overlay__close" type="button" data-project-overlay-close>Close</button>
+
+        <div class="project-detail-overlay__content">
+          <p class="project-detail__label">learn more</p>
+          <h2 id="sheldon-overlay-title" class="project-detail-overlay__title">Sheldon</h2>
+
+          <section class="project-detail-overlay__section">
+            <h3>Development Summary</h3>
+            <p>
+              Sheldon was developed as a hybrid project that combined physical making with digital interaction.
+              The idea was to turn a simple turtle character into something players could actually touch, while
+              still giving that object a game-like personality through Scratch. That mix of tactile input and
+              on-screen reaction made the project feel playful from the beginning.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>My Role</h3>
+            <p>
+              I focused on the digital side of the project by designing and coding the gameplay in Scratch. That
+              included the menu, the friendship meter, the character dialogue, and the overall pacing of how
+              Sheldon reacts to the player. I also worked with edited AI-generated turtle imagery and voice lines
+              to give the project a more complete character presence.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Physical and Digital Link</h3>
+            <p>
+              The clay turtle itself became the bridge between the object and the game. Using copper tape and a
+              micro:bit setup, touch on the sculpture could be translated into actions inside the digital
+              interface. That connection was the core of the piece, because it made petting the turtle feel like a
+              meaningful part of the gameplay rather than a separate gimmick.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Reflection</h3>
+            <p>
+              What I liked most about Sheldon was how naturally it brought sculpture, programming, and character
+              design together. It showed me how effective a small interactive idea can be when the physical and
+              digital sides support each other clearly. If I revisited it, I would expand the world around Sheldon
+              and add more character interactions so the experience could grow beyond the friendship loop.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/shared-layout.js"></script>
+    <script src="../js/project-detail.js"></script>
+  </body>
+</html>
