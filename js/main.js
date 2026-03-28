@@ -73,6 +73,10 @@ function showProject(projectId) {
 
 // Open the gallery modal with the selected preview information.
 function openGalleryModal(button) {
+  if (!galleryModal || !galleryModalImage || !galleryModalTitle || !galleryModalCaption) {
+    return;
+  }
+
   const previewImage = button.dataset.image;
   const previewAlt = button.dataset.alt;
   const previewTitle = button.dataset.title;
@@ -89,6 +93,10 @@ function openGalleryModal(button) {
 
 // Close the gallery modal.
 function closeGalleryModal() {
+  if (!galleryModal) {
+    return;
+  }
+
   galleryModal.classList.remove("is-visible");
   galleryModal.setAttribute("aria-hidden", "true");
 }
@@ -148,20 +156,24 @@ galleryButtons.forEach(function (button) {
 });
 
 // Close the modal when the close button is clicked.
-galleryCloseButton.addEventListener("click", function () {
-  closeGalleryModal();
-});
+if (galleryCloseButton) {
+  galleryCloseButton.addEventListener("click", function () {
+    closeGalleryModal();
+  });
+}
 
 // Close the modal when the dark backdrop is clicked.
-galleryModal.addEventListener("click", function (event) {
-  if (event.target.dataset.closeModal === "true") {
-    closeGalleryModal();
-  }
-});
+if (galleryModal) {
+  galleryModal.addEventListener("click", function (event) {
+    if (event.target.dataset.closeModal === "true") {
+      closeGalleryModal();
+    }
+  });
+}
 
 // Close the modal when the Escape key is pressed.
 document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && galleryModal.classList.contains("is-visible")) {
+  if (galleryModal && event.key === "Escape" && galleryModal.classList.contains("is-visible")) {
     closeGalleryModal();
   }
 });

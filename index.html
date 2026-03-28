@@ -51,6 +51,13 @@
         <!-- Home section -->
         <section id="home" class="content-section is-active" aria-labelledby="home-heading">
           <div class="hero-stage">
+            <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Primary navigation">
+              <a class="hero-stage__action hero-stage__action--solid" href="index.html" aria-current="page">Home</a>
+              <span class="hero-stage__divider" aria-hidden="true"></span>
+              <a class="hero-stage__action hero-stage__action--ghost" href="projects.html">Projects</a>
+              <span class="hero-stage__divider" aria-hidden="true"></span>
+              <a class="hero-stage__action hero-stage__action--ghost" href="contact.html">Contact</a>
+            </nav>
             <p class="hero-stage__kicker">Computation Arts + Film</p>
             <h1 id="home-heading" class="hero-stage__name">
               <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
@@ -59,12 +66,6 @@
               <span class="hero-stage__lead-line">Work shaped by play,</span>
               <span class="hero-stage__lead-line">image, and interaction</span>
             </p>
-
-            <div class="hero-stage__actions" aria-label="Primary actions">
-              <a class="hero-stage__action hero-stage__action--solid" href="#selected-work">Projects</a>
-              <span class="hero-stage__divider" aria-hidden="true"></span>
-              <a class="hero-stage__action hero-stage__action--ghost" href="contact.html">Contact</a>
-            </div>
           </div>
         </section>
 
@@ -1082,92 +1083,10 @@
         </section>
       </main>
 
-      <section class="archive-section" id="selected-work" aria-labelledby="selected-work-heading">
-        <p class="archive-section__label">Projects</p>
-        <h2 class="sr-only" id="selected-work-heading">Projects</h2>
-
-        <div class="archive-grid">
-          <article class="archive-card">
-            <figure class="archive-card__figure">
-              <img
-                class="archive-card__image"
-                src="assets/images/spirit-camper/3.png"
-                alt="Spirit Camper cover image"
-                draggable="false"
-              />
-            </figure>
-            <button class="archive-card__name-link" type="button">Spirit Camper</button>
-          </article>
-
-          <article class="archive-card">
-            <figure class="archive-card__figure">
-              <img
-                class="archive-card__image"
-                src="assets/images/sheldon/3.png"
-                alt="Sheldon cover image"
-                draggable="false"
-              />
-            </figure>
-            <button class="archive-card__name-link" type="button">Sheldon</button>
-          </article>
-
-          <article class="archive-card">
-            <figure class="archive-card__figure">
-              <img
-                class="archive-card__image"
-                src="assets/images/vampire-slayer/2.jpg"
-                alt="Vampire Slayer cover image"
-                draggable="false"
-              />
-            </figure>
-            <button class="archive-card__name-link" type="button">Vampire Slayer</button>
-          </article>
-
-          <article class="archive-card">
-            <figure class="archive-card__figure">
-              <img
-                class="archive-card__image"
-                src="assets/images/evil/2.jpg"
-                alt="E.V.I.L. cover image"
-                draggable="false"
-              />
-            </figure>
-            <button class="archive-card__name-link" type="button">E.V.I.L.</button>
-          </article>
-
-          <article class="archive-card">
-            <figure class="archive-card__figure">
-              <img
-                class="archive-card__image"
-                src="assets/images/the-heavy-20s/5.png"
-                alt="The Heavy 20s cover image"
-                draggable="false"
-              />
-            </figure>
-            <button class="archive-card__name-link" type="button">The Heavy 20s</button>
-          </article>
-
-          <article class="archive-card">
-            <figure class="archive-card__figure">
-              <img
-                class="archive-card__image"
-                src="assets/images/frottage/1.jpg"
-                alt="Frottage cover image"
-                draggable="false"
-              />
-            </figure>
-            <button class="archive-card__name-link" type="button">Frottage</button>
-          </article>
-        </div>
-      </section>
-
       <footer class="site-footer" aria-label="Site footer">
         <p class="site-footer-text">
-          <span>Ray Hernaez</span>
-          <span class="footer-divider" aria-hidden="true">•</span>
-          <span><span id="current-year"></span> Portfolio</span>
-          <span class="footer-divider" aria-hidden="true">•</span>
-          <span>Montreal, Canada</span>
+          <span>&copy; <span id="current-year"></span> Ray Hernaez Portfolio.</span>
+          <span class="site-footer-fade">All Rights Reserved.</span>
         </p>
       </footer>
     </div>

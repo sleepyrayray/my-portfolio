@@ -22,6 +22,13 @@
     <div class="page-shell page-shell--contact">
       <main class="contact-page__main">
         <section class="hero-stage contact-stage" aria-labelledby="contact-page-heading">
+          <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Contact page navigation">
+            <a class="hero-stage__action hero-stage__action--ghost" href="index.html">Home</a>
+            <span class="hero-stage__divider" aria-hidden="true"></span>
+            <a class="hero-stage__action hero-stage__action--ghost" href="projects.html">Projects</a>
+            <span class="hero-stage__divider" aria-hidden="true"></span>
+            <a class="hero-stage__action hero-stage__action--solid" href="contact.html" aria-current="page">Contact</a>
+          </nav>
           <p class="hero-stage__kicker">About + Contact</p>
           <h1 id="contact-page-heading" class="hero-stage__name">
             <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
@@ -35,12 +42,17 @@
             <p class="contact-stage__note">You can reach me at:</p>
             <p class="contact-stage__email">r.hernz@outlook.com</p>
           </div>
-
-          <div class="hero-stage__actions contact-stage__actions" aria-label="Contact page actions">
-            <a class="hero-stage__action hero-stage__action--ghost" href="index.html">Back to home</a>
-          </div>
         </section>
       </main>
+
+      <footer class="site-footer" aria-label="Site footer">
+        <p class="site-footer-text">
+          <span>&copy; <span id="current-year"></span> Ray Hernaez Portfolio.</span>
+          <span class="site-footer-fade">All Rights Reserved.</span>
+        </p>
+      </footer>
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
