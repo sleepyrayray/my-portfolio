@@ -752,6 +752,10 @@ button:focus-visible {
   padding-top: 2.6rem;
 }
 
+.project-detail-overlay__content > .project-detail__label {
+  display: none;
+}
+
 .project-detail-overlay__title {
   color: var(--text-color);
   font-family: var(--heading-font);
