@@ -45,6 +45,13 @@ body {
   background-attachment: fixed;
 }
 
+body,
+body * {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -338,7 +345,7 @@ button:focus-visible {
   margin-top: 0.9rem;
   color: var(--text-color);
   font-family: var(--label-font);
-  font-size: clamp(0.68rem, 1.45vw, 1.02rem);
+  font-size: clamp(0.84rem, 1.85vw, 1.22rem);
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: 0.02em;
@@ -699,6 +706,10 @@ button:focus-visible {
   overflow: hidden;
 }
 
+.has-contact-overlay {
+  overflow: hidden;
+}
+
 .project-detail-overlay {
   position: fixed;
   inset: 0;
@@ -788,6 +799,89 @@ button:focus-visible {
   line-height: 1.75;
 }
 
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+}
+
+.contact-overlay.is-visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.contact-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(8, 5, 4, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.contact-overlay__panel {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+  max-height: calc(100vh - 2rem);
+  margin: 0;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, rgba(29, 18, 14, 0.98), rgba(17, 10, 8, 0.96));
+  overflow-y: auto;
+}
+
+.contact-overlay__close {
+  position: absolute;
+  top: clamp(1rem, 2vw, 1.4rem);
+  right: clamp(1rem, 2vw, 1.4rem);
+  display: inline-flex;
+  margin-bottom: 0;
+  border: 1px solid rgba(241, 228, 211, 0.18);
+  padding: 0.42rem 0.72rem;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-color);
+  font-family: var(--label-font);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-overlay__close:hover,
+.contact-overlay__close:focus-visible {
+  border-color: rgba(211, 160, 122, 0.28);
+  background: linear-gradient(180deg, rgba(211, 160, 122, 0.12), rgba(165, 83, 61, 0.07));
+  transform: none;
+}
+
+.contact-overlay__content {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+  padding-top: 2.6rem;
+  text-align: center;
+}
+
+.contact-overlay__label {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.contact-overlay__title {
+  margin: 0;
+}
+
+.contact-overlay__bio {
+  width: min(100%, 54ch);
+  text-align: center;
+}
+
+.contact-overlay__reach {
+  justify-items: center;
+  margin-bottom: 0.5rem;
+}
+
 .project-detail__video .video-frame {
   margin-top: 0;
 }
@@ -850,6 +944,7 @@ button:focus-visible {
   display: grid;
   gap: 0.2rem;
   margin-top: 0.42rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-stage__note {
@@ -863,12 +958,35 @@ button:focus-visible {
 }
 
 .contact-stage__email {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
   color: var(--text-color);
   font-family: var(--label-font);
   font-size: clamp(0.72rem, 1.45vw, 0.96rem);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.contact-stage__email:hover,
+.contact-stage__email:focus-visible {
+  color: var(--accent-strong);
+  outline: none;
+}
+
+.contact-stage__copy-status {
+  min-height: 1.1em;
+  color: var(--muted-text);
+  font-family: var(--label-font);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
