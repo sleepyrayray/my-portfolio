@@ -9,7 +9,6 @@ const galleryModalImage = document.getElementById("gallery-modal-image");
 const galleryModalTitle = document.getElementById("gallery-modal-title");
 const galleryModalCaption = document.getElementById("gallery-modal-caption");
 const galleryCloseButton = document.getElementById("gallery-close-button");
-const currentYear = document.getElementById("current-year");
 const projectsSection = document.getElementById("projects");
 const projectBackButton = document.getElementById("project-back-button");
 const archiveGrid = document.querySelector(".archive-grid");
@@ -180,7 +179,3 @@ document.addEventListener("keydown", function (event) {
 
 // Show the default section when the page first loads.
 showSection(defaultSectionId);
-
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}

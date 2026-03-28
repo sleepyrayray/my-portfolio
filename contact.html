@@ -18,22 +18,19 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="contact-page">
+  <body class="contact-page" data-page="contact">
     <div class="page-shell page-shell--contact">
       <main class="contact-page__main">
         <section class="hero-stage contact-stage" aria-labelledby="contact-page-heading">
-          <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Contact page navigation">
-            <a class="hero-stage__action hero-stage__action--ghost" href="index.html">Home</a>
-            <span class="hero-stage__divider" aria-hidden="true"></span>
-            <a class="hero-stage__action hero-stage__action--ghost" href="projects.html">Projects</a>
-            <span class="hero-stage__divider" aria-hidden="true"></span>
-            <a class="hero-stage__action hero-stage__action--solid" href="contact.html" aria-current="page">Contact</a>
-          </nav>
+          <div data-site-nav data-current="contact" data-nav-label="Contact page navigation"></div>
           <p class="hero-stage__kicker">About + Contact</p>
           <h1 id="contact-page-heading" class="hero-stage__name">
             <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
           </h1>
-          <p class="contact-stage__focus">Working across game design, digital art, and visual storytelling.</p>
+          <p class="contact-stage__focus">
+            <span class="contact-stage__focus-line">Working across game design,</span>
+            <span class="contact-stage__focus-line">digital art, and visual storytelling.</span>
+          </p>
           <p class="contact-stage__bio">
             Montreal-based Computation Arts student at Concordia University, minoring in Film and Moving Images
             Studies.
@@ -45,14 +42,10 @@
         </section>
       </main>
 
-      <footer class="site-footer" aria-label="Site footer">
-        <p class="site-footer-text">
-          <span>&copy; <span id="current-year"></span> Ray Hernaez Portfolio.</span>
-          <span class="site-footer-fade">All Rights Reserved.</span>
-        </p>
-      </footer>
+      <div data-site-footer></div>
     </div>
 
+    <script src="js/shared-layout.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

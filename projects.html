@@ -18,18 +18,12 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="projects-page">
+  <body class="projects-page" data-page="projects">
     <div class="page-shell page-shell--projects">
       <main class="projects-page__main">
         <section class="projects-stage" aria-labelledby="projects-page-heading">
           <div class="projects-stage__header">
-            <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Projects page navigation">
-              <a class="hero-stage__action hero-stage__action--ghost" href="index.html">Home</a>
-              <span class="hero-stage__divider" aria-hidden="true"></span>
-              <a class="hero-stage__action hero-stage__action--solid" href="projects.html" aria-current="page">Projects</a>
-              <span class="hero-stage__divider" aria-hidden="true"></span>
-              <a class="hero-stage__action hero-stage__action--ghost" href="contact.html">Contact</a>
-            </nav>
+            <div data-site-nav data-current="projects" data-nav-label="Projects page navigation"></div>
             <h1 id="projects-page-heading" class="hero-stage__name">
               <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
             </h1>
@@ -101,14 +95,10 @@
         </section>
       </main>
 
-      <footer class="site-footer" aria-label="Site footer">
-        <p class="site-footer-text">
-          <span>&copy; <span id="current-year"></span> Ray Hernaez Portfolio.</span>
-          <span class="site-footer-fade">All Rights Reserved.</span>
-        </p>
-      </footer>
+      <div data-site-footer></div>
     </div>
 
+    <script src="js/shared-layout.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

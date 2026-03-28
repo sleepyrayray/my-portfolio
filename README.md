@@ -3,20 +3,30 @@
 ## Short Description
 A personal portfolio website for Ray Hernaez, built with plain HTML, CSS, and JavaScript.
 
-## Purpose of the Site
-This site presents Ray Hernaez's work in game design, digital art, and interactive media in a clean, easy-to-navigate format. It highlights project case studies, gallery images, and walkthrough videos while keeping the interface simple and focused.
+## Current Site Structure
+The site currently has three main public pages:
+
+- `index.html` - homepage hero
+- `projects.html` - project archive overview
+- `contact.html` - about/contact page
+
+The visual direction is dark, minimal, and retro-toned, with Oakline Studio used mainly as a structural reference.
 
 ## Current Status
-The site includes personalized `Home`, `About`, `Projects`, and `Contact` sections with real portfolio content.
+### Live design direction
+- Dark tobacco palette
+- Centered typography-led homepage
+- Sticky top-right navigation
+- Tiny bottom-left footer
+- Separate overview pages for projects and contact
 
-Current state:
-- Dark theme layout is in place
-- Main navigation switches between `Home`, `About`, `Projects`, and `Contact`
-- Only one main section is visible at a time
-- The `Projects` section opens with project buttons first, with no project selected by default
-- Project images open in a modal with captions
-- Some projects include embedded YouTube walkthroughs
-- The footer includes an automatically updating year
+### Current page behavior
+- `Home`, `Projects`, and `Contact` are always visible in the sticky nav
+- The current page is highlighted in the nav
+- The footer year is generated automatically
+- The projects archive uses a two-column desktop grid and one-column mobile grid
+- Project cover images are non-draggable and not directly interactive
+- Project names are the intended entry points for future project detail pages
 
 ## Current Projects
 - Spirit Camper
@@ -27,24 +37,34 @@ Current state:
 - Frottage
 
 ## Folder Structure
-- `index.html` - the full site layout and portfolio content
-- `css/style.css` - all styling, layout, responsive rules, and gallery presentation
-- `js/main.js` - section switching, project switching, gallery modal logic, and footer year handling
-- `assets/images/` - project image folders used in the galleries
+- `index.html` - homepage
+- `projects.html` - projects archive page
+- `contact.html` - about/contact page
+- `css/style.css` - main styling, layout rules, and responsive behavior
+- `js/main.js` - older interaction logic plus current archive protections
+- `js/shared-layout.js` - shared sticky nav and shared footer rendering
+- `assets/images/` - project image folders used in the archive and galleries
 - `sections/` - reserved for future file splitting if needed
 
-## Site Behavior
-- The top navigation shows one main section at a time
-- The `Projects` area uses its own project switcher
-- Opening `Projects` shows the project chooser before any case study is selected
-- Clicking a project button reveals that project's case study
-- Clicking a gallery thumbnail opens a larger image with a caption
+## Important Architecture Note
+The repo is currently in a transition state:
+
+- the new public experience is built around separate pages
+- some older single-page portfolio sections still remain inside `index.html`
+- some older section-switching and project-panel logic still remains in `js/main.js`
+
+Those leftovers do not define the current main experience, but they should likely be cleaned up after the project detail pages are designed.
 
 ## Local Development
-1. Open `index.html` in a browser.
-2. Edit text directly in `index.html`.
-3. Update styles in `css/style.css`.
-4. Update the simple interaction logic in `js/main.js` if needed.
+1. Open `index.html`, `projects.html`, or `contact.html` in a browser.
+2. Update shared visual styling in `css/style.css`.
+3. Update shared nav/footer rendering in `js/shared-layout.js`.
+4. Update any older interaction logic in `js/main.js` only when needed.
+
+## Next Planned Work
+- build the individual project detail pages
+- link each project name in the archive to its real page
+- clean up legacy hidden sections after the new structure is fully locked
 
 ## Deployment
 This is a static website, so it can be deployed on platforms like GitHub Pages, Netlify, or Vercel.

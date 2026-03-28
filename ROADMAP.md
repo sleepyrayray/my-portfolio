@@ -1,108 +1,109 @@
 # Portfolio Redesign Roadmap
 
 ## Goal
-Build a homepage-first redesign for Ray's portfolio that borrows Oakline Studio's composition and archive logic while translating it into a dark, retro, minimal visual language.
+Build a dark, retro, minimal portfolio that borrows Oakline Studio's composition discipline and archive logic while keeping the experience personal, image-led, and easy to grow.
 
-This roadmap is intentionally sequential. We will work one thing at a time, review it together, and leave the project-page layout design for a later phase.
+This roadmap is intentionally sequential. We work one focused area at a time, lock it in, then move forward.
 
-## Current Working Agreement
-- Focus only on the homepage for now
-- Work step by step so new personalized features can be folded in as we go
-- Keep Oakline as a structural reference, not a white-bright visual copy
-- Preserve a dark retro-vintage mood
+## Current Status
+### Completed
+- Homepage hero has been redesigned into a centered intro with a dark retro visual system
+- `Projects` and `Contact` now live on their own pages instead of being part of the homepage
+- A shared sticky top-right nav now appears on all main pages
+- A shared bottom-left footer now appears on all main pages
+- Shared page chrome has been simplified with `js/shared-layout.js` so nav and footer are not duplicated by hand
+- The project archive grid has been moved to its own `projects.html` page
+
+### Current Main Pages
+- `index.html` - hero-first homepage
+- `projects.html` - project archive overview
+- `contact.html` - about/contact page
+
+## Working Agreement
+- Keep the dark retro-vintage mood
+- Keep Oakline as a structural reference, not a bright visual copy
 - Avoid fake logos, fake mockups, or invented decorative assets
-- Navigation stays limited to `Projects` and `Contact`
-- Show all 6 current projects on the homepage
-- Each project uses one cover image on the homepage
-- Clicking a project cover should lead to a dedicated project page
-- Filtering can be added later when the project list grows
+- Work step by step and leave room for personalized features as they come up
+- Do not change approved sections casually once they feel locked
 
-## Design Translation
-### Borrow From Oakline
-- Centered intro/about composition
-- Strong whitespace and clean vertical rhythm
-- Restrained hierarchy with small labels and compact calls to action
-- Two-column archive/grid logic
-- Thin divider and border treatment
-- Sticky bottom control bar later if it still fits the final direction
+## What Has Been Translated From Oakline
+- Centered hero composition
+- Strong whitespace and restrained hierarchy
+- Tiny mono labels and compact navigation treatment
+- Image-led project archive logic
+- Minimal border/divider styling
 
-### Change For Ray's Version
-- Dark background and muted warm tones instead of a bright white canvas
-- Retro-vintage mood instead of agency-editorial neutrality
-- Ray's name and copy as typography, not a custom logo
-- Real project cover art only
-- Personal intro/about language instead of studio/client-proof language
+## What We Intentionally Changed
+- Dark tobacco palette instead of a white editorial canvas
+- Ray's name as typography instead of logo artwork
+- Separate `Projects` and `Contact` pages instead of a single agency-style landing page
+- Persistent sticky top-right nav instead of a bottom sticky filter bar
 
-## Homepage Target Structure
-### 1. Intro / About Hero
-- Small top label
-- Ray's name or title treatment
-- Short stylized about statement
-- Compact `Projects` and `Contact` actions
+## Phase Review
+### Phase 1: Visual Direction
+Status: done
 
-### 2. Project Archive
-- Two-column grid on desktop
-- One cover image per project
-- Quiet project labels and links
-- Minimal hover and motion treatment
+- Warm dark palette
+- Oakline-inspired font roles
+- Thin border system
+- Subtle grain and fixed background treatment
 
-### 3. Contact Close
-- Simple closing CTA or contact block
-- Clean transition out of the project archive
+### Phase 2: Homepage Hero
+Status: done for now
 
-## Step-By-Step Homepage Plan
-### Step 1: Lock The Visual Direction
-- Define the homepage palette
-- Define the typography pairings
-- Define the border, spacing, and texture rules
-- Decide how the retro feeling shows up without clutter
+- Centered hero composition is in place
+- Homepage copy has been simplified
+- Homepage now acts as an entry point rather than an about page
 
-### Step 2: Build The Hero / About Block
-- Replace the current top section with a centered Oakline-inspired composition
-- Rewrite and place the about copy in a more stylized form
-- Set the primary spacing rhythm for the page
-- Style the top navigation and actions
+### Phase 3: Project Archive
+Status: done for overview page
 
-### Step 3: Build The Project Grid Shell
-- Create the two-column homepage archive
-- Place all 6 project covers
-- Add project names and links
-- Tune the whitespace so the layout feels airy, minimal, and deliberate
+- Archive grid exists on `projects.html`
+- Two-column desktop / one-column mobile behavior is in place
+- Cover images and project names are shown
+- Grid edges and divider logic are in place
 
-### Step 4: Add The Homepage Contact Section
-- Build the bottom contact area
-- Connect it cleanly with the `Contact` nav target
-- Keep the styling minimal and consistent with the homepage tone
+### Phase 4: Contact / About Page
+Status: done for first pass
 
-### Step 5: Add Secondary Homepage Polish
-- Add subtle motion only where it helps
-- Add restrained texture or grain only if it strengthens the retro feel
-- Refine hover states, image treatment, and small details
-- Tune tablet and mobile layouts
+- Contact page has its own layout
+- About copy and contact info live there
+- Email is currently the only contact method
 
-### Step 6: Review Before Moving On
-- Do a dedicated homepage review pass
-- Capture any personalized additions Ray wants to introduce
-- Freeze the homepage direction before starting project-page design
+### Phase 5: Shared Layout Cleanup
+Status: done for first pass
 
-## Later Phase: Project Pages
-- Design the project detail layout after the homepage is approved
-- Decide how gameplay videos should behave on the project pages
-- Define the content structure for each project page
-- Add homepage filtering later when more projects exist
+- Sticky nav appears on all pages
+- Footer appears on all pages
+- Shared nav/footer rendering is centralized
 
-## Content Direction For The Homepage
-- Keep all 6 real projects
-- Keep the content authentic to Ray's background and work
-- Tighten the intro copy so it feels more curated and intentional
-- Save deeper project storytelling for the later project-page phase
+## Next Phase: Project Detail Pages
+### Priority
+This is the next major task.
+
+### What still needs to be built
+- Separate detail page layout for each project
+- Final content structure for each project page
+- Actual links from archive project names into those detail pages
+- Consistent project-page navigation back into the main site
+
+### Questions to resolve during that phase
+- What content blocks each project page should include
+- Whether walkthrough videos should remain external, embedded, or replaced with lighter previews
+- How minimal or information-dense each project page should feel
+
+## Still To Do After Project Pages
+- Decide whether to fully remove or archive the old hidden single-page portfolio sections still living inside `index.html`
+- Decide whether to split project data/content further for easier maintenance
+- Add filtering later if the project list grows
+- Do a dedicated responsiveness and browser QA pass
+- Do a final cleanup pass on spacing, typography, and hover polish
+
+## Current Risks / Cleanup Notes
+- `index.html` still contains legacy hidden sections from the older single-page version
+- `js/main.js` still contains older section-switching and project-panel logic that is no longer part of the current main experience
+- Shared layout is now cleaner, but the rest of the content architecture could still be simplified later
 
 ## Reference Notes
 - Oakline homepage analysis lives in `OAKLINE_HOMEPAGE_REFERENCE.md`
-- That document should guide structure and spacing, not force a bright visual style
-
-## Open Items
-- Final dark palette and accent colors
-- Final type pairing for the retro direction
-- Whether subtle grain or texture belongs on the homepage
-- Whether the sticky bottom control bar should ship in the first homepage pass or after the layout is approved
+- That document should guide structure and rhythm, not force a bright visual style

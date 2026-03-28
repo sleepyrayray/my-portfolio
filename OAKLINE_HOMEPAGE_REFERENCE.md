@@ -232,3 +232,23 @@ Best homepage adaptation path:
 ## Sources
 - [Oakline Studio](https://oakline.studio/)
 - [Framer gallery entry](https://www.framer.com/gallery/oakline-studio/)
+
+## Current Adaptation Status In This Repo
+What has already been applied:
+- centered intro composition
+- compact mono navigation treatment
+- typography-led presentation instead of logo/image dependency
+- separate project archive page with restrained grid logic
+- strong whitespace and minimal divider language
+
+What has been intentionally left behind:
+- bright white canvas
+- custom logo graphics
+- collage/sticker assets
+- testimonial band
+- sticky bottom filter bar
+
+What this means going forward:
+- this file is still useful for structure, spacing, and restraint
+- it should not be treated as a direct pixel-match target anymore
+- the next project-page phase can still borrow Oakline discipline without copying Oakline literally

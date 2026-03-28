@@ -20,7 +20,7 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="hero-focus-pass">
+  <body class="hero-focus-pass" data-page="home">
     <div class="page-shell">
       <!-- Site header -->
       <header class="site-header">
@@ -51,13 +51,7 @@
         <!-- Home section -->
         <section id="home" class="content-section is-active" aria-labelledby="home-heading">
           <div class="hero-stage">
-            <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Primary navigation">
-              <a class="hero-stage__action hero-stage__action--solid" href="index.html" aria-current="page">Home</a>
-              <span class="hero-stage__divider" aria-hidden="true"></span>
-              <a class="hero-stage__action hero-stage__action--ghost" href="projects.html">Projects</a>
-              <span class="hero-stage__divider" aria-hidden="true"></span>
-              <a class="hero-stage__action hero-stage__action--ghost" href="contact.html">Contact</a>
-            </nav>
+            <div data-site-nav data-current="home" data-nav-label="Primary navigation"></div>
             <p class="hero-stage__kicker">Computation Arts + Film</p>
             <h1 id="home-heading" class="hero-stage__name">
               <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
@@ -1083,12 +1077,7 @@
         </section>
       </main>
 
-      <footer class="site-footer" aria-label="Site footer">
-        <p class="site-footer-text">
-          <span>&copy; <span id="current-year"></span> Ray Hernaez Portfolio.</span>
-          <span class="site-footer-fade">All Rights Reserved.</span>
-        </p>
-      </footer>
+      <div data-site-footer></div>
     </div>
 
     <!-- Simple image modal for project gallery -->
@@ -1112,6 +1101,7 @@
       </div>
     </div>
 
+    <script src="js/shared-layout.js"></script>
     <!-- Main JavaScript -->
     <script src="js/main.js"></script>
   </body>
