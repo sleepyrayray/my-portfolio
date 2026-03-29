@@ -1762,7 +1762,9 @@ button:focus-visible {
 
   .hero-stage__actions--nav {
     top: max(0.65rem, env(safe-area-inset-top));
-    right: 0.75rem;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .hero-stage__action {
@@ -1894,8 +1896,12 @@ button:focus-visible {
   }
 
   .site-footer-text {
+    justify-content: center;
     gap: 0.16rem;
     font-size: 0.56rem;
+    padding-left: 0;
+    padding-inline: 0.75rem;
+    text-align: center;
   }
 
   .content-section {
