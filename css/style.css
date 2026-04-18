@@ -609,6 +609,16 @@ button:focus-visible {
   transform: none;
 }
 
+.project-detail__link-row {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.project-detail__link-prefix {
+  color: var(--text-color);
+  margin-right: 0.35rem;
+}
+
 .project-detail__stack {
   display: grid;
   gap: 1rem;

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Hernaez | When the Night Can't Breathe</title>
+    <meta
+      name="description"
+      content="When the Night Can't Breathe by Ray Hernaez, an interactive p5.js project critiquing light pollution through a responsive nighttime neighborhood scene."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:ital,wght@0,500;0,600;0,700;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="project-detail-page">
+    <div class="page-shell page-shell--project-detail">
+      <main class="project-detail-page__main">
+        <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="When the Night Can't Breathe page navigation">
+          <a class="hero-stage__action hero-stage__action--ghost" href="../index.html">Home</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--solid" href="../projects.html" aria-current="page">Projects</a>
+          <span class="hero-stage__divider" aria-hidden="true"></span>
+          <a class="hero-stage__action hero-stage__action--ghost" href="../contact.html">Contact</a>
+        </nav>
+
+        <article class="project-detail" aria-labelledby="when-the-night-cant-breathe-heading">
+          <header class="project-detail__hero">
+            <section class="project-detail__block">
+              <p class="project-detail__label">project</p>
+              <h1 id="when-the-night-cant-breathe-heading" class="project-detail__title">When the Night Can't Breathe</h1>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">bio</p>
+              <p class="project-detail__summary">
+                An interactive p5.js work that critiques light pollution through a residential nighttime scene.
+                As viewers click the houses, window lights turn on, the stars begin to disappear, and the night
+                sky becomes harder to hold onto.
+                <button
+                  class="project-detail__more-trigger"
+                  type="button"
+                  data-project-overlay-open
+                  aria-controls="when-the-night-cant-breathe-overlay"
+                  aria-expanded="false"
+                >
+                  Learn more!
+                </button>
+                <span class="project-detail__link-row">
+                  <span class="project-detail__link-prefix" aria-hidden="true">→</span>
+                  <a
+                    class="project-detail__more-trigger"
+                    href="https://sleepyrayray.github.io/ffar249/project/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Project Link
+                  </a>
+                </span>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">deliverables</p>
+              <p class="project-detail__meta-copy">
+                <span>Interactive Media</span>
+                <span>p5.js</span>
+              </p>
+            </section>
+
+            <section class="project-detail__block">
+              <p class="project-detail__label">year</p>
+              <p class="project-detail__year">2026</p>
+            </section>
+          </header>
+
+          <section class="project-detail__stack" aria-label="When the Night Can't Breathe media">
+            <div class="project-detail__pair">
+              <figure class="project-detail__figure">
+                <img loading="lazy" decoding="async" src="../assets/images/when-the-night-cant-breathe/1.webp" alt="Main scene from When the Night Can't Breathe" />
+              </figure>
+
+              <figure class="project-detail__figure">
+                <img loading="lazy" decoding="async" src="../assets/images/when-the-night-cant-breathe/2.webp" alt="Lit-house variation from When the Night Can't Breathe" />
+              </figure>
+            </div>
+
+            <section class="project-detail__video">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/lpLorL4ppYY?autoplay=1&mute=1&rel=0&playsinline=1"
+                  title="When the Night Can't Breathe walkthrough"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </section>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer" data-site-footer></footer>
+    </div>
+
+    <div class="project-detail-overlay" id="when-the-night-cant-breathe-overlay" hidden>
+      <div class="project-detail-overlay__backdrop" data-project-overlay-close></div>
+
+      <div
+        class="project-detail-overlay__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="when-the-night-cant-breathe-overlay-title"
+      >
+        <button class="project-detail-overlay__close" type="button" aria-label="Close" data-project-overlay-close>X</button>
+
+        <div class="project-detail-overlay__content">
+          <p class="project-detail__label">learn more</p>
+          <h2 id="when-the-night-cant-breathe-overlay-title" class="project-detail-overlay__title">When the Night Can't Breathe</h2>
+
+          <section class="project-detail-overlay__section">
+            <h3>Concept</h3>
+            <p>
+              When the Night Can&rsquo;t Breathe is an interactive p5.js project built around the keyword pairing
+              <em>Critiquing + The Night</em>. The piece begins in blackout: the houses are dark, the stars feel
+              fully present, and the night sky carries the whole atmosphere of the scene. From there, the work
+              asks what happens when artificial light gradually becomes the dominant way of experiencing night.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Interaction</h3>
+            <p>
+              The viewer activates the work by clicking the houses. Each click turns on more windows and pushes
+              the scene further away from darkness. As the domestic lights accumulate, the stars fade, the sky
+              shifts, and the relationship between the viewer and the night changes. The interaction is simple on
+              purpose, so the consequence of each action stays clear and readable.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Visual and Audio Design</h3>
+            <p>
+              I built the piece as a stylized residential nightscape with a moon, star field, horizon glow,
+              house silhouettes, and ambient sound. The code controls gradual transitions in star visibility, sky
+              pollution, house lighting, and atmospheric motion, including subtle shooting stars and audio shifts.
+              That layered response was important because I wanted the scene to feel alive while still keeping the
+              focus on the loss created by excess light.
+            </p>
+          </section>
+
+          <section class="project-detail-overlay__section">
+            <h3>Reflection</h3>
+            <p>
+              The project critiques the assumption that more light automatically means more progress, safety, or
+              improvement. Instead, it asks the viewer to notice what disappears when brightness becomes the
+              standard: the stars, the texture of the sky, and the quieter experience of night itself. For me, it
+              became a way to connect creative coding with environmental atmosphere and visual storytelling in a
+              more direct, interactive form.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/shared-layout.js"></script>
+    <script src="../js/project-detail.js"></script>
+  </body>
+</html>

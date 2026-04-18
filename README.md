@@ -37,6 +37,7 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 - Spirit Camper
 - Sheldon
 - Vampire Slayer
+- When the Night Can't Breathe
 - E.V.I.L.
 - The Heavy 20s
 - Frottage

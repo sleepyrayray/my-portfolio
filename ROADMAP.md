@@ -14,7 +14,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 - A shared bottom-left footer appears across the live site
 - Shared footer rendering, contact overlay behavior, and project-page header injection are handled in `js/shared-layout.js`
 - The project archive grid lives on `projects.html`
-- All six projects now have their own detail pages under `projects/`
+- All seven projects now have their own detail pages under `projects/`
 - Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
 
 ### Current Public Surface
@@ -92,6 +92,7 @@ Status: done for first pass
 - Media stacks and embedded walkthroughs are in place where needed
 - Detail pages are linked from the archive
 - Live archive/detail images have been optimized into lighter `.webp` assets
+- New projects can now be added into the archive/detail system without changing the overall layout pattern
 
 ## Next Phase: Polish And Cleanup
 ### Priority
