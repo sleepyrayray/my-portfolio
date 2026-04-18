@@ -31,6 +31,7 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 - Project detail pages include a `Learn more` text overlay
 - The contact email is click-to-copy
 - Most site text is intentionally non-selectable
+- Live project/archive images now use optimized `.webp` assets with lighter loading hints
 
 ## Current Projects
 - Spirit Camper
@@ -49,7 +50,7 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 - `js/main.js` - archive placeholder handling and archive media protections
 - `js/project-detail.js` - project detail overlay behavior and project media protections
 - `js/shared-layout.js` - shared footer rendering, project-page header injection, contact overlay behavior, custom cursor, and shared interaction rules
-- `assets/images/` - project image folders used in the archive and galleries
+- `assets/images/` - optimized project image folders used in the archive and galleries
 - `sections/` - reserved for future file splitting if needed
 
 ## Important Architecture Note

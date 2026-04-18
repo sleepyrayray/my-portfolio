@@ -91,6 +91,7 @@ Status: done for first pass
 - Long-form `Learn more` overlays are in place
 - Media stacks and embedded walkthroughs are in place where needed
 - Detail pages are linked from the archive
+- Live archive/detail images have been optimized into lighter `.webp` assets
 
 ## Next Phase: Polish And Cleanup
 ### Priority
@@ -101,6 +102,7 @@ This is the next major task.
 - Dedicated responsive and browser QA pass
 - Final polish pass on spacing, typography, hover behavior, and overlay feel
 - Decide whether any project pages need lighter video treatment later
+- Add responsive image sets later only if performance still needs more help beyond the current `.webp` optimization
 
 ## Still To Do Later
 - Decide whether project content/data should be split further for easier maintenance
