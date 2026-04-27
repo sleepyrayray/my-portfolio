@@ -89,6 +89,7 @@ Status: done for first pass
 
 - Separate detail page layout exists for each project
 - Long-form `Learn more` overlays are in place
+- Clickable captioned image overlays are in place for project detail images
 - Media stacks and embedded walkthroughs are in place where needed
 - Detail pages are linked from the archive
 - Live archive/detail images have been optimized into lighter `.webp` assets
@@ -101,7 +102,7 @@ This is the next major task.
 ### What still needs work
 - Final copy pass across homepage, overlay text, archive labels, and project detail pages
 - Dedicated responsive and browser QA pass
-- Final polish pass on spacing, typography, hover behavior, and overlay feel
+- Final polish pass on spacing, hover behavior, and overlay feel
 - Decide whether any project pages need lighter video treatment later
 - Add responsive image sets later only if performance still needs more help beyond the current `.webp` optimization
 

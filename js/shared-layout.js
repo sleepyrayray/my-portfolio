@@ -201,6 +201,10 @@ function copyText(value) {
 }
 
 function setupContentLockdown() {
+  document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
   document.addEventListener("copy", function (event) {
     event.preventDefault();
   });

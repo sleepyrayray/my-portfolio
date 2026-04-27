@@ -29,8 +29,10 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 - The projects archive uses a two-column desktop grid and one-column mobile grid
 - Project cover images and project names both open their detail pages
 - Project detail pages include a `Learn more` text overlay
+- Project detail images open a larger captioned image overlay
 - The contact email is click-to-copy
 - Most site text is intentionally non-selectable
+- Right-click is blocked on the main site surface
 - Live project/archive images now use optimized `.webp` assets with lighter loading hints
 
 ## Current Projects
@@ -49,7 +51,7 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 - `projects/` - all project detail pages
 - `css/style.css` - main styling, layout rules, overlays, and responsive behavior
 - `js/main.js` - archive placeholder handling and archive media protections
-- `js/project-detail.js` - project detail overlay behavior and project media protections
+- `js/project-detail.js` - project detail overlays, captioned image previews, and project media protections
 - `js/shared-layout.js` - shared footer rendering, project-page header injection, contact overlay behavior, custom cursor, and shared interaction rules
 - `assets/images/` - optimized project image folders used in the archive and galleries
 - `sections/` - reserved for future file splitting if needed
