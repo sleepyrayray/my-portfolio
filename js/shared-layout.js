@@ -42,7 +42,6 @@ function renderContactOverlay() {
       '<div class="contact-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="contact-overlay-title">' +
         '<button class="contact-overlay__close" type="button" aria-label="Close" data-contact-overlay-close>X</button>' +
         '<div class="contact-overlay__content">' +
-          '<p class="hero-stage__kicker contact-overlay__label">About + Contact</p>' +
           '<h2 id="contact-overlay-title" class="sr-only">About + Contact</h2>' +
           '<p class="contact-overlay__bio contact-stage__bio">' +
             "I&rsquo;m a Montreal-based student at Concordia studying Computation Arts with a minor in Film and Moving " +
@@ -50,7 +49,7 @@ function renderContactOverlay() {
           "</p>" +
           '<div class="contact-overlay__reach contact-stage__reach">' +
             '<p class="contact-stage__note">You can reach me at:</p>' +
-            '<button class="contact-stage__email" type="button" data-copy-email="r.hernz@outlook.com">r.hernz@outlook.com</button>' +
+            '<button class="contact-stage__email" type="button" data-copy-email="rayhernaez@icloud.com" title="Click email to copy">rayhernaez@icloud.com</button>' +
             '<p class="contact-stage__copy-status" aria-live="polite"></p>' +
           "</div>" +
         "</div>" +
@@ -223,7 +222,7 @@ function setupCopyEmail() {
   emailButton.addEventListener("click", function () {
     copyText(emailButton.dataset.copyEmail)
       .then(function () {
-        status.textContent = "Copied";
+        status.textContent = "✓ Copied";
 
         if (resetTimer) {
           window.clearTimeout(resetTimer);
