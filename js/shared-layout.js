@@ -226,7 +226,7 @@ function setupCopyEmail() {
   emailButton.addEventListener("click", function () {
     copyText(emailButton.dataset.copyEmail)
       .then(function () {
-        status.textContent = "✓ Copied";
+        status.textContent = "✓ copied";
 
         if (resetTimer) {
           window.clearTimeout(resetTimer);

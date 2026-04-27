@@ -47,7 +47,10 @@ function renderImageOverlay() {
       '<div class="project-image-overlay__panel" role="dialog" aria-modal="true" aria-label="Project image preview">' +
         '<button class="project-image-overlay__close" type="button" aria-label="Close" data-project-image-close>X</button>' +
         '<figure class="project-image-overlay__media">' +
-          '<img class="project-image-overlay__image" src="" alt="" draggable="false" />' +
+          '<div class="project-image-overlay__frame">' +
+            '<img class="project-image-overlay__image" src="" alt="" draggable="false" />' +
+            '<span class="project-image-overlay__watermark" aria-hidden="true"></span>' +
+          "</div>" +
           '<figcaption class="project-image-overlay__caption"></figcaption>' +
         "</figure>" +
       "</div>" +

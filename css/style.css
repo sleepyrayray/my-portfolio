@@ -892,8 +892,17 @@ button:focus-visible {
   display: grid;
   gap: 0.75rem;
   justify-items: stretch;
+  width: fit-content;
   max-width: 100%;
   max-height: calc(100vh - 4.8rem);
+}
+
+.project-image-overlay__frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .project-image-overlay__image {
@@ -906,6 +915,28 @@ button:focus-visible {
   user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
+}
+
+.project-image-overlay__watermark {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.project-image-overlay__watermark::before {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='92' viewBox='0 0 220 92' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='0' y='36' fill='white' font-family='Inter, Arial, sans-serif' font-size='18' font-style='italic' font-weight='900' letter-spacing='-1.4'%3Erayhernaez%3C/text%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 220px 92px;
+  opacity: 0.15;
+  mix-blend-mode: difference;
+  transform: rotate(-18deg);
 }
 
 .project-image-overlay__caption {

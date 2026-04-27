@@ -89,7 +89,7 @@ Status: done for first pass
 
 - Separate detail page layout exists for each project
 - Long-form `Learn more` overlays are in place
-- Clickable captioned image overlays are in place for project detail images
+- Clickable captioned and watermarked image overlays are in place for project detail images
 - Media stacks and embedded walkthroughs are in place where needed
 - Detail pages are linked from the archive
 - Live archive/detail images have been optimized into lighter `.webp` assets
