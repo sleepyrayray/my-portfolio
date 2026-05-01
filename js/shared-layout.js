@@ -6,9 +6,32 @@ function renderSiteFooter(slot) {
     '<p class="site-footer-text">' +
     "<span>&copy; " +
     currentYear +
-    " Ray Hernaez Portfolio.</span>" +
+    " Ray Hernaez.</span>" +
     '<span class="site-footer-fade">All Rights Reserved.</span>' +
     "</p>";
+}
+
+function renderHomeBrandLink() {
+  if (document.querySelector(".site-home-link")) {
+    return;
+  }
+
+  const isProjectDetail = window.location.pathname.indexOf("/projects/") !== -1;
+  const homeHref = isProjectDetail ? "../index.html" : "index.html";
+  const homeLink = document.createElement("a");
+
+  homeLink.className = "site-home-link";
+  homeLink.href = homeHref;
+  homeLink.setAttribute("aria-label", "Home");
+  homeLink.innerHTML =
+    '<span class="site-home-link__accent">RAY</span>' +
+    '<span class="site-home-link__main">HERNAEZ</span>';
+
+  if (document.body.classList.contains("home-page")) {
+    homeLink.setAttribute("aria-current", "page");
+  }
+
+  document.body.insertAdjacentElement("afterbegin", homeLink);
 }
 
 function renderProjectPageHeader() {
@@ -250,6 +273,7 @@ function setupCopyEmail() {
   });
 }
 
+renderHomeBrandLink();
 document.querySelectorAll("[data-site-footer]").forEach(renderSiteFooter);
 renderProjectPageHeader();
 renderContactOverlay();

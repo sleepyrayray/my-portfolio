@@ -12,18 +12,20 @@ The live site currently works as:
 - `contact.html` - redirect entry that opens the shared contact overlay
 
 The visual direction is dark, minimal, and retro-toned, with Oakline Studio used mainly as a structural reference.
+The current type system uses Inter for general UI/body text and Fragment Mono only for small label/meta text.
 
 ## Current Status
 ### Live design direction
 - Dark tobacco palette
 - Centered typography-led homepage
-- Plain-text sticky top-right navigation
+- Top-left `RAYHERNAEZ` home link with compact top-right project/contact navigation
 - Tiny bottom-left footer
 - Separate archive and project-detail pages
 - Shared centered contact overlay
 
 ### Current page behavior
-- `Home`, `Projects`, and `Contact` are always visible in the sticky nav
+- `RAYHERNAEZ` is the persistent home link in the top-left corner
+- `Projects` and `Contact` are always visible in the sticky top-right nav
 - `Contact` opens the shared overlay rather than a standalone content page
 - The footer year is generated automatically
 - The projects archive uses a two-column desktop grid and one-column mobile grid
@@ -52,7 +54,7 @@ The visual direction is dark, minimal, and retro-toned, with Oakline Studio used
 - `css/style.css` - main styling, layout rules, overlays, and responsive behavior
 - `js/main.js` - archive placeholder handling and archive media protections
 - `js/project-detail.js` - project detail overlays, captioned/watermarked image previews, and project media protections
-- `js/shared-layout.js` - shared footer rendering, project-page header injection, contact overlay behavior, custom cursor, and shared interaction rules
+- `js/shared-layout.js` - shared home link/footer rendering, project-page header injection, contact overlay behavior, custom cursor, and shared interaction rules
 - `assets/images/` - optimized project image folders used in the archive and galleries
 - `sections/` - reserved for future file splitting if needed
 

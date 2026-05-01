@@ -10,9 +10,9 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 - Homepage hero has been redesigned into a centered intro with a dark retro visual system
 - The public site now uses a separate homepage, archive page, and individual project detail pages
 - The contact experience now lives in a shared overlay instead of a standalone content page
-- A shared sticky top-right nav appears across the live site
+- A shared top-left `RAYHERNAEZ` home link and compact sticky top-right nav appear across the live site
 - A shared bottom-left footer appears across the live site
-- Shared footer rendering, contact overlay behavior, and project-page header injection are handled in `js/shared-layout.js`
+- Shared home link rendering, footer rendering, contact overlay behavior, and project-page header injection are handled in `js/shared-layout.js`
 - The project archive grid lives on `projects.html`
 - All seven projects now have their own detail pages under `projects/`
 - Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
@@ -33,7 +33,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 ## What Has Been Translated From Oakline
 - Centered hero composition
 - Strong whitespace and restrained hierarchy
-- Tiny mono labels and compact navigation treatment
+- Tiny mono labels, Inter-based UI text, and compact navigation treatment
 - Image-led project archive logic
 - Minimal border/divider styling
 
@@ -42,7 +42,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 - Ray's name as typography instead of logo artwork
 - Separate project archive and detail pages instead of a single agency-style landing page
 - Contact as an overlay instead of a dedicated content page
-- Persistent sticky top-right nav instead of a bottom sticky filter bar
+- Persistent branded home link and sticky top-right nav instead of a bottom sticky filter bar
 
 ## Phase Review
 ### Phase 1: Visual Direction
@@ -79,8 +79,11 @@ Status: done for first pass
 Status: done for first pass
 
 - Sticky nav appears across the live site
+- `RAYHERNAEZ` now acts as the persistent home link
 - Footer appears across the live site
+- Navigation, footer, and the home link share the same compact type scale
 - Shared footer rendering is centralized
+- Shared home link rendering is centralized
 - Shared contact overlay behavior is centralized
 - Project-page brand header is injected centrally
 

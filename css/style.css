@@ -18,9 +18,15 @@
   --nav-active-text: #1b0d09;
   --nav-active-fill: linear-gradient(180deg, #d7a47b 0%, #a5533d 100%);
   --nav-active-shadow: rgba(165, 83, 61, 0.24);
-  --body-font: "Geist", sans-serif;
-  --heading-font: "Inter", sans-serif;
-  --label-font: "Geist Mono", monospace;
+  --body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --heading-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ui-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --label-font: "Fragment Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --chrome-text-size: 0.68rem;
+  --label-size: 0.82rem;
+  --hero-label-size: clamp(0.86rem, 1.8vw, 1rem);
+  --archive-label-size: clamp(0.78rem, 1.55vw, 1.12rem);
+  --contact-focus-size: clamp(0.96rem, 1.9vw, 1.28rem);
 }
 
 /* Basic page reset */
@@ -140,7 +146,7 @@ button:focus-visible {
   margin-bottom: 0.5rem;
   color: var(--accent-color);
   font-family: var(--label-font);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -168,8 +174,8 @@ button:focus-visible {
   padding: 0.7rem 1rem;
   color: var(--muted-text);
   background: var(--button-fill);
-  font-family: var(--label-font);
-  font-size: 0.8rem;
+  font-family: var(--ui-font);
+  font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -226,16 +232,51 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 0.28rem;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.62rem;
-  letter-spacing: 0.05em;
+  font-family: var(--ui-font);
+  font-size: var(--chrome-text-size);
+  font-weight: 500;
+  letter-spacing: 0.08em;
   line-height: 1.35;
   padding-left: clamp(0.75rem, 2.8vw, 1.6rem);
   text-align: left;
+  text-transform: uppercase;
 }
 
 .site-footer-fade {
   opacity: 0.42;
+}
+
+.site-home-link {
+  position: fixed;
+  top: max(0.85rem, env(safe-area-inset-top));
+  left: clamp(0.75rem, 2.8vw, 1.6rem);
+  z-index: 31;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  color: var(--text-color);
+  font-family: var(--ui-font);
+  font-size: var(--chrome-text-size);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.site-home-link__accent {
+  color: #d3a07a;
+}
+
+.site-home-link__main {
+  color: var(--text-color);
+}
+
+.site-home-link:hover .site-home-link__accent,
+.site-home-link:focus-visible .site-home-link__accent,
+.site-home-link:hover .site-home-link__main,
+.site-home-link:focus-visible .site-home-link__main {
+  color: var(--accent-strong);
 }
 
 /* Keep the sticky nav fixed from first paint so it doesn't briefly inherit centered hero layout. */
@@ -300,7 +341,7 @@ button:focus-visible {
   max-width: none;
   color: var(--text-color);
   font-family: var(--label-font);
-  font-size: clamp(0.76rem, 1.8vw, 0.88rem);
+  font-size: var(--hero-label-size);
   font-weight: 500;
   letter-spacing: 0.06em;
   line-height: 1.2;
@@ -344,8 +385,8 @@ button:focus-visible {
   max-width: none;
   margin-top: 0.9rem;
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: clamp(0.76rem, 1.8vw, 0.88rem);
+  font-family: var(--ui-font);
+  font-size: var(--hero-label-size);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.06em;
@@ -360,8 +401,8 @@ button:focus-visible {
 .hero-stage__body {
   max-width: 30ch;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.96rem;
+  font-family: var(--ui-font);
+  font-size: 1.04rem;
   line-height: 1.45;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -405,8 +446,8 @@ button:focus-visible {
   border: 0;
   background: transparent;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--chrome-text-size);
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -562,7 +603,7 @@ button:focus-visible {
 .project-detail__label {
   color: rgba(241, 228, 211, 0.46);
   font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -571,8 +612,8 @@ button:focus-visible {
 
 .project-detail__title {
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -582,8 +623,8 @@ button:focus-visible {
 .project-detail__summary,
 .project-detail__meta-copy {
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -592,8 +633,8 @@ button:focus-visible {
 
 .project-detail__year {
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -764,8 +805,8 @@ button:focus-visible {
   background: transparent;
   box-shadow: none;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.08em;
@@ -793,8 +834,8 @@ button:focus-visible {
 
 .project-detail-overlay__title {
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -808,8 +849,8 @@ button:focus-visible {
 
 .project-detail-overlay__section h3 {
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -818,8 +859,8 @@ button:focus-visible {
 
 .project-detail-overlay__section p {
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -871,8 +912,8 @@ button:focus-visible {
   background: transparent;
   box-shadow: none;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.08em;
@@ -942,8 +983,8 @@ button:focus-visible {
 .project-image-overlay__caption {
   width: 100%;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -994,8 +1035,8 @@ button:focus-visible {
   background: transparent;
   box-shadow: none;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.08em;
@@ -1065,8 +1106,8 @@ button:focus-visible {
 .contact-stage__note,
 .contact-stage__email,
 .contact-stage__copy-status {
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0.08em;
@@ -1083,8 +1124,8 @@ button:focus-visible {
   max-width: none;
   width: fit-content;
   color: var(--text-color);
-  font-family: var(--label-font);
-  font-size: clamp(0.88rem, 1.8vw, 1.16rem);
+  font-family: var(--ui-font);
+  font-size: var(--contact-focus-size);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.06em;
@@ -1150,7 +1191,7 @@ button:focus-visible {
   margin-bottom: 0.9rem;
   color: var(--text-color);
   font-family: var(--label-font);
-  font-size: clamp(0.68rem, 1.45vw, 1.02rem);
+  font-size: var(--archive-label-size);
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.45;
@@ -1243,8 +1284,8 @@ button:focus-visible {
   padding: 0;
   background: transparent;
   color: var(--muted-text);
-  font-family: var(--label-font);
-  font-size: 0.72rem;
+  font-family: var(--ui-font);
+  font-size: var(--label-size);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
@@ -1311,7 +1352,7 @@ button:focus-visible {
   max-width: 62ch;
   margin-bottom: 2rem;
   color: var(--muted-text);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
@@ -1346,7 +1387,7 @@ button:focus-visible {
 .panel-block h3 {
   margin-bottom: 0.75rem;
   font-family: var(--heading-font);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   letter-spacing: -0.02em;
 }
 
@@ -1363,7 +1404,7 @@ button:focus-visible {
   margin-bottom: 0.9rem;
   color: var(--accent-color);
   font-family: var(--label-font);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1419,7 +1460,7 @@ button:focus-visible {
 
 .project-tab-name {
   font-family: var(--heading-font);
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -1461,8 +1502,8 @@ button:focus-visible {
   padding: 0.7rem 1rem;
   color: var(--muted-text);
   background: var(--button-fill);
-  font-family: var(--label-font);
-  font-size: 0.8rem;
+  font-family: var(--ui-font);
+  font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1522,7 +1563,7 @@ button:focus-visible {
 .project-summary {
   margin-bottom: 1.5rem;
   color: var(--muted-text);
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   line-height: 1.8;
 }
 
@@ -1541,7 +1582,7 @@ button:focus-visible {
 .project-meta-list span {
   color: var(--accent-color);
   font-family: var(--label-font);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1569,7 +1610,7 @@ button:focus-visible {
 .project-note h4 {
   margin-bottom: 0.65rem;
   font-family: var(--heading-font);
-  font-size: 1rem;
+  font-size: 1.06rem;
   letter-spacing: -0.02em;
 }
 
@@ -1850,7 +1891,7 @@ button:focus-visible {
   }
 
   .project-detail__title {
-    font-size: 0.72rem;
+    font-size: var(--label-size);
   }
 
   .project-detail-overlay__panel {
@@ -1893,18 +1934,24 @@ button:focus-visible {
   }
 
   .hero-stage__lead {
-    max-width: none;
+    max-width: 34ch;
     margin-top: 0.7rem;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    text-wrap: balance;
   }
 
   .hero-stage__body {
     max-width: 26ch;
-    font-size: 0.86rem;
+    font-size: 0.94rem;
   }
 
   .hero-stage__kicker {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-stage__lead-line {
+    white-space: normal;
   }
 
   .hero-stage__actions {
@@ -1917,6 +1964,11 @@ button:focus-visible {
     right: auto;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .site-home-link {
+    top: max(0.65rem, env(safe-area-inset-top));
+    left: 0.75rem;
   }
 
   .hero-stage__action {
@@ -1966,25 +2018,25 @@ button:focus-visible {
   .project-detail__summary,
   .project-detail__meta-copy,
   .project-detail-overlay__section p {
-    font-size: 0.72rem;
+    font-size: var(--label-size);
     line-height: 1.55;
   }
 
   .project-detail__more-trigger,
   .project-detail__label,
   .project-detail-overlay__section h3 {
-    font-size: 0.72rem;
+    font-size: var(--label-size);
   }
 
   .contact-stage__bio {
     max-width: 36ch;
-    font-size: 0.72rem;
+    font-size: var(--label-size);
   }
 
   .contact-stage__focus {
     max-width: none;
     width: auto;
-    font-size: 0.88rem;
+    font-size: 0.96rem;
   }
 
   .contact-stage__focus-line {
@@ -1996,12 +2048,12 @@ button:focus-visible {
   }
 
   .contact-stage__note {
-    font-size: 0.72rem;
+    font-size: var(--label-size);
   }
 
   .contact-stage__email {
     max-width: 100%;
-    font-size: 0.72rem;
+    font-size: var(--label-size);
     letter-spacing: 0.08em;
     overflow-wrap: anywhere;
   }
@@ -2050,7 +2102,7 @@ button:focus-visible {
   .site-footer-text {
     justify-content: center;
     gap: 0.16rem;
-    font-size: 0.56rem;
+    font-size: var(--chrome-text-size);
     padding-left: 0;
     padding-inline: 0.75rem;
     text-align: center;
