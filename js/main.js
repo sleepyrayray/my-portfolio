@@ -15,7 +15,7 @@ function fitDisplayTitle(title) {
   }
 
   let minSize = 24;
-  let maxSize = 280;
+  let maxSize = title.classList.contains("projects-stage__title") ? 58 : 108;
 
   title.style.fontSize = minSize + "px";
 

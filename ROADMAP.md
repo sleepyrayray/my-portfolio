@@ -9,7 +9,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 ### Completed
 - Homepage hero has been redesigned into a centered intro with a dark retro visual system
 - The homepage now acts as the main intro again
-- The public site now uses a homepage with selected works below the name logo plus individual project detail pages
+- The public site now uses a name-logo homepage with selected works directly after it plus individual project detail pages
 - The contact experience now lives in a shared overlay instead of a standalone content page
 - A shared top-left `RAY HERNAEZ` home link and compact sticky top-right nav appear across the live site
 - A shared bottom-left footer appears across the live site
@@ -60,7 +60,7 @@ Status: done for now
 - Centered hero composition is in place
 - Homepage copy has been simplified
 - Homepage now acts as an entry point rather than an about page
-- Project work now lives below the homepage name logo
+- Project work now appears directly after the homepage name logo
 
 ### Phase 3: Project Archive
 Status: done for first pass

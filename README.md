@@ -12,12 +12,12 @@ The live site currently works as:
 - `contact.html` - redirect entry that opens the shared contact overlay
 
 The visual direction is dark, minimal, and retro-toned, with Oakline Studio used mainly as a structural reference.
-The current type system uses Sen for display headings, Inter for general UI/body text, and Geist Mono for small label/meta text.
+The current type system uses Unbounded for display headings, Inter for general UI/body text, and Geist Mono for small label/meta text.
 
 ## Current Status
 ### Live design direction
 - Dark tobacco palette
-- Typography-led homepage with selected works below the name logo
+- Typography-led homepage with selected works right after the name logo and subtext
 - Selected work archive shown on the homepage
 - Top-left `RAY HERNAEZ` home link with compact top-right project/contact navigation
 - Tiny bottom-left footer
@@ -60,7 +60,7 @@ The current type system uses Sen for display headings, Inter for general UI/body
 - `sections/` - reserved for future file splitting if needed
 
 ## Important Architecture Note
-The public experience is now built around a homepage hero with the selected work archive below it, separate project detail pages, and a shared contact overlay.
+The public experience is now built around a name-logo intro with the selected work archive right after it, separate project detail pages, and a shared contact overlay.
 
 The older hidden homepage/about/contact/project content is no longer in the live homepage shell and has been archived in `LEGACY_SINGLE_PAGE_CONTENT.md`.
 
