@@ -44,9 +44,9 @@ function renderProjectPageHeader() {
 
   projectNav.insertAdjacentHTML(
     "afterend",
-    '<div class="project-detail-page__header" aria-hidden="true">' +
+      '<div class="project-detail-page__header" aria-hidden="true">' +
       '<div class="project-detail-page__brand hero-stage__name">' +
-        '<span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>' +
+        '<span class="hero-stage__name-accent">RAY</span><span class="hero-stage__name-main">HERNAEZ</span>' +
       "</div>" +
       '<p class="hero-stage__kicker projects-stage__label project-detail-page__label">Projects</p>' +
     "</div>"

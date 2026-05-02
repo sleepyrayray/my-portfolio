@@ -8,19 +8,19 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 ## Current Status
 ### Completed
 - Homepage hero has been redesigned into a centered intro with a dark retro visual system
-- The homepage now presents the project archive directly under the main hero/header
-- The public site now uses a homepage archive, a legacy archive page, and individual project detail pages
+- The homepage now acts as the main intro again
+- The public site now uses a homepage with selected works below the name logo plus individual project detail pages
 - The contact experience now lives in a shared overlay instead of a standalone content page
-- A shared top-left `RAYHERNAEZ` home link and compact sticky top-right nav appear across the live site
+- A shared top-left `RAY HERNAEZ` home link and compact sticky top-right nav appear across the live site
 - A shared bottom-left footer appears across the live site
 - Shared home link rendering, footer rendering, contact overlay behavior, and project-page header injection are handled in `js/shared-layout.js`
-- The project archive grid now lives on `index.html`
+- The project archive grid now lives on `index.html#selected-works`
 - All seven projects now have their own detail pages under `projects/`
 - Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
 
 ### Current Public Surface
-- `index.html` - homepage and project archive
-- `projects.html` - legacy archive page, no longer linked from the active nav
+- `index.html` - homepage hero and selected work archive
+- `projects.html` - redirect shim to `index.html#selected-works`
 - `projects/*.html` - project detail pages
 - `contact.html` - redirect shim that opens the contact overlay through `index.html?contact=1`
 
@@ -41,7 +41,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 ## What We Intentionally Changed
 - Dark tobacco palette instead of a white editorial canvas
 - Ray's name as typography instead of logo artwork
-- Homepage archive and project detail pages instead of a single agency-style landing page
+- Homepage selected work archive and project detail pages instead of a separate archive page
 - Contact as an overlay instead of a dedicated content page
 - Persistent branded home link and sticky top-right nav instead of a bottom sticky filter bar
 
@@ -60,13 +60,13 @@ Status: done for now
 - Centered hero composition is in place
 - Homepage copy has been simplified
 - Homepage now acts as an entry point rather than an about page
-- Project work now appears directly below the homepage header
+- Project work now lives below the homepage name logo
 
 ### Phase 3: Project Archive
 Status: done for first pass
 
-- Archive grid exists on `index.html`
-- Three-column desktop / two-column tablet / one-column mobile row-ordered grid behavior is in place
+- Archive grid exists on `index.html#selected-works`
+- Two-column desktop / one-column mobile row-ordered grid behavior is in place
 - Cover images and project names both open project detail pages
 - Archive grid lines have been removed so the image covers sit close together
 
@@ -81,7 +81,7 @@ Status: done for first pass
 Status: done for first pass
 
 - Sticky nav appears across the live site
-- `RAYHERNAEZ` now acts as the persistent home link
+- `RAY HERNAEZ` now acts as the persistent home link
 - Footer appears across the live site
 - Navigation, footer, and the home link share the same compact type scale
 - Shared footer rendering is centralized

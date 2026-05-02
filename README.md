@@ -6,30 +6,30 @@ A personal portfolio website for Ray Hernaez, built with plain HTML, CSS, and Ja
 ## Current Site Structure
 The live site currently works as:
 
-- `index.html` - homepage hero and project archive
-- `projects.html` - legacy archive page, no longer linked from the active nav
+- `index.html` - homepage hero and selected work archive
+- `projects.html` - redirect shim to the homepage selected works section
 - `projects/*.html` - individual project detail pages
 - `contact.html` - redirect entry that opens the shared contact overlay
 
 The visual direction is dark, minimal, and retro-toned, with Oakline Studio used mainly as a structural reference.
-The current type system uses Inter for general UI/body text and Fragment Mono only for small label/meta text.
+The current type system uses Sen for display headings, Inter for general UI/body text, and Geist Mono for small label/meta text.
 
 ## Current Status
 ### Live design direction
 - Dark tobacco palette
-- Centered typography-led homepage
-- Project archive shown directly under the homepage header
-- Top-left `RAYHERNAEZ` home link with compact top-right contact navigation
+- Typography-led homepage with selected works below the name logo
+- Selected work archive shown on the homepage
+- Top-left `RAY HERNAEZ` home link with compact top-right project/contact navigation
 - Tiny bottom-left footer
-- Homepage archive and separate project-detail pages
+- Homepage selected work archive with separate project-detail pages
 - Shared centered contact overlay
 
 ### Current page behavior
-- `RAYHERNAEZ` is the persistent home link in the top-left corner
-- `Contact` remains visible in the sticky top-right nav
+- `RAY HERNAEZ` is the persistent home link in the top-left corner
+- `Projects` scrolls to the homepage selected works section and `Contact` opens the shared overlay
 - `Contact` opens the shared overlay rather than a standalone content page
 - The footer year is generated automatically
-- The projects archive uses a wide row-ordered grid with up to three columns on desktop, two on tablet, and one on mobile
+- The projects archive uses a wide two-column row-ordered grid on desktop and one column on mobile
 - Project cover images and project names both open their detail pages
 - Project detail pages include a `Learn more` text overlay
 - Project detail images open a larger captioned and watermarked image overlay
@@ -40,16 +40,16 @@ The current type system uses Inter for general UI/body text and Fragment Mono on
 
 ## Current Projects
 - Spirit Camper
-- Sheldon
-- Vampire Slayer
-- When the Night Can't Breathe
 - E.V.I.L.
 - The Heavy 20s
+- Sheldon
+- When the Night Can't Breathe
 - Frottage
+- Vampire Slayer
 
 ## Folder Structure
-- `index.html` - homepage and projects archive
-- `projects.html` - legacy archive page that can be removed after confirmation
+- `index.html` - homepage hero and selected work archive
+- `projects.html` - redirect shim to `index.html#selected-works`
 - `contact.html` - redirect shim for the contact overlay
 - `projects/` - all project detail pages
 - `css/style.css` - main styling, layout rules, overlays, and responsive behavior
@@ -60,7 +60,7 @@ The current type system uses Inter for general UI/body text and Fragment Mono on
 - `sections/` - reserved for future file splitting if needed
 
 ## Important Architecture Note
-The public experience is now built around the homepage archive, separate project detail pages, and a shared contact overlay.
+The public experience is now built around a homepage hero with the selected work archive below it, separate project detail pages, and a shared contact overlay.
 
 The older hidden homepage/about/contact/project content is no longer in the live homepage shell and has been archived in `LEGACY_SINGLE_PAGE_CONTENT.md`.
 
