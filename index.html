@@ -40,18 +40,111 @@
   <body class="home-page">
     <div class="page-shell">
       <main class="home-page__main">
-        <section class="hero-stage" aria-labelledby="home-heading">
-          <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Primary navigation">
-            <a class="hero-stage__action hero-stage__action--ghost" href="projects.html">Projects</a>
-            <span class="hero-stage__divider" aria-hidden="true"></span>
-            <a class="hero-stage__action hero-stage__action--ghost" href="contact.html">Contact</a>
-          </nav>
-          <h1 id="home-heading" class="hero-stage__name">
-            <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
-          </h1>
-          <p class="hero-stage__lead">
-            <span class="hero-stage__lead-line">Game design, digital art, and visual storytelling</span>
-          </p>
+        <section class="home-projects projects-stage" id="projects" aria-labelledby="home-heading">
+          <div class="projects-stage__header home-projects__header">
+            <nav class="hero-stage__actions hero-stage__actions--nav" aria-label="Primary navigation">
+              <a class="hero-stage__action hero-stage__action--ghost" href="contact.html">Contact</a>
+            </nav>
+            <h1 id="home-heading" class="hero-stage__name">
+              <span class="hero-stage__name-accent">ray</span><span class="hero-stage__name-main">hernaez</span>
+            </h1>
+            <p class="hero-stage__lead">
+              <span class="hero-stage__lead-line">Game design, digital art, and visual storytelling</span>
+            </p>
+          </div>
+
+          <section class="archive-section archive-section--home" aria-labelledby="home-projects-archive-heading">
+            <h2 class="sr-only" id="home-projects-archive-heading">Projects archive</h2>
+
+            <div class="archive-grid">
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/spirit-camper.html" aria-label="Open Spirit Camper project page">
+                    <img
+                      decoding="async"
+                      class="archive-card__image"
+                      src="assets/images/spirit-camper/3.webp"
+                      alt="Spirit Camper cover image"
+                      draggable="false"
+                    />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/spirit-camper.html">Spirit Camper</a>
+              </article>
+
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/sheldon.html" aria-label="Open Sheldon project page">
+                    <img decoding="async" class="archive-card__image" src="assets/images/sheldon/3.webp" alt="Sheldon cover image" draggable="false" />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/sheldon.html">Sheldon</a>
+              </article>
+
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/vampire-slayer.html" aria-label="Open Vampire Slayer project page">
+                    <img
+                      decoding="async"
+                      class="archive-card__image"
+                      src="assets/images/vampire-slayer/2.webp"
+                      alt="Vampire Slayer cover image"
+                      draggable="false"
+                    />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/vampire-slayer.html">Vampire Slayer</a>
+              </article>
+
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/when-the-night-cant-breathe.html" aria-label="Open When the Night Can't Breathe project page">
+                    <img
+                      decoding="async"
+                      class="archive-card__image"
+                      src="assets/images/when-the-night-cant-breathe/1.webp"
+                      alt="When the Night Can't Breathe cover image"
+                      draggable="false"
+                    />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/when-the-night-cant-breathe.html">When the Night Can't Breathe</a>
+              </article>
+
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/evil.html" aria-label="Open E.V.I.L. project page">
+                    <img decoding="async" class="archive-card__image" src="assets/images/evil/2.webp" alt="E.V.I.L. cover image" draggable="false" />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/evil.html">E.V.I.L.</a>
+              </article>
+
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/the-heavy-20s.html" aria-label="Open The Heavy 20s project page">
+                    <img
+                      decoding="async"
+                      class="archive-card__image"
+                      src="assets/images/the-heavy-20s/5.webp"
+                      alt="The Heavy 20s cover image"
+                      draggable="false"
+                    />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/the-heavy-20s.html">The Heavy 20s</a>
+              </article>
+
+              <article class="archive-card">
+                <div class="archive-card__figure">
+                  <a class="archive-card__media-link" href="projects/frottage.html" aria-label="Open Frottage project page">
+                    <img decoding="async" class="archive-card__image" src="assets/images/frottage/3.webp" alt="Frottage cover image" draggable="false" />
+                  </a>
+                </div>
+                <a class="archive-card__name-link" href="projects/frottage.html">Frottage</a>
+              </article>
+            </div>
+          </section>
         </section>
       </main>
 
@@ -59,5 +152,6 @@
     </div>
 
     <script src="js/shared-layout.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
