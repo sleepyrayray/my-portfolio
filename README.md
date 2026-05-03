@@ -34,6 +34,8 @@ The current type system uses Unbounded for display headings, Inter for general U
 - Project cover images and project names both open their detail pages
 - Project detail pages include a compact arrow control for the `Learn more` text overlay
 - Project detail images display inline without zoom popups
+- Project detail pages show random Other Works before the contact prompt, with two shown on mobile
+- Project detail pages end with a centered Get In Touch section
 - The contact email is click-to-copy
 - Most site text is intentionally non-selectable
 - Right-click is blocked on the main site surface

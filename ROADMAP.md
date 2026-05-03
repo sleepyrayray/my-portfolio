@@ -92,7 +92,7 @@ Status: done for first pass
 - Shared top bar rendering is centralized
 - Live Montreal time rendering is centralized
 - Email copy behavior is centralized
-- Project-page brand header is injected centrally
+- Project-page contact CTA rendering is centralized
 
 ### Phase 6: Project Detail Pages
 Status: done for first pass
@@ -100,6 +100,8 @@ Status: done for first pass
 - Separate detail page layout exists for each project
 - Long-form `Learn more` overlays are in place
 - Project detail images now display inline without zoom popups
+- Randomized Other Works sections now appear above project-page contact CTAs, with two cards shown on mobile
+- Centered Get In Touch sections now appear at the bottom of project detail pages
 - Media stacks and embedded walkthroughs are in place where needed
 - Detail pages are linked from the archive
 - Live archive/detail images have been optimized into lighter `.webp` assets
