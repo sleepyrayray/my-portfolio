@@ -9,20 +9,20 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 ### Completed
 - Homepage hero has been redesigned into a centered intro with a dark retro visual system
 - The homepage now acts as the main intro again
-- The public site now uses a name-logo homepage with selected works directly after it plus individual project detail pages
-- The contact experience now lives in a shared overlay instead of a standalone content page
-- A shared top-left `RAY HERNAEZ` home link and compact sticky top-right nav appear across the live site
-- A shared bottom-left footer appears across the live site
-- Shared home link rendering, footer rendering, contact overlay behavior, and project-page header injection are handled in `js/shared-layout.js`
+- The public site now uses a name-logo homepage with selected works and About Me directly after it plus individual project detail pages
+- The contact/about experience now lives as an inline homepage section instead of a popup
+- A shared full-width top status bar appears across the live site with the home link, availability, and Montreal time
+- A shared full-width footer bar appears across the live site
+- Shared top bar rendering, footer rendering, live clock, email copy behavior, and project-page header injection are handled in `js/shared-layout.js`
 - The project archive grid now lives on `index.html#selected-works`
 - All seven projects now have their own detail pages under `projects/`
 - Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
 
 ### Current Public Surface
-- `index.html` - homepage hero and selected work archive
+- `index.html` - homepage hero, selected work archive, and About Me section
 - `projects.html` - redirect shim to `index.html#selected-works`
 - `projects/*.html` - project detail pages
-- `contact.html` - redirect shim that opens the contact overlay through `index.html?contact=1`
+- `contact.html` - redirect shim to `index.html#about-me`
 
 ## Working Agreement
 - Keep the dark retro-vintage mood
@@ -35,6 +35,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 - Centered hero composition
 - Strong whitespace and restrained hierarchy
 - Tiny mono labels, Inter-based UI text, and compact navigation treatment
+- Sticky status bar treatment with live availability and location time
 - Image-led project archive logic
 - Minimal border/divider styling
 
@@ -42,8 +43,8 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 - Dark tobacco palette instead of a white editorial canvas
 - Ray's name as typography instead of logo artwork
 - Homepage selected work archive and project detail pages instead of a separate archive page
-- Contact as an overlay instead of a dedicated content page
-- Persistent branded home link and sticky top-right nav instead of a bottom sticky filter bar
+- About/contact as an inline homepage section instead of a popup
+- Persistent top status bar instead of a bottom sticky filter bar or separate nav links
 
 ## Phase Review
 ### Phase 1: Visual Direction
@@ -69,24 +70,27 @@ Status: done for first pass
 - Two-column desktop / one-column mobile row-ordered grid behavior is in place
 - Cover images and project names both open project detail pages
 - Archive grid lines have been removed so the image covers sit close together
+- Cover hovers now use a faster black-and-white difference overlay
 
 ### Phase 4: Contact / About
 Status: done for first pass
 
-- Contact content now lives in a shared overlay
-- `contact.html` now acts as a redirect entry point instead of a standalone content page
+- About/contact content now lives in an inline homepage section
+- `contact.html` now redirects to the homepage About Me section instead of opening a popup
 - Email is click-to-copy
+- About copy has been updated around Computation Arts, film, interaction, and play
 
 ### Phase 5: Shared Layout Cleanup
 Status: done for first pass
 
-- Sticky nav appears across the live site
-- `RAY HERNAEZ` now acts as the persistent home link
-- Footer appears across the live site
-- Navigation, footer, and the home link share the same compact type scale
+- Sticky top status bar appears across the live site
+- `RAY HERNAEZ` now acts as the persistent home link inside the top bar
+- Footer bar appears across the live site
+- Top bar, footer, project labels, and homepage small text share the same compact type scale
 - Shared footer rendering is centralized
-- Shared home link rendering is centralized
-- Shared contact overlay behavior is centralized
+- Shared top bar rendering is centralized
+- Live Montreal time rendering is centralized
+- Email copy behavior is centralized
 - Project-page brand header is injected centrally
 
 ### Phase 6: Project Detail Pages
@@ -119,7 +123,7 @@ This is the next major task.
 ## Current Risks / Cleanup Notes
 - Legacy one-page content is archived in `LEGACY_SINGLE_PAGE_CONTENT.md`
 - `js/main.js` has now been reduced to archive-only behavior, but the broader codebase could still be split further if the site grows
-- `contact.html` is now a redirect shim, so the real contact experience lives in shared JS/CSS rather than a standalone HTML page
+- `contact.html` is now a redirect shim to the homepage About Me section
 - The current build has had many iterative visual adjustments, so a final consistency pass will still help
 
 ## Reference Notes

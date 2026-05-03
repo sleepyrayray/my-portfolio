@@ -11,39 +11,47 @@ function renderSiteFooter(slot) {
     "</p>";
 }
 
-function renderHomeBrandLink() {
-  if (document.querySelector(".site-home-link")) {
+function renderSiteTopbar() {
+  if (document.querySelector(".site-topbar")) {
     return;
   }
 
   const isProjectDetail = window.location.pathname.indexOf("/projects/") !== -1;
   const homeHref = isProjectDetail ? "../index.html" : "index.html";
-  const homeLink = document.createElement("a");
+  const topbar = document.createElement("header");
 
-  homeLink.className = "site-home-link";
-  homeLink.href = homeHref;
-  homeLink.setAttribute("aria-label", "Home");
-  homeLink.innerHTML =
-    '<span class="site-home-link__accent">RAY</span>' +
-    '<span class="site-home-link__main">HERNAEZ</span>';
+  topbar.className = "site-topbar";
+  topbar.setAttribute("aria-label", "Site status");
+  topbar.innerHTML =
+    '<p class="site-topbar__clock" aria-label="Current time in Montreal, QC">' +
+      '<span class="site-topbar__clock-time" data-site-time>00:00:00</span>' +
+      '<span class="site-topbar__separator" aria-hidden="true">&bull;</span>' +
+      '<span class="site-topbar__clock-location">MONTREAL, QC</span>' +
+    "</p>" +
+    '<a class="site-home-link" href="' +
+      homeHref +
+      '" aria-label="Home">' +
+      '<span class="site-home-link__accent">RAY</span>' +
+      '<span class="site-home-link__main">HERNAEZ</span>' +
+    "</a>" +
+    '<p class="site-topbar__availability">AVAILABLE FOR WORK</p>';
 
   if (document.body.classList.contains("home-page")) {
-    homeLink.setAttribute("aria-current", "page");
+    topbar.querySelector(".site-home-link").setAttribute("aria-current", "page");
   }
 
-  document.body.insertAdjacentElement("afterbegin", homeLink);
+  document.body.insertAdjacentElement("afterbegin", topbar);
 }
 
 function renderProjectPageHeader() {
   const projectMain = document.querySelector(".project-detail-page__main");
-  const projectNav = projectMain ? projectMain.querySelector(".hero-stage__actions--nav") : null;
 
-  if (!projectMain || !projectNav || projectMain.querySelector(".project-detail-page__header")) {
+  if (!projectMain || projectMain.querySelector(".project-detail-page__header")) {
     return;
   }
 
-  projectNav.insertAdjacentHTML(
-    "afterend",
+  projectMain.insertAdjacentHTML(
+    "afterbegin",
       '<div class="project-detail-page__header" aria-hidden="true">' +
       '<div class="project-detail-page__brand hero-stage__name">' +
         '<span class="hero-stage__name-accent">RAY</span><span class="hero-stage__name-main">HERNAEZ</span>' +
@@ -53,112 +61,30 @@ function renderProjectPageHeader() {
   );
 }
 
-function renderContactOverlay() {
-  if (document.querySelector(".contact-overlay")) {
-    return;
-  }
-
-  document.body.insertAdjacentHTML(
-    "beforeend",
-    '<div class="contact-overlay" id="contact-overlay" hidden>' +
-      '<div class="contact-overlay__backdrop" data-contact-overlay-close></div>' +
-      '<div class="contact-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="contact-overlay-title">' +
-        '<button class="contact-overlay__close" type="button" aria-label="Close" data-contact-overlay-close>X</button>' +
-        '<div class="contact-overlay__content">' +
-          '<h2 id="contact-overlay-title" class="sr-only">About + Contact</h2>' +
-          '<p class="contact-overlay__bio contact-stage__bio">' +
-            "I&rsquo;m a Montreal-based student at Concordia studying Computation Arts with a minor in Film and Moving " +
-            "Image Studies, and I enjoy creating work around games, digital art, cinematic visuals, and storytelling." +
-          "</p>" +
-          '<div class="contact-overlay__reach contact-stage__reach">' +
-            '<p class="contact-stage__note">You can reach me at:</p>' +
-            '<button class="contact-stage__email" type="button" data-copy-email="rayhernaez@icloud.com" title="Click email to copy">rayhernaez@icloud.com</button>' +
-            '<p class="contact-stage__copy-status" aria-live="polite"></p>' +
-          "</div>" +
-        "</div>" +
-      "</div>" +
-    "</div>"
-  );
-}
-
-function setupContactOverlay() {
-  const overlay = document.querySelector(".contact-overlay");
-  const closeButton = overlay ? overlay.querySelector(".contact-overlay__close") : null;
-  const closeButtons = overlay ? overlay.querySelectorAll("[data-contact-overlay-close]") : [];
-  const copyStatus = overlay ? overlay.querySelector(".contact-stage__copy-status") : null;
-  let previousActiveElement = null;
-
-  if (!overlay || !closeButton) {
-    return;
-  }
-
-  function isContactLink(element) {
-    if (!element || !element.getAttribute) {
-      return false;
-    }
-
-    const href = element.getAttribute("href");
-
-    if (!href) {
-      return false;
-    }
-
-    return new URL(href, window.location.href).pathname.endsWith("/contact.html");
-  }
-
-  function setContactOverlayState(isOpen, triggerElement) {
-    overlay.hidden = !isOpen;
-    overlay.classList.toggle("is-visible", isOpen);
-    document.body.classList.toggle("has-contact-overlay", isOpen);
-
-    if (copyStatus) {
-      copyStatus.textContent = "";
-    }
-
-    if (isOpen) {
-      previousActiveElement = triggerElement || document.activeElement;
-      closeButton.focus({ preventScroll: true });
-      return;
-    }
-
-    if (previousActiveElement && typeof previousActiveElement.focus === "function") {
-      previousActiveElement.focus({ preventScroll: true });
-    }
-  }
-
-  document.addEventListener("click", function (event) {
-    const trigger = event.target.closest("a[href]");
-
-    if (!isContactLink(trigger)) {
-      return;
-    }
-
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || trigger.target === "_blank") {
-      return;
-    }
-
-    event.preventDefault();
-    setContactOverlayState(true, trigger);
+function setupSiteClock() {
+  const clocks = document.querySelectorAll("[data-site-time]");
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Toronto",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
   });
 
-  closeButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      setContactOverlayState(false);
+  if (!clocks.length) {
+    return;
+  }
+
+  function updateClocks() {
+    const currentTime = formatter.format(new Date());
+
+    clocks.forEach(function (clock) {
+      clock.textContent = currentTime;
     });
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && !overlay.hidden) {
-      setContactOverlayState(false);
-    }
-  });
-
-  if (new URLSearchParams(window.location.search).get("contact") === "1") {
-    const nextUrl = new URL(window.location.href);
-    nextUrl.searchParams.delete("contact");
-    window.history.replaceState({}, "", nextUrl.pathname + nextUrl.search + nextUrl.hash);
-    setContactOverlayState(true);
   }
+
+  updateClocks();
+  window.setInterval(updateClocks, 1000);
 }
 
 function setupCustomCursor() {
@@ -249,7 +175,7 @@ function setupCopyEmail() {
   emailButton.addEventListener("click", function () {
     copyText(emailButton.dataset.copyEmail)
       .then(function () {
-        status.textContent = "✓ copied";
+        status.textContent = "COPIED";
 
         if (resetTimer) {
           window.clearTimeout(resetTimer);
@@ -260,7 +186,7 @@ function setupCopyEmail() {
         }, 1600);
       })
       .catch(function () {
-        status.textContent = "Copy failed";
+        status.textContent = "COPY FAILED";
 
         if (resetTimer) {
           window.clearTimeout(resetTimer);
@@ -273,11 +199,10 @@ function setupCopyEmail() {
   });
 }
 
-renderHomeBrandLink();
+renderSiteTopbar();
 document.querySelectorAll("[data-site-footer]").forEach(renderSiteFooter);
 renderProjectPageHeader();
-renderContactOverlay();
-setupContactOverlay();
+setupSiteClock();
 setupCustomCursor();
 setupContentLockdown();
 setupCopyEmail();
