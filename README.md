@@ -27,6 +27,7 @@ The current type system uses Unbounded for display headings, Inter for general U
 ### Current page behavior
 - `RAY HERNAEZ` is the persistent home link in the top bar
 - The top bar shows `AVAILABLE FOR WORK` and a live Montreal, QC clock
+- At `860px` and below, the mobile/tablet top bar simplifies to `RAY HERNAEZ` and `AVAILABLE FOR WORK`
 - The footer year is generated automatically
 - The projects archive uses a wide two-column row-ordered grid on desktop and one column on mobile
 - Project cover hovers use a faster black-and-white difference overlay

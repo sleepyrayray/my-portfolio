@@ -87,6 +87,7 @@ Status: done for first pass
 - `RAY HERNAEZ` now acts as the persistent home link inside the top bar
 - Footer bar appears across the live site
 - Top bar, footer, project labels, and homepage small text share the same compact type scale
+- Mobile/tablet layout starts at `860px`, with centered project sections and a simplified top bar
 - Shared footer rendering is centralized
 - Shared top bar rendering is centralized
 - Live Montreal time rendering is centralized

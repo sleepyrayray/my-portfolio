@@ -2052,7 +2052,7 @@ button:focus-visible {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 860px) {
   .hero-focus-pass .page-shell {
     width: min(100% - 1rem, 1120px);
     padding-top: 0;
@@ -2087,19 +2087,18 @@ button:focus-visible {
 
   .site-topbar {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas:
-      "brand clock"
-      "availability availability";
-    row-gap: 0.42rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "brand availability";
+    align-items: center;
+    row-gap: 0;
     padding: max(0.82rem, env(safe-area-inset-top)) var(--chrome-mobile-edge-space) 0.82rem;
   }
 
   .site-topbar__clock,
   .site-topbar__availability,
   .site-home-link {
-    font-size: clamp(0.62rem, 2.35vw, 0.76rem);
-    letter-spacing: 0.03em;
+    font-size: clamp(0.54rem, 2vw, 0.66rem);
+    letter-spacing: 0.02em;
   }
 
   .site-topbar__clock,
@@ -2109,10 +2108,7 @@ button:focus-visible {
 
   .site-topbar__clock {
     grid-area: clock;
-    position: static;
-    justify-self: end;
-    margin-left: 0;
-    transform: none;
+    display: none;
   }
 
   .site-topbar__availability {
@@ -2120,8 +2116,15 @@ button:focus-visible {
     position: static;
     top: auto;
     left: auto;
-    justify-self: center;
+    gap: 0.28rem;
+    justify-self: end;
+    text-align: right;
     transform: none;
+  }
+
+  .site-topbar__availability::before {
+    width: 0.4em;
+    height: 0.4em;
   }
 
   .site-home-link {
@@ -2169,10 +2172,44 @@ button:focus-visible {
     gap: 0.85rem;
   }
 
+  .projects-stage__header {
+    width: 100%;
+    max-width: 720px;
+    padding-inline: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.36rem;
+    text-align: center;
+  }
+
+  .projects-stage__title,
+  .projects-stage__years {
+    text-align: center;
+  }
+
   .about-stage {
-    width: min(calc(100vw - 1rem), 100%);
+    width: 100%;
+    max-width: 720px;
+    padding-inline: 1rem;
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    justify-items: center;
+    gap: 0;
+    text-align: center;
+  }
+
+  .about-stage__panel {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about-stage__panel + .about-stage__panel {
+    margin-top: clamp(2.35rem, 10vw, 3.4rem);
+  }
+
+  .about-stage__reach {
+    justify-items: stretch;
+    text-align: left;
   }
 
   .about-stage__bio,
@@ -2184,7 +2221,17 @@ button:focus-visible {
 
   .about-stage__email {
     max-width: 100%;
+    text-align: left;
     overflow-wrap: anywhere;
+  }
+
+  .about-stage__bio {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-stage__email-row {
+    justify-content: flex-start;
   }
 
   .project-detail__summary,
@@ -2231,16 +2278,35 @@ button:focus-visible {
   }
 
   .archive-grid {
-    width: min(calc(100vw - 1rem), 100%);
+    width: 100%;
+    max-width: 720px;
+    padding-inline: 1rem;
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .archive-card {
     padding: 0;
+    justify-items: center;
   }
 
+  .archive-card__figure,
   .archive-card__media-link {
     max-width: none;
+  }
+
+  .archive-card__caption {
+    align-items: center;
+    text-align: center;
+  }
+
+  .archive-card__name-link {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .archive-card__category {
+    text-align: center;
   }
 
   .archive-card__image {
