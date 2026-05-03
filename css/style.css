@@ -1197,6 +1197,10 @@ button:focus-visible {
   border: 0;
 }
 
+.home-projects .archive-grid > .archive-card:first-child:nth-last-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .archive-card {
   display: grid;
   width: 100%;

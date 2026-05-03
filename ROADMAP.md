@@ -68,6 +68,7 @@ Status: done for first pass
 
 - Archive grid exists on `index.html#selected-works`
 - Two-column desktop / one-column mobile row-ordered grid behavior is in place
+- Odd project counts make the first archive card span the full desktop row
 - Cover images and project names both open project detail pages
 - Archive grid lines have been removed so the image covers sit close together
 - Cover hovers now use a faster black-and-white difference overlay
