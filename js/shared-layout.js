@@ -43,24 +43,6 @@ function renderSiteTopbar() {
   document.body.insertAdjacentElement("afterbegin", topbar);
 }
 
-function renderProjectPageHeader() {
-  const projectMain = document.querySelector(".project-detail-page__main");
-
-  if (!projectMain || projectMain.querySelector(".project-detail-page__header")) {
-    return;
-  }
-
-  projectMain.insertAdjacentHTML(
-    "afterbegin",
-      '<div class="project-detail-page__header" aria-hidden="true">' +
-      '<div class="project-detail-page__brand hero-stage__name">' +
-        '<span class="hero-stage__name-accent">RAY</span><span class="hero-stage__name-main">HERNAEZ</span>' +
-      "</div>" +
-      '<p class="hero-stage__kicker projects-stage__label project-detail-page__label">Projects</p>' +
-    "</div>"
-  );
-}
-
 function setupSiteClock() {
   const clocks = document.querySelectorAll("[data-site-time]");
   const formatter = new Intl.DateTimeFormat("en-CA", {
@@ -201,7 +183,6 @@ function setupCopyEmail() {
 
 renderSiteTopbar();
 document.querySelectorAll("[data-site-footer]").forEach(renderSiteFooter);
-renderProjectPageHeader();
 setupSiteClock();
 setupCustomCursor();
 setupContentLockdown();

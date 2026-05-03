@@ -13,7 +13,7 @@ This roadmap stays sequential on purpose. Lock one area, then move forward.
 - The contact/about experience now lives as an inline homepage section instead of a popup
 - A shared full-width top status bar appears across the live site with the home link, availability, and Montreal time
 - A shared full-width footer bar appears across the live site
-- Shared top bar rendering, footer rendering, live clock, email copy behavior, and project-page header injection are handled in `js/shared-layout.js`
+- Shared top bar rendering, footer rendering, live clock, email copy behavior, and shared interaction rules are handled in `js/shared-layout.js`
 - The project archive grid now lives on `index.html#selected-works`
 - All seven projects now have their own detail pages under `projects/`
 - Legacy hidden homepage content has been archived into markdown and removed from the live homepage shell
@@ -99,7 +99,7 @@ Status: done for first pass
 
 - Separate detail page layout exists for each project
 - Long-form `Learn more` overlays are in place
-- Clickable captioned and watermarked image overlays are in place for project detail images
+- Project detail images now display inline without zoom popups
 - Media stacks and embedded walkthroughs are in place where needed
 - Detail pages are linked from the archive
 - Live archive/detail images have been optimized into lighter `.webp` assets
